@@ -1,0 +1,522 @@
+﻿segment_id,exercise,form_label,num_frames_npy,expected_frames,det_frames,det_rate,mean_visibility,file_kb,status
+chest_fly_machine_correct_001,chest fly machine,correct,147,147,147,1.0,0.8017,44.91,cached
+chest_fly_machine_correct_002,chest fly machine,correct,218,218,218,1.0,0.7701,66.55,cached
+chest_fly_machine_correct_003,chest fly machine,correct,64,64,64,1.0,0.871,19.62,cached
+chest_fly_machine_correct_004,chest fly machine,correct,80,80,80,1.0,0.9871,24.5,cached
+chest_fly_machine_correct_005,chest fly machine,correct,124,124,124,1.0,0.9587,37.91,cached
+chest_fly_machine_correct_006,chest fly machine,correct,91,91,91,1.0,0.9861,27.85,cached
+chest_fly_machine_correct_007,chest fly machine,correct,99,99,99,1.0,0.9903,30.29,cached
+chest_fly_machine_correct_008,chest fly machine,correct,312,312,312,1.0,0.9815,95.19,cached
+chest_fly_machine_correct_009,chest fly machine,correct,125,125,125,1.0,0.9897,38.21,cached
+chest_fly_machine_correct_010,chest fly machine,correct,204,204,204,1.0,0.9871,62.28,cached
+chest_fly_machine_correct_011,chest fly machine,correct,215,215,215,1.0,0.993,65.63,cached
+chest_fly_machine_correct_012,chest fly machine,correct,91,91,91,1.0,0.982,27.85,cached
+chest_fly_machine_correct_013,chest fly machine,correct,67,67,67,1.0,0.9271,20.54,cached
+chest_fly_machine_correct_014,chest fly machine,correct,111,111,111,1.0,0.7993,33.95,cached
+chest_fly_machine_correct_015,chest fly machine,correct,135,135,135,1.0,0.8377,41.26,cached
+chest_fly_machine_correct_016,chest fly machine,correct,122,122,122,1.0,0.9835,37.3,cached
+chest_fly_machine_correct_017,chest fly machine,correct,129,129,129,1.0,0.688,39.43,cached
+chest_fly_machine_correct_018,chest fly machine,correct,97,97,97,1.0,0.8482,29.68,cached
+chest_fly_machine_correct_019,chest fly machine,correct,71,71,71,1.0,0.8818,21.76,cached
+chest_fly_machine_correct_020,chest fly machine,correct,75,75,74,0.9867,0.5415,22.98,cached
+chest_fly_machine_correct_021,chest fly machine,correct,134,134,133,0.9925,0.7967,40.95,cached
+chest_fly_machine_correct_022,chest fly machine,correct,79,79,79,1.0,0.6987,24.2,cached
+chest_fly_machine_correct_023,chest fly machine,correct,70,70,70,1.0,0.6669,21.45,cached
+chest_fly_machine_correct_024,chest fly machine,correct,150,150,150,1.0,0.8556,45.83,cached
+chest_fly_machine_correct_025,chest fly machine,correct,102,102,102,1.0,0.8658,31.2,cached
+chest_fly_machine_correct_026,chest fly machine,correct,108,108,108,1.0,0.8649,33.03,cached
+chest_fly_machine_correct_027,chest fly machine,correct,104,104,104,1.0,0.8305,31.81,cached
+chest_fly_machine_correct_028,chest fly machine,correct,97,97,97,1.0,0.9875,29.68,cached
+chest_fly_machine_correct_029,chest fly machine,correct,106,106,106,1.0,0.8537,32.42,cached
+chest_fly_machine_correct_030,chest fly machine,correct,200,200,200,1.0,0.8128,61.06,cached
+chest_fly_machine_correct_031,chest fly machine,correct,90,90,90,1.0,0.8832,27.55,cached
+chest_fly_machine_correct_032,chest fly machine,correct,60,60,60,1.0,0.8679,18.41,cached
+chest_fly_machine_correct_033,chest fly machine,correct,60,60,60,1.0,0.8066,18.41,cached
+chest_fly_machine_correct_034,chest fly machine,correct,117,117,117,1.0,0.986,35.77,cached
+chest_fly_machine_correct_035,chest fly machine,correct,116,116,116,1.0,0.7844,35.47,cached
+chest_fly_machine_correct_036,chest fly machine,correct,150,150,150,1.0,0.8667,45.83,cached
+chest_fly_machine_correct_037,chest fly machine,correct,102,102,102,1.0,0.9924,31.2,cached
+chest_fly_machine_correct_038,chest fly machine,correct,120,120,120,1.0,0.9441,36.69,cached
+chest_fly_machine_correct_039,chest fly machine,correct,60,60,60,1.0,0.9782,18.41,cached
+chest_fly_machine_correct_040,chest fly machine,correct,120,120,120,1.0,0.9888,36.69,cached
+chest_fly_machine_correct_041,chest fly machine,correct,120,120,120,1.0,0.8248,36.69,cached
+chest_fly_machine_incorrect_001,chest fly machine,incorrect,76,76,76,1.0,0.9548,23.28,cached
+chest_fly_machine_incorrect_002,chest fly machine,incorrect,58,58,58,1.0,0.9761,17.8,cached
+chest_fly_machine_incorrect_003,chest fly machine,incorrect,76,76,76,1.0,0.9598,23.28,cached
+chest_fly_machine_incorrect_004,chest fly machine,incorrect,110,110,110,1.0,0.9409,33.64,cached
+chest_fly_machine_incorrect_005,chest fly machine,incorrect,73,73,72,0.9863,0.8647,22.37,cached
+chest_fly_machine_incorrect_006,chest fly machine,incorrect,95,95,95,1.0,0.8866,29.07,cached
+chest_fly_machine_incorrect_007,chest fly machine,incorrect,74,74,74,1.0,0.7777,22.67,cached
+chest_fly_machine_incorrect_008,chest fly machine,incorrect,81,81,81,1.0,0.9727,24.8,cached
+chest_fly_machine_incorrect_009,chest fly machine,incorrect,78,78,78,1.0,0.9614,23.89,cached
+chest_fly_machine_incorrect_010,chest fly machine,incorrect,65,65,65,1.0,0.9813,19.93,cached
+chest_fly_machine_incorrect_011,chest fly machine,incorrect,75,75,75,1.0,0.9839,22.98,cached
+chest_fly_machine_incorrect_012,chest fly machine,incorrect,60,60,60,1.0,0.7739,18.41,cached
+chest_fly_machine_incorrect_013,chest fly machine,incorrect,101,101,101,1.0,0.9305,30.9,cached
+chest_fly_machine_incorrect_014,chest fly machine,incorrect,60,60,60,1.0,0.9767,18.41,cached
+chest_fly_machine_incorrect_015,chest fly machine,incorrect,44,44,44,1.0,0.9801,13.53,cached
+chest_fly_machine_incorrect_016,chest fly machine,incorrect,60,60,60,1.0,0.9917,18.41,cached
+chest_fly_machine_incorrect_017,chest fly machine,incorrect,85,85,83,0.9765,0.9167,26.02,cached
+chest_fly_machine_incorrect_018,chest fly machine,incorrect,90,90,90,1.0,0.9373,27.55,cached
+chest_fly_machine_incorrect_019,chest fly machine,incorrect,66,66,66,1.0,0.9264,20.23,cached
+chest_fly_machine_incorrect_020,chest fly machine,incorrect,86,86,86,1.0,0.9432,26.33,cached
+hip_thrust_correct_001,hip thrust,correct,52,52,26,0.5,0.7128,15.97,cached
+hip_thrust_correct_002,hip thrust,correct,52,52,49,0.9423,0.7273,15.97,cached
+hip_thrust_correct_003,hip thrust,correct,113,113,112,0.9912,0.8479,34.55,cached
+hip_thrust_correct_004,hip thrust,correct,96,96,96,1.0,0.687,29.38,cached
+hip_thrust_correct_005,hip thrust,correct,167,167,167,1.0,0.9106,51.01,cached
+hip_thrust_correct_006,hip thrust,correct,102,102,102,1.0,0.9061,31.2,cached
+hip_thrust_correct_007,hip thrust,correct,59,59,59,1.0,0.6895,18.1,cached
+hip_thrust_correct_008,hip thrust,correct,69,69,69,1.0,0.7863,21.15,cached
+hip_thrust_correct_009,hip thrust,correct,74,74,71,0.9595,0.8052,22.67,cached
+hip_thrust_correct_010,hip thrust,correct,129,129,129,1.0,0.8491,39.43,cached
+hip_thrust_correct_011,hip thrust,correct,73,73,73,1.0,0.7225,22.37,cached
+hip_thrust_correct_012,hip thrust,correct,170,170,170,1.0,0.8876,51.92,cached
+hip_thrust_correct_013,hip thrust,correct,79,79,79,1.0,0.7016,24.2,cached
+hip_thrust_correct_014,hip thrust,correct,81,81,81,1.0,0.8219,24.8,cached
+hip_thrust_correct_015,hip thrust,correct,94,94,94,1.0,0.8549,28.77,cached
+hip_thrust_correct_016,hip thrust,correct,58,58,58,1.0,0.6503,17.8,cached
+hip_thrust_correct_017,hip thrust,correct,101,101,101,1.0,0.8541,30.9,cached
+hip_thrust_correct_018,hip thrust,correct,75,75,75,1.0,0.7775,22.98,cached
+hip_thrust_correct_019,hip thrust,correct,85,85,85,1.0,0.8306,26.02,cached
+hip_thrust_correct_020,hip thrust,correct,141,141,141,1.0,0.8957,43.09,cached
+hip_thrust_correct_021,hip thrust,correct,42,42,42,1.0,0.7646,12.92,cached
+hip_thrust_correct_022,hip thrust,correct,150,150,150,1.0,0.8699,45.83,cached
+hip_thrust_correct_023,hip thrust,correct,108,108,108,1.0,0.8002,33.03,cached
+hip_thrust_correct_024,hip thrust,correct,120,120,120,1.0,0.8194,36.69,cached
+hip_thrust_correct_025,hip thrust,correct,90,90,90,1.0,0.8483,27.55,cached
+hip_thrust_correct_026,hip thrust,correct,90,90,90,1.0,0.8385,27.55,cached
+hip_thrust_correct_027,hip thrust,correct,75,75,75,1.0,0.7812,22.98,cached
+hip_thrust_correct_028,hip thrust,correct,78,78,78,1.0,0.7571,23.89,cached
+hip_thrust_correct_029,hip thrust,correct,101,101,101,1.0,0.7413,30.9,cached
+hip_thrust_correct_030,hip thrust,correct,120,120,120,1.0,0.7428,36.69,cached
+hip_thrust_correct_031,hip thrust,correct,60,60,60,1.0,0.7201,18.41,cached
+hip_thrust_correct_032,hip thrust,correct,79,79,79,1.0,0.7339,24.2,cached
+hip_thrust_correct_033,hip thrust,correct,67,67,65,0.9701,0.7729,20.54,cached
+hip_thrust_correct_034,hip thrust,correct,122,122,122,1.0,0.6856,37.3,cached
+hip_thrust_correct_035,hip thrust,correct,120,120,120,1.0,0.7255,36.69,cached
+hip_thrust_correct_036,hip thrust,correct,84,84,84,1.0,0.744,25.72,cached
+hip_thrust_correct_037,hip thrust,correct,60,60,60,1.0,0.7564,18.41,cached
+hip_thrust_correct_038,hip thrust,correct,64,64,64,1.0,0.7472,19.62,cached
+hip_thrust_correct_039,hip thrust,correct,105,105,105,1.0,0.7077,32.12,cached
+hip_thrust_correct_040,hip thrust,correct,72,72,72,1.0,0.807,22.06,cached
+hip_thrust_correct_041,hip thrust,correct,60,60,60,1.0,0.8453,18.41,cached
+hip_thrust_incorrect_001,hip thrust,incorrect,80,80,80,1.0,0.692,24.5,cached
+hip_thrust_incorrect_002,hip thrust,incorrect,100,100,100,1.0,0.6982,30.59,cached
+hip_thrust_incorrect_003,hip thrust,incorrect,60,60,60,1.0,0.7269,18.41,cached
+hip_thrust_incorrect_004,hip thrust,incorrect,60,60,60,1.0,0.7784,18.41,cached
+hip_thrust_incorrect_005,hip thrust,incorrect,45,45,45,1.0,0.7617,13.84,cached
+hip_thrust_incorrect_006,hip thrust,incorrect,52,52,52,1.0,0.8104,15.97,cached
+hip_thrust_incorrect_007,hip thrust,incorrect,76,76,76,1.0,0.791,23.28,cached
+hip_thrust_incorrect_008,hip thrust,incorrect,56,56,56,1.0,0.8229,17.19,cached
+hip_thrust_incorrect_009,hip thrust,incorrect,60,60,60,1.0,0.8373,18.41,cached
+hip_thrust_incorrect_010,hip thrust,incorrect,41,41,41,1.0,0.9466,12.62,cached
+hip_thrust_incorrect_011,hip thrust,incorrect,48,48,48,1.0,0.7653,14.75,cached
+hip_thrust_incorrect_012,hip thrust,incorrect,81,81,77,0.9506,0.7112,24.8,cached
+hip_thrust_incorrect_013,hip thrust,incorrect,120,120,120,1.0,0.7211,36.69,cached
+hip_thrust_incorrect_014,hip thrust,incorrect,60,60,60,1.0,0.7557,18.41,cached
+hip_thrust_incorrect_015,hip thrust,incorrect,46,46,46,1.0,0.7118,14.14,cached
+hip_thrust_incorrect_016,hip thrust,incorrect,83,83,83,1.0,0.7645,25.41,cached
+hip_thrust_incorrect_017,hip thrust,incorrect,120,120,119,0.9917,0.762,36.69,cached
+hip_thrust_incorrect_018,hip thrust,incorrect,90,90,90,1.0,0.6289,27.55,cached
+hip_thrust_incorrect_019,hip thrust,incorrect,56,56,56,1.0,0.728,17.19,cached
+leg_extension_correct_001,leg extension,correct,69,69,69,1.0,0.7346,21.15,cached
+leg_extension_correct_002,leg extension,correct,76,76,76,1.0,0.9205,23.28,cached
+leg_extension_correct_003,leg extension,correct,71,71,71,1.0,0.9068,21.76,cached
+leg_extension_correct_004,leg extension,correct,62,62,62,1.0,0.8475,19.02,cached
+leg_extension_correct_005,leg extension,correct,52,52,52,1.0,0.8353,15.97,cached
+leg_extension_correct_006,leg extension,correct,66,66,66,1.0,0.8558,20.23,cached
+leg_extension_correct_007,leg extension,correct,58,58,58,1.0,0.7826,17.8,cached
+leg_extension_correct_008,leg extension,correct,130,130,130,1.0,0.7322,39.73,cached
+leg_extension_correct_009,leg extension,correct,61,61,61,1.0,0.8376,18.71,cached
+leg_extension_correct_010,leg extension,correct,53,53,53,1.0,0.8481,16.27,cached
+leg_extension_correct_011,leg extension,correct,71,71,71,1.0,0.8532,21.76,cached
+leg_extension_correct_012,leg extension,correct,87,87,87,1.0,0.7468,26.63,cached
+leg_extension_correct_013,leg extension,correct,70,70,70,1.0,0.7522,21.45,cached
+leg_extension_correct_014,leg extension,correct,72,72,72,1.0,0.7345,22.06,cached
+leg_extension_correct_016,leg extension,correct,156,156,156,1.0,0.6904,47.66,cached
+leg_extension_correct_017,leg extension,correct,93,93,93,1.0,0.754,28.46,cached
+leg_extension_correct_018,leg extension,correct,233,233,233,1.0,0.8204,71.12,cached
+leg_extension_correct_019,leg extension,correct,93,93,93,1.0,0.8485,28.46,cached
+leg_extension_correct_020,leg extension,correct,62,62,57,0.9194,0.7169,19.02,cached
+leg_extension_correct_021,leg extension,correct,73,73,73,1.0,0.8153,22.37,cached
+leg_extension_correct_022,leg extension,correct,86,86,86,1.0,0.7574,26.33,cached
+leg_extension_correct_023,leg extension,correct,75,75,52,0.6933,0.6267,22.98,cached
+leg_extension_correct_024,leg extension,correct,120,120,120,1.0,0.7182,36.69,cached
+leg_extension_correct_025,leg extension,correct,120,120,120,1.0,0.7125,36.69,cached
+leg_extension_correct_026,leg extension,correct,90,90,90,1.0,0.8679,27.55,cached
+leg_extension_correct_027,leg extension,correct,105,105,105,1.0,0.8655,32.12,cached
+leg_extension_correct_028,leg extension,correct,90,90,90,1.0,0.8002,27.55,cached
+leg_extension_correct_029,leg extension,correct,90,90,90,1.0,0.7613,27.55,cached
+leg_extension_correct_030,leg extension,correct,139,139,139,1.0,0.7841,42.48,cached
+leg_extension_correct_031,leg extension,correct,90,90,90,1.0,0.7754,27.55,cached
+leg_extension_correct_032,leg extension,correct,71,71,71,1.0,0.8639,21.76,cached
+leg_extension_correct_033,leg extension,correct,90,90,90,1.0,0.6874,27.55,cached
+leg_extension_correct_034,leg extension,correct,162,162,162,1.0,0.6978,49.48,cached
+leg_extension_correct_035,leg extension,correct,111,111,111,1.0,0.8208,33.95,cached
+leg_extension_correct_036,leg extension,correct,49,49,49,1.0,0.7199,15.05,cached
+leg_extension_correct_037,leg extension,correct,47,47,47,1.0,0.7366,14.45,cached
+leg_extension_correct_038,leg extension,correct,90,90,90,1.0,0.8079,27.55,cached
+leg_extension_correct_039,leg extension,correct,90,90,90,1.0,0.7806,27.55,cached
+leg_extension_correct_040,leg extension,correct,103,103,103,1.0,0.8556,31.51,cached
+leg_extension_correct_041,leg extension,correct,75,75,75,1.0,0.856,22.98,cached
+leg_extension_incorrect_001,leg extension,incorrect,34,34,34,1.0,0.7782,10.48,cached
+leg_extension_incorrect_002,leg extension,incorrect,30,30,30,1.0,0.895,9.27,cached
+leg_extension_incorrect_003,leg extension,incorrect,78,78,78,1.0,0.8658,23.89,cached
+leg_extension_incorrect_004,leg extension,incorrect,50,50,50,1.0,0.7394,15.36,cached
+leg_extension_incorrect_005,leg extension,incorrect,30,30,30,1.0,0.8078,9.27,cached
+leg_extension_incorrect_006,leg extension,incorrect,22,22,22,1.0,0.8233,6.83,cached
+leg_extension_incorrect_007,leg extension,incorrect,36,36,36,1.0,0.7108,11.09,cached
+leg_extension_incorrect_008,leg extension,incorrect,40,40,40,1.0,0.7598,12.31,cached
+leg_extension_incorrect_009,leg extension,incorrect,48,48,48,1.0,0.7894,14.75,cached
+leg_extension_incorrect_010,leg extension,incorrect,60,60,60,1.0,0.8131,18.41,cached
+leg_extension_incorrect_011,leg extension,incorrect,37,37,37,1.0,0.7414,11.4,cached
+leg_extension_incorrect_012,leg extension,incorrect,36,36,36,1.0,0.7156,11.09,cached
+leg_extension_incorrect_013,leg extension,incorrect,60,60,60,1.0,0.7629,18.41,cached
+leg_extension_incorrect_014,leg extension,incorrect,37,37,37,1.0,0.8284,11.4,cached
+leg_extension_incorrect_015,leg extension,incorrect,41,41,41,1.0,0.7355,12.62,cached
+leg_extension_incorrect_016,leg extension,incorrect,40,40,40,1.0,0.8881,12.31,cached
+leg_extension_incorrect_017,leg extension,incorrect,60,60,60,1.0,0.8242,18.41,cached
+leg_extension_incorrect_018,leg extension,incorrect,60,60,60,1.0,0.804,18.41,cached
+leg_extension_incorrect_019,leg extension,incorrect,38,38,38,1.0,0.8024,11.7,cached
+leg_extension_incorrect_020,leg extension,incorrect,39,39,39,1.0,0.9722,12.01,cached
+leg_extension_incorrect_021,leg extension,incorrect,38,38,38,1.0,0.6979,11.7,cached
+leg_extension_incorrect_022,leg extension,incorrect,31,31,31,1.0,0.8402,9.57,cached
+leg_extension_incorrect_023,leg extension,incorrect,60,60,60,1.0,0.7315,18.41,cached
+leg_extension_incorrect_024,leg extension,incorrect,42,42,42,1.0,0.8198,12.92,extracted
+leg_extension_incorrect_025,leg extension,incorrect,54,54,54,1.0,0.7421,16.58,extracted
+leg_raises_correct_001,leg raises,correct,90,90,90,1.0,0.9432,27.55,cached
+leg_raises_correct_002,leg raises,correct,47,47,47,1.0,0.9043,14.45,cached
+leg_raises_correct_003,leg raises,correct,149,149,149,1.0,0.6232,45.52,cached
+leg_raises_correct_004,leg raises,correct,113,113,113,1.0,0.7905,34.55,cached
+leg_raises_correct_005,leg raises,correct,86,86,85,0.9884,0.7369,26.33,cached
+leg_raises_correct_006,leg raises,correct,85,85,85,1.0,0.8955,26.02,cached
+leg_raises_correct_007,leg raises,correct,60,60,60,1.0,0.8042,18.41,cached
+leg_raises_correct_008,leg raises,correct,56,56,56,1.0,0.9156,17.19,cached
+leg_raises_correct_009,leg raises,correct,43,43,43,1.0,0.8408,13.23,cached
+leg_raises_correct_010,leg raises,correct,57,57,57,1.0,0.9017,17.49,cached
+leg_raises_correct_011,leg raises,correct,74,74,74,1.0,0.901,22.67,cached
+leg_raises_correct_012,leg raises,correct,160,160,158,0.9875,0.662,48.88,cached
+leg_raises_correct_013,leg raises,correct,188,188,188,1.0,0.7781,57.41,cached
+leg_raises_correct_014,leg raises,correct,61,61,61,1.0,0.9562,18.71,cached
+leg_raises_correct_015,leg raises,correct,66,66,66,1.0,0.8442,20.23,cached
+leg_raises_correct_016,leg raises,correct,92,92,92,1.0,0.8573,28.16,cached
+leg_raises_correct_017,leg raises,correct,67,67,67,1.0,0.8909,20.54,cached
+leg_raises_correct_018,leg raises,correct,60,60,60,1.0,0.82,18.41,cached
+leg_raises_correct_019,leg raises,correct,60,60,60,1.0,0.7582,18.41,cached
+leg_raises_correct_020,leg raises,correct,59,59,59,1.0,0.9527,18.1,cached
+leg_raises_correct_021,leg raises,correct,90,90,90,1.0,0.9397,27.55,cached
+leg_raises_correct_022,leg raises,correct,60,60,60,1.0,0.7584,18.41,cached
+leg_raises_correct_023,leg raises,correct,116,116,116,1.0,0.8976,35.47,cached
+leg_raises_correct_024,leg raises,correct,88,88,88,1.0,0.9032,26.94,cached
+leg_raises_correct_025,leg raises,correct,180,180,180,1.0,0.8693,54.97,cached
+leg_raises_correct_026,leg raises,correct,107,107,107,1.0,0.9379,32.73,cached
+leg_raises_correct_027,leg raises,correct,90,90,90,1.0,0.9335,27.55,cached
+leg_raises_correct_028,leg raises,correct,120,120,120,1.0,0.9121,36.69,cached
+leg_raises_correct_029,leg raises,correct,90,90,90,1.0,0.8773,27.55,cached
+leg_raises_correct_030,leg raises,correct,96,96,96,1.0,0.8827,29.38,cached
+leg_raises_correct_031,leg raises,correct,109,109,109,1.0,0.8028,33.34,cached
+leg_raises_correct_032,leg raises,correct,90,90,90,1.0,0.8352,27.55,cached
+leg_raises_correct_033,leg raises,correct,90,90,90,1.0,0.9571,27.55,cached
+leg_raises_correct_034,leg raises,correct,90,90,90,1.0,0.9337,27.55,cached
+leg_raises_correct_035,leg raises,correct,90,90,90,1.0,0.9237,27.55,cached
+leg_raises_correct_036,leg raises,correct,150,150,150,1.0,0.9315,45.83,cached
+leg_raises_correct_037,leg raises,correct,120,120,120,1.0,0.9292,36.69,cached
+leg_raises_correct_038,leg raises,correct,59,59,59,1.0,0.804,18.1,cached
+leg_raises_correct_039,leg raises,correct,71,71,71,1.0,0.684,21.76,cached
+leg_raises_correct_040,leg raises,correct,210,210,210,1.0,0.7985,64.11,cached
+leg_raises_correct_041,leg raises,correct,150,150,150,1.0,0.7967,45.83,cached
+leg_raises_incorrect_001,leg raises,incorrect,38,38,38,1.0,0.8855,11.7,cached
+leg_raises_incorrect_002,leg raises,incorrect,77,77,77,1.0,0.9286,23.59,cached
+leg_raises_incorrect_003,leg raises,incorrect,37,37,37,1.0,0.742,11.4,cached
+leg_raises_incorrect_004,leg raises,incorrect,90,90,90,1.0,0.7483,27.55,cached
+leg_raises_incorrect_005,leg raises,incorrect,68,68,67,0.9853,0.8961,20.84,cached
+leg_raises_incorrect_006,leg raises,incorrect,90,90,90,1.0,0.7279,27.55,cached
+leg_raises_incorrect_007,leg raises,incorrect,90,90,90,1.0,0.7634,27.55,cached
+leg_raises_incorrect_008,leg raises,incorrect,50,50,50,1.0,0.9115,15.36,cached
+leg_raises_incorrect_009,leg raises,incorrect,46,46,46,1.0,0.8038,14.14,cached
+leg_raises_incorrect_010,leg raises,incorrect,60,60,60,1.0,0.7966,18.41,cached
+leg_raises_incorrect_011,leg raises,incorrect,43,43,43,1.0,0.9402,13.23,cached
+leg_raises_incorrect_012,leg raises,incorrect,60,60,60,1.0,0.9036,18.41,cached
+leg_raises_incorrect_013,leg raises,incorrect,52,52,52,1.0,0.8443,15.97,cached
+leg_raises_incorrect_014,leg raises,incorrect,79,79,79,1.0,0.7316,24.2,cached
+leg_raises_incorrect_015,leg raises,incorrect,60,60,60,1.0,0.826,18.41,cached
+leg_raises_incorrect_016,leg raises,incorrect,49,49,49,1.0,0.7591,15.05,cached
+pull_up_correct_001,pull up,correct,39,39,38,0.9744,0.8578,12.01,cached
+pull_up_correct_002,pull up,correct,60,60,60,1.0,0.9587,18.41,cached
+pull_up_correct_003,pull up,correct,84,84,84,1.0,0.667,25.72,cached
+pull_up_correct_004,pull up,correct,70,70,70,1.0,0.697,21.45,cached
+pull_up_correct_005,pull up,correct,108,108,108,1.0,0.7475,33.03,cached
+pull_up_correct_006,pull up,correct,44,44,44,1.0,0.8122,13.53,cached
+pull_up_correct_007,pull up,correct,120,120,120,1.0,0.7461,36.69,cached
+pull_up_correct_008,pull up,correct,79,79,79,1.0,0.7771,24.2,cached
+pull_up_correct_009,pull up,correct,49,49,49,1.0,0.9767,15.05,cached
+pull_up_correct_010,pull up,correct,213,213,213,1.0,0.6351,65.02,cached
+pull_up_correct_011,pull up,correct,123,123,123,1.0,0.9121,37.6,cached
+pull_up_correct_012,pull up,correct,72,72,72,1.0,0.9826,22.06,cached
+pull_up_correct_013,pull up,correct,84,84,84,1.0,0.7633,25.72,cached
+pull_up_correct_014,pull up,correct,66,66,66,1.0,0.7323,20.23,cached
+pull_up_correct_015,pull up,correct,93,93,93,1.0,0.8407,28.46,cached
+pull_up_correct_016,pull up,correct,126,126,126,1.0,0.6622,38.52,cached
+pull_up_correct_017,pull up,correct,81,81,81,1.0,0.6354,24.8,cached
+pull_up_correct_018,pull up,correct,102,102,97,0.951,0.7784,31.2,cached
+pull_up_correct_019,pull up,correct,78,78,78,1.0,0.8179,23.89,cached
+pull_up_correct_020,pull up,correct,80,80,80,1.0,0.7369,24.5,cached
+pull_up_correct_021,pull up,correct,98,98,98,1.0,0.7116,29.98,cached
+pull_up_correct_022,pull up,correct,90,90,86,0.9556,0.8075,27.55,cached
+pull_up_correct_023,pull up,correct,173,173,173,1.0,0.9442,52.84,cached
+pull_up_correct_024,pull up,correct,57,57,57,1.0,0.9824,17.49,cached
+pull_up_correct_025,pull up,correct,72,72,72,1.0,0.7287,22.06,cached
+pull_up_correct_026,pull up,correct,86,86,86,1.0,0.8054,26.33,cached
+pull_up_correct_027,pull up,correct,68,68,68,1.0,0.9718,20.84,cached
+pull_up_correct_028,pull up,correct,42,42,42,1.0,0.6952,12.92,cached
+pull_up_correct_029,pull up,correct,38,38,38,1.0,0.7867,11.7,cached
+pull_up_correct_030,pull up,correct,81,81,81,1.0,0.9698,24.8,cached
+pull_up_correct_031,pull up,correct,76,76,76,1.0,0.9785,23.28,cached
+pull_up_correct_032,pull up,correct,65,65,65,1.0,0.9646,19.93,cached
+pull_up_correct_033,pull up,correct,88,88,88,1.0,0.8596,26.94,cached
+pull_up_correct_034,pull up,correct,46,46,46,1.0,0.9094,14.14,cached
+pull_up_correct_035,pull up,correct,60,60,60,1.0,0.8847,18.41,cached
+pull_up_correct_036,pull up,correct,93,93,93,1.0,0.7162,28.46,cached
+pull_up_correct_037,pull up,correct,150,150,150,1.0,0.9142,45.83,cached
+pull_up_correct_038,pull up,correct,90,90,90,1.0,0.8144,27.55,cached
+pull_up_correct_039,pull up,correct,82,82,82,1.0,0.9403,25.11,cached
+pull_up_correct_040,pull up,correct,89,89,89,1.0,0.6648,27.24,cached
+pull_up_correct_041,pull up,correct,73,73,73,1.0,0.9239,22.37,cached
+pull_up_incorrect_001,pull up,incorrect,39,39,39,1.0,0.9832,12.01,cached
+pull_up_incorrect_002,pull up,incorrect,51,51,51,1.0,0.9568,15.66,cached
+pull_up_incorrect_003,pull up,incorrect,66,66,66,1.0,0.8905,20.23,cached
+pull_up_incorrect_004,pull up,incorrect,34,34,34,1.0,0.9448,10.48,cached
+pull_up_incorrect_005,pull up,incorrect,42,42,42,1.0,0.8343,12.92,cached
+pull_up_incorrect_006,pull up,incorrect,58,58,58,1.0,0.9085,17.8,cached
+pull_up_incorrect_007,pull up,incorrect,82,82,82,1.0,0.7855,25.11,cached
+pull_up_incorrect_008,pull up,incorrect,60,60,60,1.0,0.8166,18.41,cached
+pull_up_incorrect_009,pull up,incorrect,43,43,43,1.0,0.8552,13.23,cached
+pull_up_incorrect_010,pull up,incorrect,47,47,47,1.0,0.9016,14.45,cached
+pull_up_incorrect_011,pull up,incorrect,60,60,60,1.0,0.9379,18.41,cached
+pull_up_incorrect_012,pull up,incorrect,60,60,60,1.0,0.8286,18.41,cached
+pull_up_incorrect_013,pull up,incorrect,43,43,43,1.0,0.843,13.23,cached
+pull_up_incorrect_014,pull up,incorrect,51,51,51,1.0,0.8475,15.66,cached
+pull_up_incorrect_015,pull up,incorrect,120,120,120,1.0,0.825,36.69,cached
+pull_up_incorrect_016,pull up,incorrect,30,30,30,1.0,0.8904,9.27,cached
+pull_up_incorrect_017,pull up,incorrect,49,49,49,1.0,0.6419,15.05,cached
+pull_up_incorrect_018,pull up,incorrect,120,120,120,1.0,0.7691,36.69,cached
+pull_up_incorrect_019,pull up,incorrect,105,105,105,1.0,0.9274,32.12,cached
+pull_up_incorrect_020,pull up,incorrect,38,38,38,1.0,0.8025,11.7,cached
+pull_up_incorrect_021,pull up,incorrect,180,180,180,1.0,0.7618,54.97,cached
+pull_up_incorrect_022,pull up,incorrect,60,60,60,1.0,0.8049,18.41,cached
+pull_up_incorrect_023,pull up,incorrect,60,60,60,1.0,0.883,18.41,cached
+pull_up_incorrect_024,pull up,incorrect,61,61,61,1.0,0.8576,18.71,cached
+pull_up_incorrect_025,pull up,incorrect,54,54,54,1.0,0.9599,16.58,cached
+pull_up_incorrect_026,pull up,incorrect,42,42,42,1.0,0.7383,12.92,extracted
+pull_up_incorrect_027,pull up,incorrect,48,48,48,1.0,0.7111,14.75,extracted
+pull_up_incorrect_028,pull up,incorrect,57,57,56,0.9825,0.7228,17.49,extracted
+pull_up_incorrect_029,pull up,incorrect,69,69,68,0.9855,0.8409,21.15,extracted
+pull_up_incorrect_030,pull up,incorrect,69,69,69,1.0,0.7207,21.15,extracted
+push_up_correct_001,push-up,correct,61,61,61,1.0,0.8009,18.71,cached
+push_up_correct_002,push-up,correct,102,102,102,1.0,0.7574,31.2,cached
+push_up_correct_003,push-up,correct,105,105,105,1.0,0.7893,32.12,cached
+push_up_correct_004,push-up,correct,90,90,90,1.0,0.819,27.55,cached
+push_up_correct_005,push-up,correct,44,44,44,1.0,0.7151,13.53,cached
+push_up_correct_006,push-up,correct,36,36,36,1.0,0.791,11.09,cached
+push_up_correct_007,push-up,correct,99,99,99,1.0,0.7503,30.29,cached
+push_up_correct_008,push-up,correct,32,32,32,1.0,0.764,9.88,cached
+push_up_correct_009,push-up,correct,65,65,65,1.0,0.8138,19.93,cached
+push_up_correct_010,push-up,correct,41,41,41,1.0,0.8074,12.62,cached
+push_up_correct_011,push-up,correct,58,58,58,1.0,0.7291,17.8,cached
+push_up_correct_012,push-up,correct,54,54,54,1.0,0.7659,16.58,cached
+push_up_correct_013,push-up,correct,71,71,71,1.0,0.7642,21.76,cached
+push_up_correct_014,push-up,correct,56,56,56,1.0,0.7491,17.19,cached
+push_up_correct_015,push-up,correct,91,91,91,1.0,0.8093,27.85,cached
+push_up_correct_016,push-up,correct,84,84,84,1.0,0.8227,25.72,cached
+push_up_correct_017,push-up,correct,106,106,106,1.0,0.7498,32.42,cached
+push_up_correct_018,push-up,correct,66,66,66,1.0,0.7652,20.23,cached
+push_up_correct_019,push-up,correct,25,25,25,1.0,0.8172,7.74,cached
+push_up_correct_020,push-up,correct,52,52,52,1.0,0.7091,15.97,cached
+push_up_correct_021,push-up,correct,71,71,71,1.0,0.7205,21.76,cached
+push_up_correct_022,push-up,correct,82,82,74,0.9024,0.7361,25.11,cached
+push_up_correct_023,push-up,correct,59,59,59,1.0,0.8047,18.1,cached
+push_up_correct_024,push-up,correct,34,34,34,1.0,0.844,10.48,cached
+push_up_correct_025,push-up,correct,56,56,56,1.0,0.759,17.19,cached
+push_up_correct_026,push-up,correct,59,59,59,1.0,0.782,18.1,cached
+push_up_correct_027,push-up,correct,60,60,60,1.0,0.7912,18.41,cached
+push_up_correct_028,push-up,correct,43,43,43,1.0,0.782,13.23,cached
+push_up_correct_029,push-up,correct,127,127,127,1.0,0.7678,38.82,cached
+push_up_correct_030,push-up,correct,136,136,136,1.0,0.7178,41.56,cached
+push_up_correct_031,push-up,correct,48,48,48,1.0,0.8015,14.75,cached
+push_up_correct_032,push-up,correct,70,70,70,1.0,0.8422,21.45,cached
+push_up_correct_033,push-up,correct,66,66,66,1.0,0.8202,20.23,cached
+push_up_correct_034,push-up,correct,59,59,59,1.0,0.7279,18.1,cached
+push_up_correct_035,push-up,correct,112,112,112,1.0,0.7833,34.25,cached
+push_up_correct_036,push-up,correct,60,60,60,1.0,0.8132,18.41,cached
+push_up_correct_037,push-up,correct,90,90,90,1.0,0.7294,27.55,cached
+push_up_correct_038,push-up,correct,90,90,90,1.0,0.759,27.55,cached
+push_up_correct_039,push-up,correct,62,62,62,1.0,0.7717,19.02,cached
+push_up_correct_040,push-up,correct,65,65,65,1.0,0.767,19.93,cached
+push_up_correct_041,push-up,correct,103,103,103,1.0,0.7674,31.51,cached
+push_up_incorrect_001,push-up,incorrect,41,41,41,1.0,0.7897,12.62,cached
+push_up_incorrect_002,push-up,incorrect,95,95,95,1.0,0.8099,29.07,cached
+push_up_incorrect_003,push-up,incorrect,27,27,27,1.0,0.7408,8.35,cached
+push_up_incorrect_004,push-up,incorrect,60,60,60,1.0,0.7354,18.41,cached
+push_up_incorrect_005,push-up,incorrect,27,27,27,1.0,0.8735,8.35,cached
+push_up_incorrect_006,push-up,incorrect,66,66,66,1.0,0.7955,20.23,cached
+push_up_incorrect_007,push-up,incorrect,90,90,90,1.0,0.9172,27.55,cached
+push_up_incorrect_008,push-up,incorrect,50,50,50,1.0,0.8096,15.36,cached
+push_up_incorrect_009,push-up,incorrect,76,76,76,1.0,0.7105,23.28,cached
+push_up_incorrect_010,push-up,incorrect,60,60,60,1.0,0.8121,18.41,cached
+push_up_incorrect_011,push-up,incorrect,60,60,60,1.0,0.7469,18.41,cached
+push_up_incorrect_012,push-up,incorrect,90,90,90,1.0,0.8774,27.55,cached
+push_up_incorrect_013,push-up,incorrect,71,71,71,1.0,0.7622,21.76,cached
+push_up_incorrect_014,push-up,incorrect,69,69,69,1.0,0.8083,21.15,cached
+push_up_incorrect_015,push-up,incorrect,57,57,57,1.0,0.7943,17.49,cached
+push_up_incorrect_016,push-up,incorrect,34,34,34,1.0,0.844,10.48,cached
+push_up_incorrect_017,push-up,incorrect,89,89,89,1.0,0.8344,27.24,cached
+push_up_incorrect_018,push-up,incorrect,83,83,83,1.0,0.7946,25.41,cached
+push_up_incorrect_019,push-up,incorrect,78,78,78,1.0,0.8377,23.89,cached
+push_up_incorrect_020,push-up,incorrect,69,69,69,1.0,0.8847,21.15,cached
+push_up_incorrect_021,push-up,incorrect,54,54,54,1.0,0.8355,16.58,cached
+push_up_incorrect_022,push-up,incorrect,61,61,61,1.0,0.8256,18.71,cached
+push_up_incorrect_023,push-up,incorrect,42,42,42,1.0,0.7442,12.92,cached
+push_up_incorrect_024,push-up,incorrect,45,45,45,1.0,0.702,13.84,cached
+push_up_incorrect_025,push-up,incorrect,72,72,72,1.0,0.7193,22.06,cached
+push_up_incorrect_026,push-up,incorrect,93,93,93,1.0,0.7849,28.46,cached
+push_up_incorrect_027,push-up,incorrect,36,36,36,1.0,0.9017,11.09,cached
+push_up_incorrect_028,push-up,incorrect,38,38,38,1.0,0.8404,11.7,cached
+push_up_incorrect_029,push-up,incorrect,90,90,90,1.0,0.8383,27.55,cached
+push_up_incorrect_030,push-up,incorrect,120,120,120,1.0,0.7956,36.69,cached
+push_up_incorrect_031,push-up,incorrect,45,45,45,1.0,0.8082,13.84,cached
+push_up_incorrect_032,push-up,incorrect,60,60,60,1.0,0.7342,18.41,cached
+push_up_incorrect_033,push-up,incorrect,120,120,120,1.0,0.8492,36.69,cached
+push_up_incorrect_034,push-up,incorrect,38,38,38,1.0,0.824,11.7,cached
+push_up_incorrect_035,push-up,incorrect,48,48,48,1.0,0.7932,14.75,cached
+push_up_incorrect_036,push-up,incorrect,42,42,42,1.0,0.7986,12.92,cached
+push_up_incorrect_037,push-up,incorrect,56,56,56,1.0,0.7108,17.19,cached
+push_up_incorrect_038,push-up,incorrect,34,34,34,1.0,0.7754,10.48,cached
+push_up_incorrect_039,push-up,incorrect,32,32,32,1.0,0.821,9.88,cached
+squat_correct_001,squat,correct,57,57,57,1.0,0.857,17.49,cached
+squat_correct_002,squat,correct,93,93,93,1.0,0.7974,28.46,cached
+squat_correct_003,squat,correct,83,83,83,1.0,0.7001,25.41,cached
+squat_correct_004,squat,correct,72,72,72,1.0,0.6289,22.06,cached
+squat_correct_005,squat,correct,76,76,76,1.0,0.6779,23.28,cached
+squat_correct_006,squat,correct,89,89,89,1.0,0.7015,27.24,cached
+squat_correct_007,squat,correct,94,94,94,1.0,0.8735,28.77,cached
+squat_correct_008,squat,correct,113,113,113,1.0,0.9957,34.55,cached
+squat_correct_009,squat,correct,105,105,105,1.0,0.7756,32.12,cached
+squat_correct_010,squat,correct,57,57,57,1.0,0.7872,17.49,cached
+squat_correct_011,squat,correct,90,90,90,1.0,0.7704,27.55,cached
+squat_correct_012,squat,correct,111,111,111,1.0,0.7478,33.95,cached
+squat_correct_013,squat,correct,94,94,94,1.0,0.7936,28.77,cached
+squat_correct_014,squat,correct,47,47,47,1.0,0.8414,14.45,cached
+squat_correct_015,squat,correct,65,65,65,1.0,0.9949,19.93,cached
+squat_correct_016,squat,correct,77,77,77,1.0,0.8649,23.59,cached
+squat_correct_017,squat,correct,108,108,108,1.0,0.9342,33.03,cached
+squat_correct_019,squat,correct,110,110,105,0.9545,0.6889,33.64,cached
+squat_correct_020,squat,correct,136,136,136,1.0,0.7274,41.56,cached
+squat_correct_021,squat,correct,38,38,38,1.0,0.8453,11.7,cached
+squat_correct_022,squat,correct,53,53,53,1.0,0.8606,16.27,cached
+squat_correct_025,squat,correct,105,105,105,1.0,0.9295,32.12,cached
+squat_correct_026,squat,correct,131,131,131,1.0,0.9528,40.04,cached
+squat_correct_027,squat,correct,59,59,59,1.0,0.9786,18.1,cached
+squat_correct_028,squat,correct,45,45,45,1.0,0.9787,13.84,cached
+squat_correct_029,squat,correct,93,93,93,1.0,0.7893,28.46,cached
+squat_correct_030,squat,correct,83,83,83,1.0,0.8268,25.41,cached
+squat_correct_031,squat,correct,85,85,85,1.0,0.8294,26.02,cached
+squat_correct_032,squat,correct,207,207,207,1.0,0.9747,63.2,cached
+squat_correct_033,squat,correct,63,63,63,1.0,0.909,19.32,cached
+squat_correct_034,squat,correct,75,75,75,1.0,0.9648,22.98,cached
+squat_correct_035,squat,correct,229,229,229,1.0,0.8582,69.9,cached
+squat_correct_036,squat,correct,163,163,163,1.0,0.7552,49.79,cached
+squat_correct_037,squat,correct,150,150,150,1.0,0.9568,45.83,cached
+squat_correct_038,squat,correct,127,127,127,1.0,0.812,38.82,cached
+squat_correct_039,squat,correct,85,85,85,1.0,0.8336,26.02,cached
+squat_correct_040,squat,correct,109,109,109,1.0,0.7964,33.34,cached
+squat_correct_041,squat,correct,120,120,120,1.0,0.8803,36.69,cached
+squat_correct_042,squat,correct,90,90,90,1.0,0.9078,27.55,cached
+squat_correct_043,squat,correct,50,50,50,1.0,0.8248,15.36,cached
+squat_correct_044,squat,correct,123,123,123,1.0,0.9919,37.6,cached
+squat_correct_045,squat,correct,96,96,96,1.0,0.7427,29.38,cached
+squat_correct_046,squat,correct,176,176,176,1.0,0.7933,53.75,cached
+squat_incorrect_001,squat,incorrect,138,138,138,1.0,0.7628,42.17,cached
+squat_incorrect_002,squat,incorrect,99,99,99,1.0,0.7263,30.29,cached
+squat_incorrect_003,squat,incorrect,93,93,93,1.0,0.7365,28.46,cached
+squat_incorrect_004,squat,incorrect,62,62,62,1.0,0.853,19.02,cached
+squat_incorrect_005,squat,incorrect,84,84,84,1.0,0.9537,25.72,cached
+squat_incorrect_006,squat,incorrect,81,81,81,1.0,0.7354,24.8,cached
+squat_incorrect_007,squat,incorrect,90,90,90,1.0,0.8069,27.55,cached
+squat_incorrect_008,squat,incorrect,87,87,87,1.0,0.9688,26.63,cached
+squat_incorrect_009,squat,incorrect,66,66,66,1.0,0.9543,20.23,cached
+squat_incorrect_010,squat,incorrect,87,87,87,1.0,0.8471,26.63,cached
+squat_incorrect_011,squat,incorrect,75,75,75,1.0,0.8018,22.98,cached
+squat_incorrect_012,squat,incorrect,155,155,155,1.0,0.8784,47.35,cached
+squat_incorrect_013,squat,incorrect,152,152,152,1.0,0.6884,46.44,cached
+squat_incorrect_014,squat,incorrect,103,103,103,1.0,0.7118,31.51,cached
+squat_incorrect_015,squat,incorrect,56,56,56,1.0,0.9603,17.19,cached
+squat_incorrect_016,squat,incorrect,57,57,57,1.0,0.965,17.49,cached
+squat_incorrect_017,squat,incorrect,80,80,80,1.0,0.828,24.5,cached
+squat_incorrect_018,squat,incorrect,150,150,150,1.0,0.684,45.83,cached
+squat_incorrect_019,squat,incorrect,66,66,66,1.0,0.9627,20.23,cached
+squat_incorrect_020,squat,incorrect,53,53,53,1.0,0.9957,16.27,cached
+squat_incorrect_021,squat,incorrect,112,112,112,1.0,0.7132,34.25,cached
+squat_incorrect_022,squat,incorrect,139,139,139,1.0,0.9957,42.48,cached
+squat_incorrect_023,squat,incorrect,93,93,93,1.0,0.7565,28.46,extracted
+squat_incorrect_024,squat,incorrect,75,75,75,1.0,0.9913,22.98,extracted
+squat_incorrect_025,squat,incorrect,138,138,138,1.0,0.7348,42.17,extracted
+t_bar_row_correct_001,t bar row,correct,67,67,67,1.0,0.7965,20.54,cached
+t_bar_row_correct_002,t bar row,correct,34,34,34,1.0,0.9009,10.48,cached
+t_bar_row_correct_003,t bar row,correct,57,57,57,1.0,0.8244,17.49,cached
+t_bar_row_correct_004,t bar row,correct,97,97,97,1.0,0.7313,29.68,cached
+t_bar_row_correct_005,t bar row,correct,44,44,44,1.0,0.8576,13.53,cached
+t_bar_row_correct_006,t bar row,correct,53,53,53,1.0,0.7304,16.27,cached
+t_bar_row_correct_007,t bar row,correct,57,57,57,1.0,0.8611,17.49,cached
+t_bar_row_correct_008,t bar row,correct,39,39,39,1.0,0.958,12.01,cached
+t_bar_row_correct_009,t bar row,correct,60,60,60,1.0,0.7271,18.41,cached
+t_bar_row_correct_010,t bar row,correct,66,66,66,1.0,0.9047,20.23,cached
+t_bar_row_correct_011,t bar row,correct,61,61,52,0.8525,0.7371,18.71,cached
+t_bar_row_correct_012,t bar row,correct,54,54,54,1.0,0.96,16.58,cached
+t_bar_row_correct_013,t bar row,correct,32,32,32,1.0,0.7114,9.88,cached
+t_bar_row_correct_014,t bar row,correct,84,84,83,0.9881,0.6152,25.72,cached
+t_bar_row_correct_015,t bar row,correct,93,93,93,1.0,0.6901,28.46,cached
+t_bar_row_correct_016,t bar row,correct,109,109,109,1.0,0.7218,33.34,cached
+t_bar_row_correct_017,t bar row,correct,77,77,72,0.9351,0.6801,23.59,cached
+t_bar_row_correct_018,t bar row,correct,69,69,69,1.0,0.9355,21.15,cached
+t_bar_row_correct_019,t bar row,correct,49,49,49,1.0,0.8961,15.05,cached
+t_bar_row_correct_020,t bar row,correct,86,86,86,1.0,0.9297,26.33,cached
+t_bar_row_correct_021,t bar row,correct,86,86,86,1.0,0.8506,26.33,cached
+t_bar_row_correct_022,t bar row,correct,35,35,35,1.0,0.8245,10.79,cached
+t_bar_row_correct_023,t bar row,correct,34,34,34,1.0,0.8437,10.48,cached
+t_bar_row_correct_024,t bar row,correct,90,90,90,1.0,0.7767,27.55,cached
+t_bar_row_correct_025,t bar row,correct,60,60,60,1.0,0.9111,18.41,cached
+t_bar_row_correct_026,t bar row,correct,75,75,75,1.0,0.9019,22.98,cached
+t_bar_row_correct_027,t bar row,correct,135,135,135,1.0,0.7287,41.26,cached
+t_bar_row_correct_028,t bar row,correct,120,120,120,1.0,0.9281,36.69,cached
+t_bar_row_correct_029,t bar row,correct,101,101,101,1.0,0.9235,30.9,cached
+t_bar_row_correct_030,t bar row,correct,60,60,60,1.0,0.7457,18.41,cached
+t_bar_row_correct_031,t bar row,correct,60,60,60,1.0,0.8203,18.41,cached
+t_bar_row_correct_032,t bar row,correct,66,66,66,1.0,0.8139,20.23,cached
+t_bar_row_correct_033,t bar row,correct,53,53,53,1.0,0.8244,16.27,cached
+t_bar_row_correct_034,t bar row,correct,80,80,80,1.0,0.8711,24.5,cached
+t_bar_row_correct_035,t bar row,correct,65,65,65,1.0,0.8149,19.93,cached
+t_bar_row_correct_036,t bar row,correct,125,125,125,1.0,0.7678,38.21,cached
+t_bar_row_correct_037,t bar row,correct,61,61,61,1.0,0.7556,18.71,cached
+t_bar_row_correct_038,t bar row,correct,121,121,121,1.0,0.747,36.99,cached
+t_bar_row_correct_039,t bar row,correct,35,35,35,1.0,0.8022,10.79,cached
+t_bar_row_correct_040,t bar row,correct,156,156,156,1.0,0.7419,47.66,cached
+t_bar_row_correct_041,t bar row,correct,56,56,56,1.0,0.858,17.19,cached
+t_bar_row_correct_042,t bar row,correct,57,57,57,1.0,0.8448,17.49,cached
+t_bar_row_incorrect_001,t bar row,incorrect,52,52,52,1.0,0.7896,15.97,cached
+t_bar_row_incorrect_002,t bar row,incorrect,65,65,65,1.0,0.711,19.93,cached
+t_bar_row_incorrect_003,t bar row,incorrect,44,44,44,1.0,0.7705,13.53,cached
+t_bar_row_incorrect_004,t bar row,incorrect,45,45,45,1.0,0.7555,13.84,cached
+t_bar_row_incorrect_005,t bar row,incorrect,75,75,75,1.0,0.7549,22.98,cached
+t_bar_row_incorrect_006,t bar row,incorrect,57,57,57,1.0,0.8237,17.49,cached
+t_bar_row_incorrect_007,t bar row,incorrect,51,51,51,1.0,0.8409,15.66,cached
+t_bar_row_incorrect_008,t bar row,incorrect,46,46,46,1.0,0.636,14.14,cached
+t_bar_row_incorrect_009,t bar row,incorrect,39,39,39,1.0,0.7295,12.01,cached
+t_bar_row_incorrect_010,t bar row,incorrect,38,38,38,1.0,0.8209,11.7,cached
+t_bar_row_incorrect_011,t bar row,incorrect,33,33,33,1.0,0.7344,10.18,cached
+t_bar_row_incorrect_012,t bar row,incorrect,55,55,55,1.0,0.9361,16.88,cached
+t_bar_row_incorrect_013,t bar row,incorrect,38,38,38,1.0,0.7992,11.7,cached
+t_bar_row_incorrect_014,t bar row,incorrect,34,34,34,1.0,0.714,10.48,cached
+t_bar_row_incorrect_015,t bar row,incorrect,42,42,41,0.9762,0.7793,12.92,cached
+t_bar_row_incorrect_016,t bar row,incorrect,36,36,36,1.0,0.7536,11.09,cached
+t_bar_row_incorrect_017,t bar row,incorrect,30,30,30,1.0,0.8118,9.27,cached

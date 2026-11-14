@@ -1,0 +1,522 @@
+segment_id,video_id,exercise,source,form_label,error_reason,video_path,start_frame,end_frame,duration_sec,num_frames,fps
+pull_up_correct_001,pull_up_src_001,pull up,EFA,correct,none,data_videos/pull_up/pull_up_correct_001.mp4,0,38,1.63,39,23.98
+pull_up_correct_002,pull_up_src_002,pull up,EFA,correct,none,data_videos/pull_up/pull_up_correct_002.mp4,0,59,2.0,60,29.97
+pull_up_correct_003,pull_up_src_002,pull up,EFA,correct,none,data_videos/pull_up/pull_up_correct_003.mp4,0,83,2.8,84,29.97
+pull_up_correct_004,pull_up_src_002,pull up,EFA,correct,none,data_videos/pull_up/pull_up_correct_004.mp4,0,69,2.34,70,29.97
+pull_up_correct_005,pull_up_src_005,pull up,EFA,correct,none,data_videos/pull_up/pull_up_correct_005.mp4,0,107,3.6,108,29.97
+pull_up_correct_006,pull_up_src_006,pull up,EFA,correct,none,data_videos/pull_up/pull_up_correct_006.mp4,0,43,1.84,44,23.98
+pull_up_correct_007,pull_up_src_007,pull up,EFA,correct,none,data_videos/pull_up/pull_up_correct_007.mp4,0,119,4.0,120,29.97
+pull_up_correct_008,pull_up_src_008,pull up,EFA,correct,none,data_videos/pull_up/pull_up_correct_008.mp4,0,78,2.64,79,29.97
+pull_up_correct_009,pull_up_src_009,pull up,EFA,correct,none,data_videos/pull_up/pull_up_correct_009.mp4,0,48,1.63,49,29.97
+pull_up_correct_010,pull_up_src_010,pull up,EFA,correct,none,data_videos/pull_up/pull_up_correct_010.mp4,0,212,7.1,213,30.0
+pull_up_correct_011,pull_up_src_011,pull up,EFA,correct,none,data_videos/pull_up/pull_up_correct_011.mp4,0,122,4.1,123,29.97
+pull_up_correct_012,pull_up_src_012,pull up,EFA,correct,none,data_videos/pull_up/pull_up_correct_012.mp4,0,71,2.4,72,29.97
+pull_up_correct_013,pull_up_src_013,pull up,EFA,correct,none,data_videos/pull_up/pull_up_correct_013.mp4,0,83,3.5,84,23.98
+pull_up_correct_014,pull_up_src_014,pull up,EFA,correct,none,data_videos/pull_up/pull_up_correct_014.mp4,0,65,2.75,66,23.98
+pull_up_correct_015,pull_up_src_015,pull up,EFA,correct,none,data_videos/pull_up/pull_up_correct_015.mp4,0,92,3.1,93,30.0
+pull_up_correct_016,pull_up_src_016,pull up,EFA,correct,none,data_videos/pull_up/pull_up_correct_016.mp4,0,125,4.2,126,30.0
+pull_up_correct_017,pull_up_src_016,pull up,EFA,correct,none,data_videos/pull_up/pull_up_correct_017.mp4,0,80,2.7,81,30.0
+pull_up_correct_018,pull_up_src_025,pull up,GYMED,correct,none,data_videos/pull_up/pull_up_correct_018.mp4,0,101,4.08,102,25.0
+pull_up_correct_019,pull_up_src_026,pull up,GYMED,correct,none,data_videos/pull_up/pull_up_correct_019.mp4,0,77,2.6,78,30.0
+pull_up_correct_020,pull_up_src_027,pull up,GYMED,correct,none,data_videos/pull_up/pull_up_correct_020.mp4,0,79,2.67,80,29.97
+pull_up_correct_021,pull_up_src_028,pull up,GYMED,correct,none,data_videos/pull_up/pull_up_correct_021.mp4,0,97,3.27,98,29.97
+pull_up_correct_022,pull_up_src_029,pull up,GYMED,correct,none,data_videos/pull_up/pull_up_correct_022.mp4,0,89,3.0,90,29.97
+pull_up_correct_023,pull_up_src_030,pull up,GYMED,correct,none,data_videos/pull_up/pull_up_correct_023.mp4,0,172,2.88,173,60.0
+pull_up_correct_024,pull_up_src_030,pull up,GYMED,correct,none,data_videos/pull_up/pull_up_correct_024.mp4,0,56,1.9,57,29.97
+pull_up_correct_025,pull_up_src_002,pull up,GYMED,correct,none,data_videos/pull_up/pull_up_correct_025.mp4,0,71,2.4,72,29.97
+pull_up_correct_026,pull_up_src_033,pull up,GYMED,correct,none,data_videos/pull_up/pull_up_correct_026.mp4,0,85,3.44,86,25.0
+pull_up_correct_027,pull_up_src_002,pull up,GYMED,correct,none,data_videos/pull_up/pull_up_correct_027.mp4,0,67,2.27,68,29.97
+pull_up_correct_028,pull_up_src_035,pull up,GYMED,correct,none,data_videos/pull_up/pull_up_correct_028.mp4,0,41,1.75,42,24.0
+pull_up_correct_029,pull_up_src_036,pull up,GYMED,correct,none,data_videos/pull_up/pull_up_correct_029.mp4,0,37,1.58,38,23.98
+pull_up_correct_030,pull_up_src_030,pull up,GYMED,correct,none,data_videos/pull_up/pull_up_correct_030.mp4,0,80,2.7,81,29.97
+pull_up_correct_031,pull_up_src_039,pull up,YouTube,correct,none,data_videos/pull_up/pull_up_correct_031.mp4,0,75,2.53,76,30.0
+pull_up_correct_032,pull_up_src_039,pull up,YouTube,correct,none,data_videos/pull_up/pull_up_correct_032.mp4,0,64,2.17,65,30.0
+pull_up_correct_033,pull_up_src_042,pull up,YouTube,correct,none,data_videos/pull_up/pull_up_correct_033.mp4,0,87,2.93,88,30.0
+pull_up_correct_034,pull_up_src_045,pull up,YouTube,correct,none,data_videos/pull_up/pull_up_correct_034.mp4,0,45,1.53,46,30.0
+pull_up_correct_035,pull_up_src_046,pull up,YouTube,correct,none,data_videos/pull_up/pull_up_correct_035.mp4,0,59,2.0,60,30.0
+pull_up_correct_036,pull_up_src_046,pull up,YouTube,correct,none,data_videos/pull_up/pull_up_correct_036.mp4,0,92,3.1,93,30.0
+pull_up_correct_037,pull_up_src_049,pull up,YouTube,correct,none,data_videos/pull_up/pull_up_correct_037.mp4,0,149,5.0,150,30.0
+pull_up_correct_038,pull_up_src_049,pull up,YouTube,correct,none,data_videos/pull_up/pull_up_correct_038.mp4,0,89,3.0,90,30.0
+pull_up_correct_039,pull_up_src_052,pull up,YouTube,correct,none,data_videos/pull_up/pull_up_correct_039.mp4,0,81,2.73,82,30.0
+pull_up_correct_040,pull_up_src_054,pull up,YouTube,correct,none,data_videos/pull_up/pull_up_correct_040.mp4,0,88,2.97,89,30.0
+pull_up_correct_041,pull_up_src_054,pull up,YouTube,correct,none,data_videos/pull_up/pull_up_correct_041.mp4,0,72,2.43,73,30.0
+pull_up_incorrect_001,pull_up_src_002,pull up,EFA,incorrect,partial_rom,data_videos/pull_up/pull_up_incorrect_001.mp4,0,38,1.3,39,29.97
+pull_up_incorrect_002,pull_up_src_002,pull up,EFA,incorrect,partial_rom,data_videos/pull_up/pull_up_incorrect_002.mp4,0,50,1.7,51,29.97
+pull_up_incorrect_003,pull_up_src_002,pull up,EFA,incorrect,unequal_pull,data_videos/pull_up/pull_up_incorrect_003.mp4,0,65,2.2,66,29.97
+pull_up_incorrect_004,pull_up_src_010,pull up,EFA,incorrect,partial_rom,data_videos/pull_up/pull_up_incorrect_004.mp4,0,33,1.13,34,30.0
+pull_up_incorrect_005,pull_up_src_010,pull up,EFA,incorrect,partial_rom,data_videos/pull_up/pull_up_incorrect_005.mp4,0,41,1.4,42,30.0
+pull_up_incorrect_006,pull_up_src_011,pull up,EFA,incorrect,kipping,data_videos/pull_up/pull_up_incorrect_006.mp4,0,57,1.94,58,29.97
+pull_up_incorrect_007,pull_up_src_014,pull up,EFA,incorrect,unequal_pull,data_videos/pull_up/pull_up_incorrect_007.mp4,0,81,3.42,82,23.98
+pull_up_incorrect_008,pull_up_src_038,pull up,YouTube,incorrect,partial_rom,data_videos/pull_up/pull_up_incorrect_008.mp4,0,59,2.0,60,30.0
+pull_up_incorrect_009,pull_up_src_040,pull up,YouTube,incorrect,shoulders_shrugging,data_videos/pull_up/pull_up_incorrect_009.mp4,0,42,1.43,43,30.0
+pull_up_incorrect_010,pull_up_src_041,pull up,YouTube,incorrect,using_momentum,data_videos/pull_up/pull_up_incorrect_010.mp4,0,46,1.57,47,30.0
+pull_up_incorrect_011,pull_up_src_039,pull up,YouTube,incorrect,shoulders_shrugging,data_videos/pull_up/pull_up_incorrect_011.mp4,0,59,2.0,60,30.0
+pull_up_incorrect_012,pull_up_src_039,pull up,YouTube,incorrect,using_momentum,data_videos/pull_up/pull_up_incorrect_012.mp4,0,59,2.0,60,30.0
+pull_up_incorrect_013,pull_up_src_039,pull up,YouTube,incorrect,partial_rom,data_videos/pull_up/pull_up_incorrect_013.mp4,0,42,1.43,43,30.0
+pull_up_incorrect_014,pull_up_src_039,pull up,YouTube,incorrect,shoulders_shrugging,data_videos/pull_up/pull_up_incorrect_014.mp4,0,50,1.7,51,30.0
+pull_up_incorrect_015,pull_up_src_047,pull up,YouTube,incorrect,uncontrolled_eccentric,data_videos/pull_up/pull_up_incorrect_015.mp4,0,119,4.0,120,30.0
+pull_up_incorrect_016,pull_up_src_048,pull up,YouTube,incorrect,using_momentum,data_videos/pull_up/pull_up_incorrect_016.mp4,0,29,1.0,30,30.0
+pull_up_incorrect_017,pull_up_src_048,pull up,YouTube,incorrect,using_momentum,data_videos/pull_up/pull_up_incorrect_017.mp4,0,48,1.63,49,30.0
+pull_up_incorrect_018,pull_up_src_050,pull up,YouTube,incorrect,partial_rom,data_videos/pull_up/pull_up_incorrect_018.mp4,0,119,4.0,120,30.0
+pull_up_incorrect_019,pull_up_src_051,pull up,YouTube,incorrect,shoulders_shrugging,data_videos/pull_up/pull_up_incorrect_019.mp4,0,104,3.5,105,30.0
+pull_up_incorrect_020,pull_up_src_053,pull up,YouTube,incorrect,neck_extension,data_videos/pull_up/pull_up_incorrect_020.mp4,0,37,1.27,38,30.0
+pull_up_incorrect_021,pull_up_src_055,pull up,YouTube,incorrect,shoulders_shrugging,data_videos/pull_up/pull_up_incorrect_021.mp4,0,179,6.0,180,30.0
+pull_up_incorrect_022,pull_up_src_056,pull up,YouTube,incorrect,uncontrolled_eccentric,data_videos/pull_up/pull_up_incorrect_022.mp4,0,59,2.0,60,30.0
+pull_up_incorrect_023,pull_up_src_056,pull up,YouTube,incorrect,using_momentum,data_videos/pull_up/pull_up_incorrect_023.mp4,0,59,2.0,60,30.0
+pull_up_incorrect_024,pull_up_src_057,pull up,YouTube,incorrect,partial_rom,data_videos/pull_up/pull_up_incorrect_024.mp4,0,60,2.03,61,30.0
+pull_up_incorrect_025,pull_up_src_058,pull up,YouTube,incorrect,using_momentum,data_videos/pull_up/pull_up_incorrect_025.mp4,0,53,1.8,54,30.0
+pull_up_incorrect_026,pull_up_src_059,pull up,YouTube,incorrect,partial_rom,data_videos/pull_up/pull_up_incorrect_026.mp4,0,41,1.4,42,30.0
+pull_up_incorrect_027,pull_up_src_060,pull up,YouTube,incorrect,partial_rom,data_videos/pull_up/pull_up_incorrect_027.mp4,0,47,1.6,48,30.0
+pull_up_incorrect_028,pull_up_src_059,pull up,YouTube,incorrect,using_momentum,data_videos/pull_up/pull_up_incorrect_028.mp4,0,56,1.9,57,30.0
+pull_up_incorrect_029,pull_up_src_060,pull up,YouTube,incorrect,using_momentum,data_videos/pull_up/pull_up_incorrect_029.mp4,0,68,2.3,69,30.0
+pull_up_incorrect_030,pull_up_src_060,pull up,YouTube,incorrect,unequal_pull,data_videos/pull_up/pull_up_incorrect_030.mp4,0,68,2.3,69,30.0
+push_up_correct_001,push_up_src_001,push-up,EFA,correct,none,data_videos/push_up/push_up_correct_001.mp4,0,60,2.54,61,23.98
+push_up_correct_002,push_up_src_002,push-up,EFA,correct,none,data_videos/push_up/push_up_correct_002.mp4,0,101,3.4,102,29.97
+push_up_correct_003,push_up_src_002,push-up,EFA,correct,none,data_videos/push_up/push_up_correct_003.mp4,0,104,3.5,105,29.97
+push_up_correct_004,push_up_src_004,push-up,EFA,correct,none,data_videos/push_up/push_up_correct_004.mp4,0,89,3.0,90,29.97
+push_up_correct_005,push_up_src_005,push-up,EFA,correct,none,data_videos/push_up/push_up_correct_005.mp4,0,43,1.84,44,23.98
+push_up_correct_006,push_up_src_006,push-up,EFA,correct,none,data_videos/push_up/push_up_correct_006.mp4,0,35,1.5,36,23.98
+push_up_correct_007,push_up_src_008,push-up,EFA,correct,none,data_videos/push_up/push_up_correct_007.mp4,0,98,3.3,99,29.97
+push_up_correct_008,push_up_src_007,push-up,EFA,correct,none,data_videos/push_up/push_up_correct_008.mp4,0,31,1.33,32,24.0
+push_up_correct_009,push_up_src_011,push-up,EFA,correct,none,data_videos/push_up/push_up_correct_009.mp4,0,64,2.6,65,25.0
+push_up_correct_010,push_up_src_012,push-up,EFA,correct,none,data_videos/push_up/push_up_correct_010.mp4,0,40,1.64,41,25.0
+push_up_correct_011,push_up_src_017,push-up,GYMED,correct,none,data_videos/push_up/push_up_correct_011.mp4,0,57,1.94,58,29.97
+push_up_correct_012,push_up_src_018,push-up,GYMED,correct,none,data_videos/push_up/push_up_correct_012.mp4,0,53,1.8,54,29.97
+push_up_correct_013,push_up_src_017,push-up,GYMED,correct,none,data_videos/push_up/push_up_correct_013.mp4,0,70,2.37,71,29.97
+push_up_correct_014,push_up_src_017,push-up,GYMED,correct,none,data_videos/push_up/push_up_correct_014.mp4,0,55,1.87,56,29.97
+push_up_correct_015,push_up_src_021,push-up,GYMED,correct,none,data_videos/push_up/push_up_correct_015.mp4,0,90,3.04,91,29.97
+push_up_correct_016,push_up_src_022,push-up,GYMED,correct,none,data_videos/push_up/push_up_correct_016.mp4,0,83,2.8,84,29.97
+push_up_correct_017,push_up_src_023,push-up,GYMED,correct,none,data_videos/push_up/push_up_correct_017.mp4,0,105,3.54,106,29.97
+push_up_correct_018,push_up_src_017,push-up,GYMED,correct,none,data_videos/push_up/push_up_correct_018.mp4,0,65,2.2,66,29.97
+push_up_correct_019,push_up_src_018,push-up,GYMED,correct,none,data_videos/push_up/push_up_correct_019.mp4,0,24,0.83,25,29.97
+push_up_correct_020,push_up_src_026,push-up,GYMED,correct,none,data_videos/push_up/push_up_correct_020.mp4,0,51,1.74,52,29.97
+push_up_correct_021,push_up_src_027,push-up,GYMED,correct,none,data_videos/push_up/push_up_correct_021.mp4,0,70,2.37,71,29.97
+push_up_correct_022,push_up_src_028,push-up,GYMED,correct,none,data_videos/push_up/push_up_correct_022.mp4,0,81,2.74,82,29.97
+push_up_correct_023,push_up_src_029,push-up,GYMED,correct,none,data_videos/push_up/push_up_correct_023.mp4,0,58,1.97,59,29.97
+push_up_correct_024,push_up_src_018,push-up,GYMED,correct,none,data_videos/push_up/push_up_correct_024.mp4,0,33,1.13,34,29.97
+push_up_correct_025,push_up_src_031,push-up,GYMED,correct,none,data_videos/push_up/push_up_correct_025.mp4,0,55,1.87,56,29.97
+push_up_correct_026,push_up_src_033,push-up,YouTube,correct,none,data_videos/push_up/push_up_correct_026.mp4,0,58,1.97,59,30.0
+push_up_correct_027,push_up_src_034,push-up,YouTube,correct,none,data_videos/push_up/push_up_correct_027.mp4,0,59,2.0,60,30.0
+push_up_correct_028,push_up_src_035,push-up,YouTube,correct,none,data_videos/push_up/push_up_correct_028.mp4,0,42,1.43,43,30.0
+push_up_correct_029,push_up_src_036,push-up,YouTube,correct,none,data_videos/push_up/push_up_correct_029.mp4,0,126,4.23,127,30.0
+push_up_correct_030,push_up_src_037,push-up,YouTube,correct,none,data_videos/push_up/push_up_correct_030.mp4,0,135,4.53,136,30.0
+push_up_correct_031,push_up_src_039,push-up,YouTube,correct,none,data_videos/push_up/push_up_correct_031.mp4,0,47,1.6,48,30.0
+push_up_correct_032,push_up_src_041,push-up,YouTube,correct,none,data_videos/push_up/push_up_correct_032.mp4,0,69,2.33,70,30.0
+push_up_correct_033,push_up_src_041,push-up,YouTube,correct,none,data_videos/push_up/push_up_correct_033.mp4,0,65,2.2,66,30.0
+push_up_correct_034,push_up_src_042,push-up,YouTube,correct,none,data_videos/push_up/push_up_correct_034.mp4,0,58,1.97,59,30.0
+push_up_correct_035,push_up_src_043,push-up,YouTube,correct,none,data_videos/push_up/push_up_correct_035.mp4,0,111,3.73,112,30.0
+push_up_correct_036,push_up_src_044,push-up,YouTube,correct,none,data_videos/push_up/push_up_correct_036.mp4,0,59,2.0,60,30.0
+push_up_correct_037,push_up_src_048,push-up,YouTube,correct,none,data_videos/push_up/push_up_correct_037.mp4,0,89,3.0,90,30.0
+push_up_correct_038,push_up_src_051,push-up,YouTube,correct,none,data_videos/push_up/push_up_correct_038.mp4,0,89,3.0,90,30.0
+push_up_correct_039,push_up_src_053,push-up,YouTube,correct,none,data_videos/push_up/push_up_correct_039.mp4,0,61,2.07,62,30.0
+push_up_correct_040,push_up_src_056,push-up,YouTube,correct,none,data_videos/push_up/push_up_correct_040.mp4,0,64,2.17,65,30.0
+push_up_correct_041,push_up_src_057,push-up,YouTube,correct,none,data_videos/push_up/push_up_correct_041.mp4,0,102,3.43,103,30.0
+push_up_incorrect_001,push_up_src_007,push-up,EFA,incorrect,partial_rom,data_videos/push_up/push_up_incorrect_001.mp4,0,40,1.71,41,24.0
+push_up_incorrect_002,push_up_src_010,push-up,EFA,incorrect,partial_rom,data_videos/push_up/push_up_incorrect_002.mp4,0,94,3.8,95,25.0
+push_up_incorrect_003,push_up_src_002,push-up,EFA,incorrect,elbow_excessive_flare,data_videos/push_up/push_up_incorrect_003.mp4,0,26,0.9,27,29.97
+push_up_incorrect_004,push_up_src_002,push-up,EFA,incorrect,waist_sagging,data_videos/push_up/push_up_incorrect_004.mp4,0,59,2.0,60,29.97
+push_up_incorrect_005,push_up_src_007,push-up,EFA,incorrect,hips_too_high,data_videos/push_up/push_up_incorrect_005.mp4,0,26,1.12,27,24.0
+push_up_incorrect_006,push_up_src_016,push-up,EFA,incorrect,hips_too_high,data_videos/push_up/push_up_incorrect_006.mp4,0,65,2.75,66,23.98
+push_up_incorrect_007,push_up_src_032,push-up,YouTube,incorrect,elbow_excessive_flare,data_videos/push_up/push_up_incorrect_007.mp4,0,89,3.0,90,30.0
+push_up_incorrect_008,push_up_src_038,push-up,YouTube,incorrect,waist_sagging,data_videos/push_up/push_up_incorrect_008.mp4,0,49,1.67,50,30.0
+push_up_incorrect_009,push_up_src_038,push-up,YouTube,incorrect,elbow_excessive_flare,data_videos/push_up/push_up_incorrect_009.mp4,0,75,2.53,76,30.0
+push_up_incorrect_010,push_up_src_040,push-up,YouTube,incorrect,waist_sagging,data_videos/push_up/push_up_incorrect_010.mp4,0,59,2.0,60,30.0
+push_up_incorrect_011,push_up_src_042,push-up,YouTube,incorrect,elbow_excessive_flare,data_videos/push_up/push_up_incorrect_011.mp4,0,59,2.0,60,30.0
+push_up_incorrect_012,push_up_src_045,push-up,YouTube,incorrect,snaking_push_up,data_videos/push_up/push_up_incorrect_012.mp4,0,89,3.0,90,30.0
+push_up_incorrect_013,push_up_src_046,push-up,YouTube,incorrect,hips_too_high,data_videos/push_up/push_up_incorrect_013.mp4,0,70,2.37,71,30.0
+push_up_incorrect_014,push_up_src_046,push-up,YouTube,incorrect,waist_sagging,data_videos/push_up/push_up_incorrect_014.mp4,0,68,2.3,69,30.0
+push_up_incorrect_015,push_up_src_047,push-up,YouTube,incorrect,hips_too_high,data_videos/push_up/push_up_incorrect_015.mp4,0,56,1.9,57,30.0
+push_up_incorrect_016,push_up_src_049,push-up,YouTube,incorrect,waist_sagging,data_videos/push_up/push_up_incorrect_016.mp4,0,33,1.13,34,30.0
+push_up_incorrect_017,push_up_src_050,push-up,YouTube,incorrect,elbow_excessive_flare,data_videos/push_up/push_up_incorrect_017.mp4,0,88,2.97,89,30.0
+push_up_incorrect_018,push_up_src_050,push-up,YouTube,incorrect,hips_too_high,data_videos/push_up/push_up_incorrect_018.mp4,0,82,2.77,83,30.0
+push_up_incorrect_019,push_up_src_050,push-up,YouTube,incorrect,waist_sagging,data_videos/push_up/push_up_incorrect_019.mp4,0,77,2.6,78,30.0
+push_up_incorrect_020,push_up_src_050,push-up,YouTube,incorrect,snaking_push_up,data_videos/push_up/push_up_incorrect_020.mp4,0,68,2.3,69,30.0
+push_up_incorrect_021,push_up_src_052,push-up,YouTube,incorrect,waist_sagging,data_videos/push_up/push_up_incorrect_021.mp4,0,53,1.8,54,30.0
+push_up_incorrect_022,push_up_src_052,push-up,YouTube,incorrect,waist_sagging,data_videos/push_up/push_up_incorrect_022.mp4,0,60,2.03,61,30.0
+push_up_incorrect_023,push_up_src_054,push-up,YouTube,incorrect,elbow_excessive_flare,data_videos/push_up/push_up_incorrect_023.mp4,0,41,1.4,42,30.0
+push_up_incorrect_024,push_up_src_055,push-up,YouTube,incorrect,elbow_excessive_flare,data_videos/push_up/push_up_incorrect_024.mp4,0,44,1.5,45,30.0
+push_up_incorrect_025,push_up_src_058,push-up,YouTube,incorrect,partial_rom,data_videos/push_up/push_up_incorrect_025.mp4,0,71,2.4,72,30.0
+push_up_incorrect_026,push_up_src_058,push-up,YouTube,incorrect,elbow_excessive_flare,data_videos/push_up/push_up_incorrect_026.mp4,0,92,3.1,93,30.0
+push_up_incorrect_027,push_up_src_058,push-up,YouTube,incorrect,waist_sagging,data_videos/push_up/push_up_incorrect_027.mp4,0,35,1.2,36,30.0
+push_up_incorrect_028,push_up_src_058,push-up,YouTube,incorrect,waist_sagging,data_videos/push_up/push_up_incorrect_028.mp4,0,37,1.27,38,30.0
+push_up_incorrect_029,push_up_src_059,push-up,YouTube,incorrect,waist_sagging,data_videos/push_up/push_up_incorrect_029.mp4,0,89,3.0,90,30.0
+push_up_incorrect_030,push_up_src_059,push-up,YouTube,incorrect,hips_too_high,data_videos/push_up/push_up_incorrect_030.mp4,0,119,4.0,120,30.0
+push_up_incorrect_031,push_up_src_059,push-up,YouTube,incorrect,partial_rom,data_videos/push_up/push_up_incorrect_031.mp4,0,44,1.5,45,30.0
+push_up_incorrect_032,push_up_src_060,push-up,YouTube,incorrect,elbow_excessive_flare,data_videos/push_up/push_up_incorrect_032.mp4,0,59,2.0,60,30.0
+push_up_incorrect_033,push_up_src_060,push-up,YouTube,incorrect,waist_sagging,data_videos/push_up/push_up_incorrect_033.mp4,0,119,4.0,120,30.0
+push_up_incorrect_034,push_up_src_060,push-up,YouTube,incorrect,partial_rom,data_videos/push_up/push_up_incorrect_034.mp4,0,37,1.27,38,30.0
+push_up_incorrect_035,push_up_src_061,push-up,YouTube,incorrect,waist_sagging,data_videos/push_up/push_up_incorrect_035.mp4,0,47,1.6,48,30.0
+push_up_incorrect_036,push_up_src_044,push-up,YouTube,incorrect,waist_sagging,data_videos/push_up/push_up_incorrect_036.mp4,0,41,1.4,42,30.0
+push_up_incorrect_037,push_up_src_062,push-up,YouTube,incorrect,elbow_excessive_flare,data_videos/push_up/push_up_incorrect_037.mp4,0,55,1.87,56,30.0
+push_up_incorrect_038,push_up_src_044,push-up,YouTube,incorrect,elbow_excessive_flare,data_videos/push_up/push_up_incorrect_038.mp4,0,33,1.13,34,30.0
+push_up_incorrect_039,push_up_src_044,push-up,YouTube,incorrect,partial_rom,data_videos/push_up/push_up_incorrect_039.mp4,0,31,1.07,32,30.0
+leg_extension_correct_001,leg_extension_src_001,leg extension,GYMED,correct,none,data_videos/leg_extension/leg_extension_correct_001.mp4,0,68,2.88,69,23.98
+leg_extension_correct_002,leg_extension_src_002,leg extension,GYMED,correct,none,data_videos/leg_extension/leg_extension_correct_002.mp4,0,75,2.54,76,29.97
+leg_extension_correct_003,leg_extension_src_002,leg extension,GYMED,correct,none,data_videos/leg_extension/leg_extension_correct_003.mp4,0,70,2.37,71,29.97
+leg_extension_correct_004,leg_extension_src_002,leg extension,GYMED,correct,none,data_videos/leg_extension/leg_extension_correct_004.mp4,0,61,2.07,62,29.97
+leg_extension_correct_005,leg_extension_src_005,leg extension,GYMED,correct,none,data_videos/leg_extension/leg_extension_correct_005.mp4,0,51,1.73,52,29.97
+leg_extension_correct_006,leg_extension_src_005,leg extension,GYMED,correct,none,data_videos/leg_extension/leg_extension_correct_006.mp4,0,65,2.2,66,29.97
+leg_extension_correct_007,leg_extension_src_005,leg extension,GYMED,correct,none,data_videos/leg_extension/leg_extension_correct_007.mp4,0,57,1.93,58,29.98
+leg_extension_correct_008,leg_extension_src_008,leg extension,GYMED,correct,none,data_videos/leg_extension/leg_extension_correct_008.mp4,0,129,4.34,130,29.97
+leg_extension_correct_009,leg_extension_src_009,leg extension,GYMED,correct,none,data_videos/leg_extension/leg_extension_correct_009.mp4,0,60,2.03,61,30.0
+leg_extension_correct_010,leg_extension_src_009,leg extension,GYMED,correct,none,data_videos/leg_extension/leg_extension_correct_010.mp4,0,52,1.77,53,30.0
+leg_extension_correct_011,leg_extension_src_009,leg extension,GYMED,correct,none,data_videos/leg_extension/leg_extension_correct_011.mp4,0,70,2.37,71,30.0
+leg_extension_correct_012,leg_extension_src_012,leg extension,GYMED,correct,none,data_videos/leg_extension/leg_extension_correct_012.mp4,0,86,2.9,87,30.0
+leg_extension_correct_013,leg_extension_src_012,leg extension,GYMED,correct,none,data_videos/leg_extension/leg_extension_correct_013.mp4,0,69,2.33,70,30.0
+leg_extension_correct_014,leg_extension_src_014,leg extension,GYMED,correct,none,data_videos/leg_extension/leg_extension_correct_014.mp4,0,71,3.0,72,23.98
+leg_extension_correct_016,leg_extension_src_016,leg extension,GYMED,correct,none,data_videos/leg_extension/leg_extension_correct_016.mp4,0,155,6.24,156,25.0
+leg_extension_correct_017,leg_extension_src_017,leg extension,GYMED,correct,none,data_videos/leg_extension/leg_extension_correct_017.mp4,0,92,3.72,93,25.0
+leg_extension_correct_018,leg_extension_src_018,leg extension,GYMED,correct,none,data_videos/leg_extension/leg_extension_correct_018.mp4,0,232,7.77,233,29.97
+leg_extension_correct_019,leg_extension_src_019,leg extension,GYMED,correct,none,data_videos/leg_extension/leg_extension_correct_019.mp4,0,92,3.1,93,30.0
+leg_extension_correct_020,leg_extension_src_020,leg extension,GYMED,correct,none,data_videos/leg_extension/leg_extension_correct_020.mp4,0,61,2.59,62,23.98
+leg_extension_correct_021,leg_extension_src_021,leg extension,GYMED,correct,none,data_videos/leg_extension/leg_extension_correct_021.mp4,0,72,3.04,73,24.0
+leg_extension_correct_022,leg_extension_src_022,leg extension,GYMED,correct,none,data_videos/leg_extension/leg_extension_correct_022.mp4,0,85,2.87,86,29.97
+leg_extension_correct_023,leg_extension_src_023,leg extension,GYMED,correct,none,data_videos/leg_extension/leg_extension_correct_023.mp4,0,74,3.13,75,23.98
+leg_extension_correct_024,leg_extension_src_025,leg extension,YouTube,correct,none,data_videos/leg_extension/leg_extension_correct_024.mp4,0,119,4.0,120,30.0
+leg_extension_correct_025,leg_extension_src_025,leg extension,YouTube,correct,none,data_videos/leg_extension/leg_extension_correct_025.mp4,0,119,4.0,120,30.0
+leg_extension_correct_026,leg_extension_src_027,leg extension,YouTube,correct,none,data_videos/leg_extension/leg_extension_correct_026.mp4,0,89,3.0,90,30.0
+leg_extension_correct_027,leg_extension_src_027,leg extension,YouTube,correct,none,data_videos/leg_extension/leg_extension_correct_027.mp4,0,104,3.5,105,30.0
+leg_extension_correct_028,leg_extension_src_028,leg extension,YouTube,correct,none,data_videos/leg_extension/leg_extension_correct_028.mp4,0,89,3.0,90,30.0
+leg_extension_correct_029,leg_extension_src_029,leg extension,YouTube,correct,none,data_videos/leg_extension/leg_extension_correct_029.mp4,0,89,3.0,90,30.0
+leg_extension_correct_030,leg_extension_src_031,leg extension,YouTube,correct,none,data_videos/leg_extension/leg_extension_correct_030.mp4,0,138,4.63,139,30.0
+leg_extension_correct_031,leg_extension_src_032,leg extension,YouTube,correct,none,data_videos/leg_extension/leg_extension_correct_031.mp4,0,89,3.0,90,30.0
+leg_extension_correct_032,leg_extension_src_035,leg extension,YouTube,correct,none,data_videos/leg_extension/leg_extension_correct_032.mp4,0,70,2.37,71,30.0
+leg_extension_correct_033,leg_extension_src_036,leg extension,YouTube,correct,none,data_videos/leg_extension/leg_extension_correct_033.mp4,0,89,3.0,90,30.0
+leg_extension_correct_034,leg_extension_src_038,leg extension,YouTube,correct,none,data_videos/leg_extension/leg_extension_correct_034.mp4,0,161,5.4,162,30.0
+leg_extension_correct_035,leg_extension_src_039,leg extension,YouTube,correct,none,data_videos/leg_extension/leg_extension_correct_035.mp4,0,110,3.7,111,30.0
+leg_extension_correct_036,leg_extension_src_044,leg extension,YouTube,correct,none,data_videos/leg_extension/leg_extension_correct_036.mp4,0,48,1.63,49,30.0
+leg_extension_correct_037,leg_extension_src_046,leg extension,YouTube,correct,none,data_videos/leg_extension/leg_extension_correct_037.mp4,0,46,1.57,47,30.0
+leg_extension_correct_038,leg_extension_src_051,leg extension,YouTube,correct,none,data_videos/leg_extension/leg_extension_correct_038.mp4,0,89,3.0,90,30.0
+leg_extension_correct_039,leg_extension_src_053,leg extension,YouTube,correct,none,data_videos/leg_extension/leg_extension_correct_039.mp4,0,89,3.0,90,30.0
+leg_extension_correct_040,leg_extension_src_054,leg extension,YouTube,correct,none,data_videos/leg_extension/leg_extension_correct_040.mp4,0,102,3.43,103,30.0
+leg_extension_correct_041,leg_extension_src_055,leg extension,YouTube,correct,none,data_videos/leg_extension/leg_extension_correct_041.mp4,0,74,2.5,75,30.0
+leg_extension_incorrect_001,leg_extension_src_024,leg extension,YouTube,incorrect,partial_rom,data_videos/leg_extension/leg_extension_incorrect_001.mp4,0,33,1.13,34,30.0
+leg_extension_incorrect_002,leg_extension_src_026,leg extension,YouTube,incorrect,torso_swinging,data_videos/leg_extension/leg_extension_incorrect_002.mp4,0,29,1.0,30,30.0
+leg_extension_incorrect_003,leg_extension_src_028,leg extension,YouTube,incorrect,leaning_forward,data_videos/leg_extension/leg_extension_incorrect_003.mp4,0,77,2.6,78,30.0
+leg_extension_incorrect_004,leg_extension_src_030,leg extension,YouTube,incorrect,leaning_forward,data_videos/leg_extension/leg_extension_incorrect_004.mp4,0,49,1.67,50,30.0
+leg_extension_incorrect_005,leg_extension_src_030,leg extension,YouTube,incorrect,partial_rom,data_videos/leg_extension/leg_extension_incorrect_005.mp4,0,29,1.0,30,30.0
+leg_extension_incorrect_006,leg_extension_src_033,leg extension,YouTube,incorrect,partial_rom,data_videos/leg_extension/leg_extension_incorrect_006.mp4,0,21,0.73,22,30.0
+leg_extension_incorrect_007,leg_extension_src_033,leg extension,YouTube,incorrect,torso_swinging,data_videos/leg_extension/leg_extension_incorrect_007.mp4,0,35,1.2,36,30.0
+leg_extension_incorrect_008,leg_extension_src_034,leg extension,YouTube,incorrect,leaning_forward,data_videos/leg_extension/leg_extension_incorrect_008.mp4,0,39,1.33,40,30.0
+leg_extension_incorrect_009,leg_extension_src_037,leg extension,YouTube,incorrect,using_momentum,data_videos/leg_extension/leg_extension_incorrect_009.mp4,0,47,1.6,48,30.0
+leg_extension_incorrect_010,leg_extension_src_040,leg extension,YouTube,incorrect,partial_rom,data_videos/leg_extension/leg_extension_incorrect_010.mp4,0,59,2.0,60,30.0
+leg_extension_incorrect_011,leg_extension_src_041,leg extension,YouTube,incorrect,partial_rom,data_videos/leg_extension/leg_extension_incorrect_011.mp4,0,36,1.23,37,30.0
+leg_extension_incorrect_012,leg_extension_src_042,leg extension,YouTube,incorrect,using_momentum,data_videos/leg_extension/leg_extension_incorrect_012.mp4,0,35,1.2,36,30.0
+leg_extension_incorrect_013,leg_extension_src_043,leg extension,YouTube,incorrect,torso_swinging,data_videos/leg_extension/leg_extension_incorrect_013.mp4,0,59,2.0,60,30.0
+leg_extension_incorrect_014,leg_extension_src_045,leg extension,YouTube,incorrect,using_momentum,data_videos/leg_extension/leg_extension_incorrect_014.mp4,0,36,1.23,37,30.0
+leg_extension_incorrect_015,leg_extension_src_047,leg extension,YouTube,incorrect,leaning_forward,data_videos/leg_extension/leg_extension_incorrect_015.mp4,0,40,1.37,41,30.0
+leg_extension_incorrect_016,leg_extension_src_047,leg extension,YouTube,incorrect,hands_on_knees,data_videos/leg_extension/leg_extension_incorrect_016.mp4,0,39,1.33,40,30.0
+leg_extension_incorrect_017,leg_extension_src_048,leg extension,YouTube,incorrect,leaning_forward,data_videos/leg_extension/leg_extension_incorrect_017.mp4,0,59,2.0,60,30.0
+leg_extension_incorrect_018,leg_extension_src_048,leg extension,YouTube,incorrect,leaning_forward,data_videos/leg_extension/leg_extension_incorrect_018.mp4,0,59,2.0,60,30.0
+leg_extension_incorrect_019,leg_extension_src_049,leg extension,YouTube,incorrect,torso_swinging,data_videos/leg_extension/leg_extension_incorrect_019.mp4,0,37,1.27,38,30.0
+leg_extension_incorrect_020,leg_extension_src_050,leg extension,YouTube,incorrect,partial_rom,data_videos/leg_extension/leg_extension_incorrect_020.mp4,0,38,1.3,39,30.0
+leg_extension_incorrect_021,leg_extension_src_052,leg extension,YouTube,incorrect,leaning_forward,data_videos/leg_extension/leg_extension_incorrect_021.mp4,0,37,1.27,38,30.0
+leg_extension_incorrect_022,leg_extension_src_056,leg extension,YouTube,incorrect,partial_rom,data_videos/leg_extension/leg_extension_incorrect_022.mp4,0,30,1.03,31,30.0
+leg_extension_incorrect_023,leg_extension_src_057,leg extension,YouTube,incorrect,butt_lifting,data_videos/leg_extension/leg_extension_incorrect_023.mp4,0,59,2.0,60,30.0
+leg_extension_incorrect_024,leg_extension_src_058,leg extension,YouTube,incorrect,partial_rom,data_videos/leg_extension/leg_extension_incorrect_024.mp4,0,41,1.4,42,30.0
+leg_extension_incorrect_025,leg_extension_src_059,leg extension,YouTube,incorrect,butt_lifting,data_videos/leg_extension/leg_extension_incorrect_025.mp4,0,53,1.8,54,30.0
+squat_correct_001,squat_src_001,squat,EFA,correct,none,data_videos/squat/squat_correct_001.mp4,0,56,2.38,57,24.0
+squat_correct_002,squat_src_002,squat,EFA,correct,none,data_videos/squat/squat_correct_002.mp4,0,92,3.1,93,29.97
+squat_correct_003,squat_src_003,squat,EFA,correct,none,data_videos/squat/squat_correct_003.mp4,0,82,3.32,83,25.0
+squat_correct_004,squat_src_004,squat,EFA,correct,none,data_videos/squat/squat_correct_004.mp4,0,71,3.0,72,24.0
+squat_correct_005,squat_src_005,squat,EFA,correct,none,data_videos/squat/squat_correct_005.mp4,0,75,3.04,76,25.0
+squat_correct_006,squat_src_005,squat,EFA,correct,none,data_videos/squat/squat_correct_006.mp4,0,88,3.56,89,25.0
+squat_correct_007,squat_src_007,squat,EFA,correct,none,data_videos/squat/squat_correct_007.mp4,0,93,3.92,94,23.98
+squat_correct_008,squat_src_007,squat,EFA,correct,none,data_videos/squat/squat_correct_008.mp4,0,112,4.71,113,23.98
+squat_correct_009,squat_src_007,squat,EFA,correct,none,data_videos/squat/squat_correct_009.mp4,0,104,4.38,105,23.98
+squat_correct_010,squat_src_010,squat,EFA,correct,none,data_videos/squat/squat_correct_010.mp4,0,56,1.9,57,29.97
+squat_correct_011,squat_src_011,squat,EFA,correct,none,data_videos/squat/squat_correct_011.mp4,0,89,3.0,90,29.97
+squat_correct_012,squat_src_012,squat,EFA,correct,none,data_videos/squat/squat_correct_012.mp4,0,110,3.7,111,30.01
+squat_correct_013,squat_src_013,squat,EFA,correct,none,data_videos/squat/squat_correct_013.mp4,0,93,3.74,94,25.17
+squat_correct_014,squat_src_014,squat,EFA,correct,none,data_videos/squat/squat_correct_014.mp4,0,46,1.95,47,24.07
+squat_correct_015,squat_src_015,squat,EFA,correct,none,data_videos/squat/squat_correct_015.mp4,0,64,2.59,65,25.09
+squat_correct_016,squat_src_016,squat,EFA,correct,none,data_videos/squat/squat_correct_016.mp4,0,76,3.06,77,25.16
+squat_correct_017,squat_src_017,squat,EFA,correct,none,data_videos/squat/squat_correct_017.mp4,0,107,3.61,108,29.91
+squat_correct_019,squat_src_019,squat,EFA,correct,none,data_videos/squat/squat_correct_019.mp4,0,109,3.68,110,29.91
+squat_correct_020,squat_src_018,squat,EFA,correct,none,data_videos/squat/squat_correct_020.mp4,0,135,4.55,136,29.9
+squat_correct_021,squat_src_001,squat,EFA,correct,none,data_videos/squat/squat_correct_021.mp4,0,37,1.58,38,24.01
+squat_correct_022,squat_src_025,squat,EFA,correct,none,data_videos/squat/squat_correct_022.mp4,0,52,2.21,53,23.98
+squat_correct_025,squat_src_028,squat,EFA,correct,none,data_videos/squat/squat_correct_025.mp4,0,104,3.5,105,30.0
+squat_correct_026,squat_src_031,squat,EFA,correct,none,data_videos/squat/squat_correct_026.mp4,0,130,4.37,131,30.0
+squat_correct_027,squat_src_032,squat,EFA,correct,none,data_videos/squat/squat_correct_027.mp4,0,58,1.96,59,30.18
+squat_correct_028,squat_src_033,squat,EFA,correct,none,data_videos/squat/squat_correct_028.mp4,0,44,1.51,45,29.88
+squat_correct_029,squat_src_041,squat,YouTube,correct,none,data_videos/squat/squat_correct_029.mp4,0,92,3.1,93,30.0
+squat_correct_030,squat_src_042,squat,YouTube,correct,none,data_videos/squat/squat_correct_030.mp4,0,82,2.77,83,30.0
+squat_correct_031,squat_src_042,squat,YouTube,correct,none,data_videos/squat/squat_correct_031.mp4,0,84,2.83,85,30.0
+squat_correct_032,squat_src_043,squat,YouTube,correct,none,data_videos/squat/squat_correct_032.mp4,0,206,6.9,207,30.0
+squat_correct_033,squat_src_045,squat,YouTube,correct,none,data_videos/squat/squat_correct_033.mp4,0,62,2.1,63,30.0
+squat_correct_034,squat_src_047,squat,YouTube,correct,none,data_videos/squat/squat_correct_034.mp4,0,74,2.5,75,30.0
+squat_correct_035,squat_src_051,squat,YouTube,correct,none,data_videos/squat/squat_correct_035.mp4,0,228,7.63,229,30.0
+squat_correct_036,squat_src_051,squat,YouTube,correct,none,data_videos/squat/squat_correct_036.mp4,0,162,5.43,163,30.0
+squat_correct_037,squat_src_056,squat,YouTube,correct,none,data_videos/squat/squat_correct_037.mp4,0,149,5.0,150,30.0
+squat_correct_038,squat_src_057,squat,YouTube,correct,none,data_videos/squat/squat_correct_038.mp4,0,126,4.23,127,30.0
+squat_correct_039,squat_src_059,squat,YouTube,correct,none,data_videos/squat/squat_correct_039.mp4,0,84,2.83,85,30.0
+squat_correct_040,squat_src_060,squat,YouTube,correct,none,data_videos/squat/squat_correct_040.mp4,0,108,3.63,109,30.0
+squat_correct_041,squat_src_061,squat,YouTube,correct,none,data_videos/squat/squat_correct_041.mp4,0,119,4.0,120,30.0
+squat_correct_042,squat_src_062,squat,YouTube,correct,none,data_videos/squat/squat_correct_042.mp4,0,89,3.6,90,25.0
+squat_correct_043,squat_src_063,squat,YouTube,correct,none,data_videos/squat/squat_correct_043.mp4,0,49,2.0,50,25.0
+squat_correct_044,squat_src_064,squat,YouTube,correct,none,data_videos/squat/squat_correct_044.mp4,0,122,4.1,123,30.0
+squat_correct_045,squat_src_064,squat,YouTube,correct,none,data_videos/squat/squat_correct_045.mp4,0,95,3.2,96,30.0
+squat_correct_046,squat_src_065,squat,YouTube,correct,none,data_videos/squat/squat_correct_046.mp4,0,175,7.02,176,25.08
+squat_incorrect_001,squat_src_022,squat,EFA,incorrect,butt_wink,data_videos/squat/squat_incorrect_001.mp4,0,137,4.6,138,30.0
+squat_incorrect_002,squat_src_023,squat,EFA,incorrect,hips_rising_first,data_videos/squat/squat_incorrect_002.mp4,0,98,3.96,99,25.0
+squat_incorrect_003,squat_src_024,squat,EFA,incorrect,butt_wink,data_videos/squat/squat_incorrect_003.mp4,0,92,3.1,93,30.0
+squat_incorrect_004,squat_src_029,squat,EFA,incorrect,hips_too_low,data_videos/squat/squat_incorrect_004.mp4,0,61,2.09,62,29.68
+squat_incorrect_005,squat_src_030,squat,EFA,incorrect,hips_too_low,data_videos/squat/squat_incorrect_005.mp4,0,83,2.82,84,29.81
+squat_incorrect_006,squat_src_034,squat,EFA,incorrect,heels_lifting,data_videos/squat/squat_incorrect_006.mp4,0,80,2.7,81,30.0
+squat_incorrect_007,squat_src_035,squat,EFA,incorrect,heels_lifting,data_videos/squat/squat_incorrect_007.mp4,0,89,3.0,90,29.97
+squat_incorrect_008,squat_src_036,squat,EFA,incorrect,heels_lifting,data_videos/squat/squat_incorrect_008.mp4,0,86,2.9,87,29.98
+squat_incorrect_009,squat_src_036,squat,EFA,incorrect,partial_rom,data_videos/squat/squat_incorrect_009.mp4,0,65,2.2,66,29.98
+squat_incorrect_010,squat_src_035,squat,EFA,incorrect,hips_rising_first,data_videos/squat/squat_incorrect_010.mp4,0,86,2.9,87,29.97
+squat_incorrect_011,squat_src_039,squat,EFA,incorrect,partial_rom,data_videos/squat/squat_incorrect_011.mp4,0,74,2.47,75,30.31
+squat_incorrect_012,squat_src_040,squat,YouTube,incorrect,leaning_forward,data_videos/squat/squat_incorrect_012.mp4,0,154,5.17,155,30.0
+squat_incorrect_013,squat_src_044,squat,YouTube,incorrect,hips_rising_first,data_videos/squat/squat_incorrect_013.mp4,0,151,5.07,152,30.0
+squat_incorrect_014,squat_src_046,squat,YouTube,incorrect,leaning_forward,data_videos/squat/squat_incorrect_014.mp4,0,102,3.43,103,30.0
+squat_incorrect_015,squat_src_048,squat,YouTube,incorrect,partial_rom,data_videos/squat/squat_incorrect_015.mp4,0,55,1.87,56,30.0
+squat_incorrect_016,squat_src_049,squat,YouTube,incorrect,partial_rom,data_videos/squat/squat_incorrect_016.mp4,0,56,1.9,57,30.0
+squat_incorrect_017,squat_src_050,squat,YouTube,incorrect,partial_rom,data_videos/squat/squat_incorrect_017.mp4,0,79,2.67,80,30.0
+squat_incorrect_018,squat_src_052,squat,YouTube,incorrect,hips_rising_first,data_videos/squat/squat_incorrect_018.mp4,0,149,5.0,150,30.0
+squat_incorrect_019,squat_src_053,squat,YouTube,incorrect,partial_rom,data_videos/squat/squat_incorrect_019.mp4,0,65,2.2,66,30.0
+squat_incorrect_020,squat_src_054,squat,YouTube,incorrect,partial_rom,data_videos/squat/squat_incorrect_020.mp4,0,52,1.77,53,30.0
+squat_incorrect_021,squat_src_051,squat,YouTube,incorrect,hips_rising_first,data_videos/squat/squat_incorrect_021.mp4,0,111,3.73,112,30.0
+squat_incorrect_022,squat_src_058,squat,YouTube,incorrect,knee_valgus,data_videos/squat/squat_incorrect_022.mp4,0,138,4.63,139,30.0
+squat_incorrect_023,squat_src_066,squat,YouTube,incorrect,leaning_forward,data_videos/squat/squat_incorrect_023.mp4,0,92,3.1,93,30.0
+squat_incorrect_024,squat_src_067,squat,YouTube,incorrect,knee_valgus,data_videos/squat/squat_incorrect_024.mp4,0,74,2.5,75,30.0
+squat_incorrect_025,squat_src_068,squat,YouTube,incorrect,hips_rising_first,data_videos/squat/squat_incorrect_025.mp4,0,137,4.6,138,30.0
+chest_fly_machine_correct_001,chest_fly_machine_src_001,chest fly machine,GYMED,correct,none,data_videos/chest_fly_machine/chest_fly_machine_correct_001.mp4,0,146,4.9,147,30.0
+chest_fly_machine_correct_002,chest_fly_machine_src_002,chest fly machine,GYMED,correct,none,data_videos/chest_fly_machine/chest_fly_machine_correct_002.mp4,0,217,9.09,218,23.98
+chest_fly_machine_correct_003,chest_fly_machine_src_003,chest fly machine,GYMED,correct,none,data_videos/chest_fly_machine/chest_fly_machine_correct_003.mp4,0,63,2.13,64,30.0
+chest_fly_machine_correct_004,chest_fly_machine_src_004,chest fly machine,GYMED,correct,none,data_videos/chest_fly_machine/chest_fly_machine_correct_004.mp4,0,79,2.67,80,29.97
+chest_fly_machine_correct_005,chest_fly_machine_src_005,chest fly machine,GYMED,correct,none,data_videos/chest_fly_machine/chest_fly_machine_correct_005.mp4,0,123,4.13,124,30.0
+chest_fly_machine_correct_006,chest_fly_machine_src_005,chest fly machine,GYMED,correct,none,data_videos/chest_fly_machine/chest_fly_machine_correct_006.mp4,0,90,3.03,91,30.0
+chest_fly_machine_correct_007,chest_fly_machine_src_007,chest fly machine,GYMED,correct,none,data_videos/chest_fly_machine/chest_fly_machine_correct_007.mp4,0,98,3.3,99,30.0
+chest_fly_machine_correct_008,chest_fly_machine_src_008,chest fly machine,GYMED,correct,none,data_videos/chest_fly_machine/chest_fly_machine_correct_008.mp4,0,311,10.41,312,29.97
+chest_fly_machine_correct_009,chest_fly_machine_src_005,chest fly machine,GYMED,correct,none,data_videos/chest_fly_machine/chest_fly_machine_correct_009.mp4,0,124,4.17,125,30.0
+chest_fly_machine_correct_010,chest_fly_machine_src_008,chest fly machine,GYMED,correct,none,data_videos/chest_fly_machine/chest_fly_machine_correct_010.mp4,0,203,6.81,204,29.97
+chest_fly_machine_correct_011,chest_fly_machine_src_008,chest fly machine,GYMED,correct,none,data_videos/chest_fly_machine/chest_fly_machine_correct_011.mp4,0,214,7.17,215,29.97
+chest_fly_machine_correct_012,chest_fly_machine_src_012,chest fly machine,GYMED,correct,none,data_videos/chest_fly_machine/chest_fly_machine_correct_012.mp4,0,90,3.04,91,29.97
+chest_fly_machine_correct_013,chest_fly_machine_src_013,chest fly machine,GYMED,correct,none,data_videos/chest_fly_machine/chest_fly_machine_correct_013.mp4,0,66,2.23,67,30.0
+chest_fly_machine_correct_014,chest_fly_machine_src_014,chest fly machine,GYMED,correct,none,data_videos/chest_fly_machine/chest_fly_machine_correct_014.mp4,0,110,3.7,111,30.0
+chest_fly_machine_correct_015,chest_fly_machine_src_015,chest fly machine,GYMED,correct,none,data_videos/chest_fly_machine/chest_fly_machine_correct_015.mp4,0,134,4.5,135,29.97
+chest_fly_machine_correct_016,chest_fly_machine_src_016,chest fly machine,GYMED,correct,none,data_videos/chest_fly_machine/chest_fly_machine_correct_016.mp4,0,121,5.09,122,23.98
+chest_fly_machine_correct_017,chest_fly_machine_src_017,chest fly machine,GYMED,correct,none,data_videos/chest_fly_machine/chest_fly_machine_correct_017.mp4,0,128,4.3,129,29.97
+chest_fly_machine_correct_018,chest_fly_machine_src_017,chest fly machine,GYMED,correct,none,data_videos/chest_fly_machine/chest_fly_machine_correct_018.mp4,0,96,3.24,97,29.97
+chest_fly_machine_correct_019,chest_fly_machine_src_019,chest fly machine,GYMED,correct,none,data_videos/chest_fly_machine/chest_fly_machine_correct_019.mp4,0,70,2.37,71,30.0
+chest_fly_machine_correct_020,chest_fly_machine_src_020,chest fly machine,GYMED,correct,none,data_videos/chest_fly_machine/chest_fly_machine_correct_020.mp4,0,74,3.0,75,25.0
+chest_fly_machine_correct_021,chest_fly_machine_src_021,chest fly machine,GYMED,correct,none,data_videos/chest_fly_machine/chest_fly_machine_correct_021.mp4,0,133,2.24,134,59.94
+chest_fly_machine_correct_022,chest_fly_machine_src_022,chest fly machine,GYMED,correct,none,data_videos/chest_fly_machine/chest_fly_machine_correct_022.mp4,0,78,3.16,79,25.0
+chest_fly_machine_correct_023,chest_fly_machine_src_022,chest fly machine,GYMED,correct,none,data_videos/chest_fly_machine/chest_fly_machine_correct_023.mp4,0,69,2.8,70,25.0
+chest_fly_machine_correct_024,chest_fly_machine_src_024,chest fly machine,GYMED,correct,none,data_videos/chest_fly_machine/chest_fly_machine_correct_024.mp4,0,149,5.0,150,29.97
+chest_fly_machine_correct_025,chest_fly_machine_src_025,chest fly machine,GYMED,correct,none,data_videos/chest_fly_machine/chest_fly_machine_correct_025.mp4,0,101,3.4,102,29.97
+chest_fly_machine_correct_026,chest_fly_machine_src_025,chest fly machine,GYMED,correct,none,data_videos/chest_fly_machine/chest_fly_machine_correct_026.mp4,0,107,3.6,108,29.97
+chest_fly_machine_correct_027,chest_fly_machine_src_004,chest fly machine,GYMED,correct,none,data_videos/chest_fly_machine/chest_fly_machine_correct_027.mp4,0,103,3.47,104,29.97
+chest_fly_machine_correct_028,chest_fly_machine_src_028,chest fly machine,GYMED,correct,none,data_videos/chest_fly_machine/chest_fly_machine_correct_028.mp4,0,96,3.24,97,29.97
+chest_fly_machine_correct_029,chest_fly_machine_src_029,chest fly machine,YouTube,correct,none,data_videos/chest_fly_machine/chest_fly_machine_correct_029.mp4,0,105,3.53,106,30.0
+chest_fly_machine_correct_030,chest_fly_machine_src_031,chest fly machine,YouTube,correct,none,data_videos/chest_fly_machine/chest_fly_machine_correct_030.mp4,0,199,6.67,200,30.0
+chest_fly_machine_correct_031,chest_fly_machine_src_034,chest fly machine,YouTube,correct,none,data_videos/chest_fly_machine/chest_fly_machine_correct_031.mp4,0,89,3.0,90,30.0
+chest_fly_machine_correct_032,chest_fly_machine_src_034,chest fly machine,YouTube,correct,none,data_videos/chest_fly_machine/chest_fly_machine_correct_032.mp4,0,59,2.0,60,30.0
+chest_fly_machine_correct_033,chest_fly_machine_src_036,chest fly machine,YouTube,correct,none,data_videos/chest_fly_machine/chest_fly_machine_correct_033.mp4,0,59,2.0,60,30.0
+chest_fly_machine_correct_034,chest_fly_machine_src_037,chest fly machine,YouTube,correct,none,data_videos/chest_fly_machine/chest_fly_machine_correct_034.mp4,0,116,3.9,117,30.0
+chest_fly_machine_correct_035,chest_fly_machine_src_038,chest fly machine,YouTube,correct,none,data_videos/chest_fly_machine/chest_fly_machine_correct_035.mp4,0,115,3.87,116,30.0
+chest_fly_machine_correct_036,chest_fly_machine_src_040,chest fly machine,YouTube,correct,none,data_videos/chest_fly_machine/chest_fly_machine_correct_036.mp4,0,149,5.0,150,30.0
+chest_fly_machine_correct_037,chest_fly_machine_src_043,chest fly machine,YouTube,correct,none,data_videos/chest_fly_machine/chest_fly_machine_correct_037.mp4,0,101,3.4,102,30.0
+chest_fly_machine_correct_038,chest_fly_machine_src_050,chest fly machine,YouTube,correct,none,data_videos/chest_fly_machine/chest_fly_machine_correct_038.mp4,0,119,4.0,120,30.0
+chest_fly_machine_correct_039,chest_fly_machine_src_051,chest fly machine,YouTube,correct,none,data_videos/chest_fly_machine/chest_fly_machine_correct_039.mp4,0,59,2.0,60,30.0
+chest_fly_machine_correct_040,chest_fly_machine_src_052,chest fly machine,YouTube,correct,none,data_videos/chest_fly_machine/chest_fly_machine_correct_040.mp4,0,119,4.0,120,30.0
+chest_fly_machine_correct_041,chest_fly_machine_src_053,chest fly machine,YouTube,correct,none,data_videos/chest_fly_machine/chest_fly_machine_correct_041.mp4,0,119,4.0,120,30.0
+chest_fly_machine_incorrect_001,chest_fly_machine_src_030,chest fly machine,YouTube,incorrect,excessive_elbow_bend,data_videos/chest_fly_machine/chest_fly_machine_incorrect_001.mp4,0,75,2.53,76,30.0
+chest_fly_machine_incorrect_002,chest_fly_machine_src_032,chest fly machine,YouTube,incorrect,elbow_lockout,data_videos/chest_fly_machine/chest_fly_machine_incorrect_002.mp4,0,57,1.93,58,30.0
+chest_fly_machine_incorrect_003,chest_fly_machine_src_033,chest fly machine,YouTube,incorrect,shoulder_protraction,data_videos/chest_fly_machine/chest_fly_machine_incorrect_003.mp4,0,75,2.53,76,30.0
+chest_fly_machine_incorrect_004,chest_fly_machine_src_035,chest fly machine,YouTube,incorrect,elbow_lockout,data_videos/chest_fly_machine/chest_fly_machine_incorrect_004.mp4,0,109,3.67,110,30.0
+chest_fly_machine_incorrect_005,chest_fly_machine_src_035,chest fly machine,YouTube,incorrect,excessive_elbow_bend,data_videos/chest_fly_machine/chest_fly_machine_incorrect_005.mp4,0,72,2.43,73,30.0
+chest_fly_machine_incorrect_006,chest_fly_machine_src_035,chest fly machine,YouTube,incorrect,elbows_dropping,data_videos/chest_fly_machine/chest_fly_machine_incorrect_006.mp4,0,94,3.17,95,30.0
+chest_fly_machine_incorrect_007,chest_fly_machine_src_038,chest fly machine,YouTube,incorrect,shoulder_protraction,data_videos/chest_fly_machine/chest_fly_machine_incorrect_007.mp4,0,73,2.47,74,30.0
+chest_fly_machine_incorrect_008,chest_fly_machine_src_039,chest fly machine,YouTube,incorrect,elbow_lockout,data_videos/chest_fly_machine/chest_fly_machine_incorrect_008.mp4,0,80,2.7,81,30.0
+chest_fly_machine_incorrect_009,chest_fly_machine_src_039,chest fly machine,YouTube,incorrect,elbow_lockout,data_videos/chest_fly_machine/chest_fly_machine_incorrect_009.mp4,0,77,2.6,78,30.0
+chest_fly_machine_incorrect_010,chest_fly_machine_src_041,chest fly machine,YouTube,incorrect,shoulder_protraction,data_videos/chest_fly_machine/chest_fly_machine_incorrect_010.mp4,0,64,2.17,65,30.0
+chest_fly_machine_incorrect_011,chest_fly_machine_src_042,chest fly machine,YouTube,incorrect,shoulder_protraction,data_videos/chest_fly_machine/chest_fly_machine_incorrect_011.mp4,0,74,2.5,75,30.0
+chest_fly_machine_incorrect_012,chest_fly_machine_src_044,chest fly machine,YouTube,incorrect,shoulder_protraction,data_videos/chest_fly_machine/chest_fly_machine_incorrect_012.mp4,0,59,2.0,60,30.0
+chest_fly_machine_incorrect_013,chest_fly_machine_src_045,chest fly machine,YouTube,incorrect,shoulder_protraction,data_videos/chest_fly_machine/chest_fly_machine_incorrect_013.mp4,0,100,3.37,101,30.0
+chest_fly_machine_incorrect_014,chest_fly_machine_src_046,chest fly machine,YouTube,incorrect,elbow_lockout,data_videos/chest_fly_machine/chest_fly_machine_incorrect_014.mp4,0,59,2.0,60,30.0
+chest_fly_machine_incorrect_015,chest_fly_machine_src_047,chest fly machine,YouTube,incorrect,shoulder_protraction,data_videos/chest_fly_machine/chest_fly_machine_incorrect_015.mp4,0,43,1.47,44,30.0
+chest_fly_machine_incorrect_016,chest_fly_machine_src_007,chest fly machine,YouTube,incorrect,excessive_elbow_bend,data_videos/chest_fly_machine/chest_fly_machine_incorrect_016.mp4,0,59,2.0,60,30.0
+chest_fly_machine_incorrect_017,chest_fly_machine_src_049,chest fly machine,YouTube,incorrect,excessive_elbow_bend,data_videos/chest_fly_machine/chest_fly_machine_incorrect_017.mp4,0,84,2.83,85,30.0
+chest_fly_machine_incorrect_018,chest_fly_machine_src_050,chest fly machine,YouTube,incorrect,shoulder_protraction,data_videos/chest_fly_machine/chest_fly_machine_incorrect_018.mp4,0,89,3.0,90,30.0
+chest_fly_machine_incorrect_019,chest_fly_machine_src_050,chest fly machine,YouTube,incorrect,excessive_elbow_bend,data_videos/chest_fly_machine/chest_fly_machine_incorrect_019.mp4,0,65,2.2,66,30.0
+chest_fly_machine_incorrect_020,chest_fly_machine_src_050,chest fly machine,YouTube,incorrect,shoulders_shrugging,data_videos/chest_fly_machine/chest_fly_machine_incorrect_020.mp4,0,85,2.87,86,30.0
+hip_thrust_correct_001,hip_thrust_src_001,hip thrust,GYMED,correct,none,data_videos/hip_thrust/hip_thrust_correct_001.mp4,0,51,1.74,52,29.97
+hip_thrust_correct_002,hip_thrust_src_001,hip thrust,GYMED,correct,none,data_videos/hip_thrust/hip_thrust_correct_002.mp4,0,51,1.74,52,29.97
+hip_thrust_correct_003,hip_thrust_src_002,hip thrust,GYMED,correct,none,data_videos/hip_thrust/hip_thrust_correct_003.mp4,0,112,3.77,113,30.0
+hip_thrust_correct_004,hip_thrust_src_003,hip thrust,GYMED,correct,none,data_videos/hip_thrust/hip_thrust_correct_004.mp4,0,95,3.2,96,30.02
+hip_thrust_correct_005,hip_thrust_src_004,hip thrust,GYMED,correct,none,data_videos/hip_thrust/hip_thrust_correct_005.mp4,0,166,5.57,167,29.97
+hip_thrust_correct_006,hip_thrust_src_004,hip thrust,GYMED,correct,none,data_videos/hip_thrust/hip_thrust_correct_006.mp4,0,101,3.4,102,29.97
+hip_thrust_correct_007,hip_thrust_src_006,hip thrust,GYMED,correct,none,data_videos/hip_thrust/hip_thrust_correct_007.mp4,0,58,1.97,59,30.0
+hip_thrust_correct_008,hip_thrust_src_006,hip thrust,GYMED,correct,none,data_videos/hip_thrust/hip_thrust_correct_008.mp4,0,68,2.3,69,30.0
+hip_thrust_correct_009,hip_thrust_src_007,hip thrust,GYMED,correct,none,data_videos/hip_thrust/hip_thrust_correct_009.mp4,0,73,2.47,74,29.97
+hip_thrust_correct_010,hip_thrust_src_008,hip thrust,GYMED,correct,none,data_videos/hip_thrust/hip_thrust_correct_010.mp4,0,128,4.3,129,29.97
+hip_thrust_correct_011,hip_thrust_src_009,hip thrust,GYMED,correct,none,data_videos/hip_thrust/hip_thrust_correct_011.mp4,0,72,2.92,73,25.0
+hip_thrust_correct_012,hip_thrust_src_004,hip thrust,GYMED,correct,none,data_videos/hip_thrust/hip_thrust_correct_012.mp4,0,169,5.67,170,29.97
+hip_thrust_correct_013,hip_thrust_src_011,hip thrust,GYMED,correct,none,data_videos/hip_thrust/hip_thrust_correct_013.mp4,0,78,2.63,79,30.0
+hip_thrust_correct_014,hip_thrust_src_013,hip thrust,GYMED,correct,none,data_videos/hip_thrust/hip_thrust_correct_014.mp4,0,80,2.7,81,30.0
+hip_thrust_correct_015,hip_thrust_src_014,hip thrust,GYMED,correct,none,data_videos/hip_thrust/hip_thrust_correct_015.mp4,0,93,3.13,94,30.0
+hip_thrust_correct_016,hip_thrust_src_007,hip thrust,GYMED,correct,none,data_videos/hip_thrust/hip_thrust_correct_016.mp4,0,57,1.94,58,29.97
+hip_thrust_correct_017,hip_thrust_src_016,hip thrust,GYMED,correct,none,data_videos/hip_thrust/hip_thrust_correct_017.mp4,0,100,4.04,101,25.0
+hip_thrust_correct_018,hip_thrust_src_017,hip thrust,GYMED,correct,none,data_videos/hip_thrust/hip_thrust_correct_018.mp4,0,74,2.5,75,30.0
+hip_thrust_correct_019,hip_thrust_src_008,hip thrust,GYMED,correct,none,data_videos/hip_thrust/hip_thrust_correct_019.mp4,0,84,2.84,85,29.97
+hip_thrust_correct_020,hip_thrust_src_019,hip thrust,GYMED,correct,none,data_videos/hip_thrust/hip_thrust_correct_020.mp4,0,140,4.7,141,30.0
+hip_thrust_correct_021,hip_thrust_src_020,hip thrust,GYMED,correct,none,data_videos/hip_thrust/hip_thrust_correct_021.mp4,0,41,1.75,42,23.98
+hip_thrust_correct_022,hip_thrust_src_004,hip thrust,GYMED,correct,none,data_videos/hip_thrust/hip_thrust_correct_022.mp4,0,149,5.0,150,29.97
+hip_thrust_correct_023,hip_thrust_src_023,hip thrust,YouTube,correct,none,data_videos/hip_thrust/hip_thrust_correct_023.mp4,0,107,3.6,108,30.0
+hip_thrust_correct_024,hip_thrust_src_024,hip thrust,YouTube,correct,none,data_videos/hip_thrust/hip_thrust_correct_024.mp4,0,119,4.0,120,30.0
+hip_thrust_correct_025,hip_thrust_src_024,hip thrust,YouTube,correct,none,data_videos/hip_thrust/hip_thrust_correct_025.mp4,0,89,3.0,90,30.0
+hip_thrust_correct_026,hip_thrust_src_026,hip thrust,YouTube,correct,none,data_videos/hip_thrust/hip_thrust_correct_026.mp4,0,89,3.0,90,30.0
+hip_thrust_correct_027,hip_thrust_src_027,hip thrust,YouTube,correct,none,data_videos/hip_thrust/hip_thrust_correct_027.mp4,0,74,2.5,75,30.0
+hip_thrust_correct_028,hip_thrust_src_027,hip thrust,YouTube,correct,none,data_videos/hip_thrust/hip_thrust_correct_028.mp4,0,77,2.6,78,30.0
+hip_thrust_correct_029,hip_thrust_src_029,hip thrust,YouTube,correct,none,data_videos/hip_thrust/hip_thrust_correct_029.mp4,0,100,3.37,101,30.0
+hip_thrust_correct_030,hip_thrust_src_031,hip thrust,YouTube,correct,none,data_videos/hip_thrust/hip_thrust_correct_030.mp4,0,119,4.0,120,30.0
+hip_thrust_correct_031,hip_thrust_src_038,hip thrust,YouTube,correct,none,data_videos/hip_thrust/hip_thrust_correct_031.mp4,0,59,2.0,60,30.0
+hip_thrust_correct_032,hip_thrust_src_040,hip thrust,YouTube,correct,none,data_videos/hip_thrust/hip_thrust_correct_032.mp4,0,78,2.63,79,30.0
+hip_thrust_correct_033,hip_thrust_src_040,hip thrust,YouTube,correct,none,data_videos/hip_thrust/hip_thrust_correct_033.mp4,0,66,2.23,67,30.0
+hip_thrust_correct_034,hip_thrust_src_040,hip thrust,YouTube,correct,none,data_videos/hip_thrust/hip_thrust_correct_034.mp4,0,121,4.07,122,30.0
+hip_thrust_correct_035,hip_thrust_src_041,hip thrust,YouTube,correct,none,data_videos/hip_thrust/hip_thrust_correct_035.mp4,0,119,4.0,120,30.0
+hip_thrust_correct_036,hip_thrust_src_042,hip thrust,YouTube,correct,none,data_videos/hip_thrust/hip_thrust_correct_036.mp4,0,83,2.8,84,30.0
+hip_thrust_correct_037,hip_thrust_src_045,hip thrust,YouTube,correct,none,data_videos/hip_thrust/hip_thrust_correct_037.mp4,0,59,2.0,60,30.0
+hip_thrust_correct_038,hip_thrust_src_045,hip thrust,YouTube,correct,none,data_videos/hip_thrust/hip_thrust_correct_038.mp4,0,63,2.13,64,30.0
+hip_thrust_correct_039,hip_thrust_src_047,hip thrust,YouTube,correct,none,data_videos/hip_thrust/hip_thrust_correct_039.mp4,0,104,3.5,105,30.0
+hip_thrust_correct_040,hip_thrust_src_047,hip thrust,YouTube,correct,none,data_videos/hip_thrust/hip_thrust_correct_040.mp4,0,71,2.4,72,30.0
+hip_thrust_correct_041,hip_thrust_src_049,hip thrust,YouTube,correct,none,data_videos/hip_thrust/hip_thrust_correct_041.mp4,0,59,2.0,60,30.0
+hip_thrust_incorrect_001,hip_thrust_src_012,hip thrust,GYMED,incorrect,head_looking_up,data_videos/hip_thrust/hip_thrust_incorrect_001.mp4,0,79,2.67,80,30.0
+hip_thrust_incorrect_002,hip_thrust_src_022,hip thrust,YouTube,incorrect,hyperextended_back,data_videos/hip_thrust/hip_thrust_incorrect_002.mp4,0,99,3.33,100,30.0
+hip_thrust_incorrect_003,hip_thrust_src_025,hip thrust,YouTube,incorrect,improper_foot_placement,data_videos/hip_thrust/hip_thrust_incorrect_003.mp4,0,59,2.0,60,30.0
+hip_thrust_incorrect_004,hip_thrust_src_028,hip thrust,YouTube,incorrect,improper_foot_placement,data_videos/hip_thrust/hip_thrust_incorrect_004.mp4,0,59,2.0,60,30.0
+hip_thrust_incorrect_005,hip_thrust_src_030,hip thrust,YouTube,incorrect,head_looking_up,data_videos/hip_thrust/hip_thrust_incorrect_005.mp4,0,44,1.5,45,30.0
+hip_thrust_incorrect_006,hip_thrust_src_030,hip thrust,YouTube,incorrect,improper_foot_placement,data_videos/hip_thrust/hip_thrust_incorrect_006.mp4,0,51,1.73,52,30.0
+hip_thrust_incorrect_007,hip_thrust_src_032,hip thrust,YouTube,incorrect,head_looking_up,data_videos/hip_thrust/hip_thrust_incorrect_007.mp4,0,75,2.53,76,30.0
+hip_thrust_incorrect_008,hip_thrust_src_033,hip thrust,YouTube,incorrect,improper_foot_placement,data_videos/hip_thrust/hip_thrust_incorrect_008.mp4,0,55,1.87,56,30.0
+hip_thrust_incorrect_009,hip_thrust_src_034,hip thrust,YouTube,incorrect,using_momentum,data_videos/hip_thrust/hip_thrust_incorrect_009.mp4,0,59,2.0,60,30.0
+hip_thrust_incorrect_010,hip_thrust_src_035,hip thrust,YouTube,incorrect,partial_rom,data_videos/hip_thrust/hip_thrust_incorrect_010.mp4,0,40,1.37,41,30.0
+hip_thrust_incorrect_011,hip_thrust_src_036,hip thrust,YouTube,incorrect,using_momentum,data_videos/hip_thrust/hip_thrust_incorrect_011.mp4,0,47,1.6,48,30.0
+hip_thrust_incorrect_012,hip_thrust_src_037,hip thrust,YouTube,incorrect,head_looking_up,data_videos/hip_thrust/hip_thrust_incorrect_012.mp4,0,80,2.7,81,30.0
+hip_thrust_incorrect_013,hip_thrust_src_039,hip thrust,YouTube,incorrect,partial_rom,data_videos/hip_thrust/hip_thrust_incorrect_013.mp4,0,119,4.0,120,30.0
+hip_thrust_incorrect_014,hip_thrust_src_042,hip thrust,YouTube,incorrect,head_looking_up,data_videos/hip_thrust/hip_thrust_incorrect_014.mp4,0,59,2.0,60,30.0
+hip_thrust_incorrect_015,hip_thrust_src_043,hip thrust,YouTube,incorrect,partial_rom,data_videos/hip_thrust/hip_thrust_incorrect_015.mp4,0,45,1.53,46,30.0
+hip_thrust_incorrect_016,hip_thrust_src_044,hip thrust,YouTube,incorrect,head_looking_up,data_videos/hip_thrust/hip_thrust_incorrect_016.mp4,0,82,2.77,83,30.0
+hip_thrust_incorrect_017,hip_thrust_src_046,hip thrust,YouTube,incorrect,hyperextended_back,data_videos/hip_thrust/hip_thrust_incorrect_017.mp4,0,119,4.0,120,30.0
+hip_thrust_incorrect_018,hip_thrust_src_048,hip thrust,YouTube,incorrect,head_looking_up,data_videos/hip_thrust/hip_thrust_incorrect_018.mp4,0,89,3.0,90,30.0
+hip_thrust_incorrect_019,hip_thrust_src_050,hip thrust,YouTube,incorrect,hyperextended_back,data_videos/hip_thrust/hip_thrust_incorrect_019.mp4,0,55,1.87,56,30.0
+t_bar_row_correct_001,t_bar_row_src_001,t bar row,GYMED,correct,none,data_videos/t_bar_row/t_bar_row_correct_001.mp4,0,66,2.24,67,29.97
+t_bar_row_correct_002,t_bar_row_src_002,t bar row,GYMED,correct,none,data_videos/t_bar_row/t_bar_row_correct_002.mp4,0,33,1.42,34,23.98
+t_bar_row_correct_003,t_bar_row_src_001,t bar row,GYMED,correct,none,data_videos/t_bar_row/t_bar_row_correct_003.mp4,0,56,1.9,57,29.97
+t_bar_row_correct_004,t_bar_row_src_004,t bar row,GYMED,correct,none,data_videos/t_bar_row/t_bar_row_correct_004.mp4,0,96,3.24,97,29.97
+t_bar_row_correct_005,t_bar_row_src_005,t bar row,GYMED,correct,none,data_videos/t_bar_row/t_bar_row_correct_005.mp4,0,43,1.47,44,29.97
+t_bar_row_correct_006,t_bar_row_src_006,t bar row,GYMED,correct,none,data_videos/t_bar_row/t_bar_row_correct_006.mp4,0,52,1.77,53,29.97
+t_bar_row_correct_007,t_bar_row_src_007,t bar row,GYMED,correct,none,data_videos/t_bar_row/t_bar_row_correct_007.mp4,0,56,1.9,57,29.97
+t_bar_row_correct_008,t_bar_row_src_007,t bar row,GYMED,correct,none,data_videos/t_bar_row/t_bar_row_correct_008.mp4,0,38,1.3,39,29.97
+t_bar_row_correct_009,t_bar_row_src_009,t bar row,GYMED,correct,none,data_videos/t_bar_row/t_bar_row_correct_009.mp4,0,59,2.0,60,29.97
+t_bar_row_correct_010,t_bar_row_src_010,t bar row,GYMED,correct,none,data_videos/t_bar_row/t_bar_row_correct_010.mp4,0,65,2.2,66,30.0
+t_bar_row_correct_011,t_bar_row_src_010,t bar row,GYMED,correct,none,data_videos/t_bar_row/t_bar_row_correct_011.mp4,0,60,2.03,61,30.0
+t_bar_row_correct_012,t_bar_row_src_010,t bar row,GYMED,correct,none,data_videos/t_bar_row/t_bar_row_correct_012.mp4,0,53,1.8,54,30.0
+t_bar_row_correct_013,t_bar_row_src_002,t bar row,GYMED,correct,none,data_videos/t_bar_row/t_bar_row_correct_013.mp4,0,31,1.33,32,23.98
+t_bar_row_correct_014,t_bar_row_src_012,t bar row,GYMED,correct,none,data_videos/t_bar_row/t_bar_row_correct_014.mp4,0,83,2.8,84,29.97
+t_bar_row_correct_015,t_bar_row_src_013,t bar row,GYMED,correct,none,data_videos/t_bar_row/t_bar_row_correct_015.mp4,0,92,3.1,93,29.97
+t_bar_row_correct_016,t_bar_row_src_013,t bar row,GYMED,correct,none,data_videos/t_bar_row/t_bar_row_correct_016.mp4,0,108,3.64,109,29.97
+t_bar_row_correct_017,t_bar_row_src_013,t bar row,GYMED,correct,none,data_videos/t_bar_row/t_bar_row_correct_017.mp4,0,76,2.57,77,29.97
+t_bar_row_correct_018,t_bar_row_src_016,t bar row,GYMED,correct,none,data_videos/t_bar_row/t_bar_row_correct_018.mp4,0,68,2.88,69,23.98
+t_bar_row_correct_019,t_bar_row_src_017,t bar row,GYMED,correct,none,data_videos/t_bar_row/t_bar_row_correct_019.mp4,0,48,1.63,49,29.97
+t_bar_row_correct_020,t_bar_row_src_018,t bar row,GYMED,correct,none,data_videos/t_bar_row/t_bar_row_correct_020.mp4,0,85,3.58,86,24.0
+t_bar_row_correct_021,t_bar_row_src_019,t bar row,GYMED,correct,none,data_videos/t_bar_row/t_bar_row_correct_021.mp4,0,85,2.87,86,29.97
+t_bar_row_correct_022,t_bar_row_src_002,t bar row,GYMED,correct,none,data_videos/t_bar_row/t_bar_row_correct_022.mp4,0,34,1.46,35,23.98
+t_bar_row_correct_023,t_bar_row_src_002,t bar row,GYMED,correct,none,data_videos/t_bar_row/t_bar_row_correct_023.mp4,0,33,1.42,34,23.98
+t_bar_row_correct_024,t_bar_row_src_012,t bar row,GYMED,correct,none,data_videos/t_bar_row/t_bar_row_correct_024.mp4,0,89,3.0,90,29.97
+t_bar_row_correct_025,t_bar_row_src_023,t bar row,YouTube,correct,none,data_videos/t_bar_row/t_bar_row_correct_025.mp4,0,59,2.0,60,30.0
+t_bar_row_correct_026,t_bar_row_src_023,t bar row,YouTube,correct,none,data_videos/t_bar_row/t_bar_row_correct_026.mp4,0,74,2.5,75,30.0
+t_bar_row_correct_027,t_bar_row_src_025,t bar row,YouTube,correct,none,data_videos/t_bar_row/t_bar_row_correct_027.mp4,0,134,4.5,135,30.0
+t_bar_row_correct_028,t_bar_row_src_026,t bar row,YouTube,correct,none,data_videos/t_bar_row/t_bar_row_correct_028.mp4,0,119,4.0,120,30.0
+t_bar_row_correct_029,t_bar_row_src_026,t bar row,YouTube,correct,none,data_videos/t_bar_row/t_bar_row_correct_029.mp4,0,100,3.37,101,30.0
+t_bar_row_correct_030,t_bar_row_src_029,t bar row,YouTube,correct,none,data_videos/t_bar_row/t_bar_row_correct_030.mp4,0,59,2.0,60,30.0
+t_bar_row_correct_031,t_bar_row_src_030,t bar row,YouTube,correct,none,data_videos/t_bar_row/t_bar_row_correct_031.mp4,0,59,2.0,60,30.0
+t_bar_row_correct_032,t_bar_row_src_034,t bar row,YouTube,correct,none,data_videos/t_bar_row/t_bar_row_correct_032.mp4,0,65,2.2,66,30.0
+t_bar_row_correct_033,t_bar_row_src_035,t bar row,YouTube,correct,none,data_videos/t_bar_row/t_bar_row_correct_033.mp4,0,52,1.77,53,30.0
+t_bar_row_correct_034,t_bar_row_src_036,t bar row,YouTube,correct,none,data_videos/t_bar_row/t_bar_row_correct_034.mp4,0,79,2.67,80,30.0
+t_bar_row_correct_035,t_bar_row_src_037,t bar row,YouTube,correct,none,data_videos/t_bar_row/t_bar_row_correct_035.mp4,0,64,2.17,65,30.0
+t_bar_row_correct_036,t_bar_row_src_038,t bar row,YouTube,correct,none,data_videos/t_bar_row/t_bar_row_correct_036.mp4,0,124,4.17,125,30.0
+t_bar_row_correct_037,t_bar_row_src_039,t bar row,YouTube,correct,none,data_videos/t_bar_row/t_bar_row_correct_037.mp4,0,60,2.03,61,30.0
+t_bar_row_correct_038,t_bar_row_src_041,t bar row,YouTube,correct,none,data_videos/t_bar_row/t_bar_row_correct_038.mp4,0,120,4.03,121,30.0
+t_bar_row_correct_039,t_bar_row_src_043,t bar row,YouTube,correct,none,data_videos/t_bar_row/t_bar_row_correct_039.mp4,0,34,1.17,35,30.0
+t_bar_row_correct_040,t_bar_row_src_044,t bar row,YouTube,correct,none,data_videos/t_bar_row/t_bar_row_correct_040.mp4,0,155,5.2,156,30.0
+t_bar_row_correct_041,t_bar_row_src_047,t bar row,YouTube,correct,none,data_videos/t_bar_row/t_bar_row_correct_041.mp4,0,55,1.87,56,30.0
+t_bar_row_correct_042,t_bar_row_src_050,t bar row,YouTube,correct,none,data_videos/t_bar_row/t_bar_row_correct_042.mp4,0,56,1.9,57,30.0
+t_bar_row_incorrect_001,t_bar_row_src_024,t bar row,YouTube,incorrect,standing_too_upright,data_videos/t_bar_row/t_bar_row_incorrect_001.mp4,0,51,1.73,52,30.0
+t_bar_row_incorrect_002,t_bar_row_src_025,t bar row,YouTube,incorrect,using_momentum,data_videos/t_bar_row/t_bar_row_incorrect_002.mp4,0,64,2.17,65,30.0
+t_bar_row_incorrect_003,t_bar_row_src_025,t bar row,YouTube,incorrect,uncontrolled_eccentric,data_videos/t_bar_row/t_bar_row_incorrect_003.mp4,0,43,1.47,44,30.0
+t_bar_row_incorrect_004,t_bar_row_src_027,t bar row,YouTube,incorrect,standing_too_upright,data_videos/t_bar_row/t_bar_row_incorrect_004.mp4,0,44,1.5,45,30.0
+t_bar_row_incorrect_005,t_bar_row_src_028,t bar row,YouTube,incorrect,round_back,data_videos/t_bar_row/t_bar_row_incorrect_005.mp4,0,74,2.5,75,30.0
+t_bar_row_incorrect_006,t_bar_row_src_031,t bar row,YouTube,incorrect,straight_legs,data_videos/t_bar_row/t_bar_row_incorrect_006.mp4,0,56,1.9,57,30.0
+t_bar_row_incorrect_007,t_bar_row_src_031,t bar row,YouTube,incorrect,standing_too_upright,data_videos/t_bar_row/t_bar_row_incorrect_007.mp4,0,50,1.7,51,30.0
+t_bar_row_incorrect_008,t_bar_row_src_032,t bar row,YouTube,incorrect,using_momentum,data_videos/t_bar_row/t_bar_row_incorrect_008.mp4,0,45,1.53,46,30.0
+t_bar_row_incorrect_009,t_bar_row_src_033,t bar row,YouTube,incorrect,round_back,data_videos/t_bar_row/t_bar_row_incorrect_009.mp4,0,38,1.3,39,30.0
+t_bar_row_incorrect_010,t_bar_row_src_039,t bar row,YouTube,incorrect,uncontrolled_eccentric,data_videos/t_bar_row/t_bar_row_incorrect_010.mp4,0,37,1.27,38,30.0
+t_bar_row_incorrect_011,t_bar_row_src_040,t bar row,YouTube,incorrect,standing_too_upright,data_videos/t_bar_row/t_bar_row_incorrect_011.mp4,0,32,1.1,33,30.0
+t_bar_row_incorrect_012,t_bar_row_src_042,t bar row,YouTube,incorrect,using_momentum,data_videos/t_bar_row/t_bar_row_incorrect_012.mp4,0,54,1.83,55,30.0
+t_bar_row_incorrect_013,t_bar_row_src_045,t bar row,YouTube,incorrect,standing_too_upright,data_videos/t_bar_row/t_bar_row_incorrect_013.mp4,0,37,1.27,38,30.0
+t_bar_row_incorrect_014,t_bar_row_src_045,t bar row,YouTube,incorrect,uncontrolled_eccentric,data_videos/t_bar_row/t_bar_row_incorrect_014.mp4,0,33,1.13,34,30.0
+t_bar_row_incorrect_015,t_bar_row_src_046,t bar row,YouTube,incorrect,uncontrolled_eccentric,data_videos/t_bar_row/t_bar_row_incorrect_015.mp4,0,41,1.4,42,30.0
+t_bar_row_incorrect_016,t_bar_row_src_048,t bar row,YouTube,incorrect,improper_foot_placement,data_videos/t_bar_row/t_bar_row_incorrect_016.mp4,0,35,1.2,36,30.0
+t_bar_row_incorrect_017,t_bar_row_src_049,t bar row,YouTube,incorrect,round_back,data_videos/t_bar_row/t_bar_row_incorrect_017.mp4,0,29,1.0,30,30.0
+leg_raises_correct_001,leg_raises_src_001,leg raises,GYMED,correct,none,data_videos/leg_raises/leg_raises_correct_001.mp4,0,89,3.0,90,29.97
+leg_raises_correct_002,leg_raises_src_002,leg raises,GYMED,correct,none,data_videos/leg_raises/leg_raises_correct_002.mp4,0,46,1.57,47,29.97
+leg_raises_correct_003,leg_raises_src_003,leg raises,GYMED,correct,none,data_videos/leg_raises/leg_raises_correct_003.mp4,0,148,4.97,149,29.97
+leg_raises_correct_004,leg_raises_src_003,leg raises,GYMED,correct,none,data_videos/leg_raises/leg_raises_correct_004.mp4,0,112,3.77,113,29.97
+leg_raises_correct_005,leg_raises_src_005,leg raises,GYMED,correct,none,data_videos/leg_raises/leg_raises_correct_005.mp4,0,85,3.59,86,23.98
+leg_raises_correct_006,leg_raises_src_001,leg raises,GYMED,correct,none,data_videos/leg_raises/leg_raises_correct_006.mp4,0,84,2.84,85,29.97
+leg_raises_correct_007,leg_raises_src_007,leg raises,GYMED,correct,none,data_videos/leg_raises/leg_raises_correct_007.mp4,0,59,2.5,60,23.98
+leg_raises_correct_008,leg_raises_src_001,leg raises,GYMED,correct,none,data_videos/leg_raises/leg_raises_correct_008.mp4,0,55,1.87,56,29.98
+leg_raises_correct_009,leg_raises_src_002,leg raises,GYMED,correct,none,data_videos/leg_raises/leg_raises_correct_009.mp4,0,42,1.43,43,29.97
+leg_raises_correct_010,leg_raises_src_002,leg raises,GYMED,correct,none,data_videos/leg_raises/leg_raises_correct_010.mp4,0,56,1.9,57,29.97
+leg_raises_correct_011,leg_raises_src_011,leg raises,GYMED,correct,none,data_videos/leg_raises/leg_raises_correct_011.mp4,0,73,2.47,74,29.97
+leg_raises_correct_012,leg_raises_src_003,leg raises,GYMED,correct,none,data_videos/leg_raises/leg_raises_correct_012.mp4,0,159,5.34,160,29.97
+leg_raises_correct_013,leg_raises_src_013,leg raises,GYMED,correct,none,data_videos/leg_raises/leg_raises_correct_013.mp4,0,187,7.52,188,25.0
+leg_raises_correct_014,leg_raises_src_014,leg raises,GYMED,correct,none,data_videos/leg_raises/leg_raises_correct_014.mp4,0,60,2.54,61,23.98
+leg_raises_correct_015,leg_raises_src_015,leg raises,GYMED,correct,none,data_videos/leg_raises/leg_raises_correct_015.mp4,0,65,2.64,66,25.0
+leg_raises_correct_016,leg_raises_src_015,leg raises,GYMED,correct,none,data_videos/leg_raises/leg_raises_correct_016.mp4,0,91,3.68,92,25.0
+leg_raises_correct_017,leg_raises_src_007,leg raises,GYMED,correct,none,data_videos/leg_raises/leg_raises_correct_017.mp4,0,66,2.79,67,23.98
+leg_raises_correct_018,leg_raises_src_018,leg raises,YouTube,correct,none,data_videos/leg_raises/leg_raises_correct_018.mp4,0,59,2.0,60,30.0
+leg_raises_correct_019,leg_raises_src_020,leg raises,YouTube,correct,none,data_videos/leg_raises/leg_raises_correct_019.mp4,0,59,2.0,60,30.0
+leg_raises_correct_020,leg_raises_src_021,leg raises,YouTube,correct,none,data_videos/leg_raises/leg_raises_correct_020.mp4,0,58,1.97,59,30.0
+leg_raises_correct_021,leg_raises_src_021,leg raises,YouTube,correct,none,data_videos/leg_raises/leg_raises_correct_021.mp4,0,89,3.0,90,30.0
+leg_raises_correct_022,leg_raises_src_022,leg raises,YouTube,correct,none,data_videos/leg_raises/leg_raises_correct_022.mp4,0,59,2.0,60,30.0
+leg_raises_correct_023,leg_raises_src_025,leg raises,YouTube,correct,none,data_videos/leg_raises/leg_raises_correct_023.mp4,0,115,3.87,116,30.0
+leg_raises_correct_024,leg_raises_src_025,leg raises,YouTube,correct,none,data_videos/leg_raises/leg_raises_correct_024.mp4,0,87,2.93,88,30.0
+leg_raises_correct_025,leg_raises_src_026,leg raises,YouTube,correct,none,data_videos/leg_raises/leg_raises_correct_025.mp4,0,179,6.0,180,30.0
+leg_raises_correct_026,leg_raises_src_026,leg raises,YouTube,correct,none,data_videos/leg_raises/leg_raises_correct_026.mp4,0,106,3.57,107,30.0
+leg_raises_correct_027,leg_raises_src_030,leg raises,YouTube,correct,none,data_videos/leg_raises/leg_raises_correct_027.mp4,0,89,3.0,90,30.0
+leg_raises_correct_028,leg_raises_src_031,leg raises,YouTube,correct,none,data_videos/leg_raises/leg_raises_correct_028.mp4,0,119,4.0,120,30.0
+leg_raises_correct_029,leg_raises_src_031,leg raises,YouTube,correct,none,data_videos/leg_raises/leg_raises_correct_029.mp4,0,89,3.0,90,30.0
+leg_raises_correct_030,leg_raises_src_031,leg raises,YouTube,correct,none,data_videos/leg_raises/leg_raises_correct_030.mp4,0,95,3.2,96,30.0
+leg_raises_correct_031,leg_raises_src_032,leg raises,YouTube,correct,none,data_videos/leg_raises/leg_raises_correct_031.mp4,0,108,3.63,109,30.0
+leg_raises_correct_032,leg_raises_src_033,leg raises,YouTube,correct,none,data_videos/leg_raises/leg_raises_correct_032.mp4,0,89,3.0,90,30.0
+leg_raises_correct_033,leg_raises_src_034,leg raises,YouTube,correct,none,data_videos/leg_raises/leg_raises_correct_033.mp4,0,89,3.0,90,30.0
+leg_raises_correct_034,leg_raises_src_034,leg raises,YouTube,correct,none,data_videos/leg_raises/leg_raises_correct_034.mp4,0,89,3.0,90,30.0
+leg_raises_correct_035,leg_raises_src_034,leg raises,YouTube,correct,none,data_videos/leg_raises/leg_raises_correct_035.mp4,0,89,3.0,90,30.0
+leg_raises_correct_036,leg_raises_src_037,leg raises,YouTube,correct,none,data_videos/leg_raises/leg_raises_correct_036.mp4,0,149,5.0,150,30.0
+leg_raises_correct_037,leg_raises_src_037,leg raises,YouTube,correct,none,data_videos/leg_raises/leg_raises_correct_037.mp4,0,119,4.0,120,30.0
+leg_raises_correct_038,leg_raises_src_038,leg raises,YouTube,correct,none,data_videos/leg_raises/leg_raises_correct_038.mp4,0,58,1.97,59,30.0
+leg_raises_correct_039,leg_raises_src_041,leg raises,YouTube,correct,none,data_videos/leg_raises/leg_raises_correct_039.mp4,0,70,2.37,71,30.0
+leg_raises_correct_040,leg_raises_src_042,leg raises,YouTube,correct,none,data_videos/leg_raises/leg_raises_correct_040.mp4,0,209,7.0,210,30.0
+leg_raises_correct_041,leg_raises_src_042,leg raises,YouTube,correct,none,data_videos/leg_raises/leg_raises_correct_041.mp4,0,149,5.0,150,30.0
+leg_raises_incorrect_001,leg_raises_src_019,leg raises,YouTube,incorrect,using_momentum,data_videos/leg_raises/leg_raises_incorrect_001.mp4,0,37,1.27,38,30.0
+leg_raises_incorrect_002,leg_raises_src_022,leg raises,YouTube,incorrect,using_momentum,data_videos/leg_raises/leg_raises_incorrect_002.mp4,0,76,2.57,77,30.0
+leg_raises_incorrect_003,leg_raises_src_023,leg raises,YouTube,incorrect,hip_flexor_dominance,data_videos/leg_raises/leg_raises_incorrect_003.mp4,0,36,1.23,37,30.0
+leg_raises_incorrect_004,leg_raises_src_024,leg raises,YouTube,incorrect,using_momentum,data_videos/leg_raises/leg_raises_incorrect_004.mp4,0,89,3.0,90,30.0
+leg_raises_incorrect_005,leg_raises_src_026,leg raises,YouTube,incorrect,using_momentum,data_videos/leg_raises/leg_raises_incorrect_005.mp4,0,67,2.27,68,30.0
+leg_raises_incorrect_006,leg_raises_src_027,leg raises,YouTube,incorrect,hip_flexor_dominance,data_videos/leg_raises/leg_raises_incorrect_006.mp4,0,89,3.0,90,30.0
+leg_raises_incorrect_007,leg_raises_src_027,leg raises,YouTube,incorrect,arching_lower_back,data_videos/leg_raises/leg_raises_incorrect_007.mp4,0,89,3.0,90,30.0
+leg_raises_incorrect_008,leg_raises_src_028,leg raises,YouTube,incorrect,using_momentum,data_videos/leg_raises/leg_raises_incorrect_008.mp4,0,49,1.67,50,30.0
+leg_raises_incorrect_009,leg_raises_src_029,leg raises,YouTube,incorrect,using_momentum,data_videos/leg_raises/leg_raises_incorrect_009.mp4,0,45,1.53,46,30.0
+leg_raises_incorrect_010,leg_raises_src_032,leg raises,YouTube,incorrect,hip_flexor_dominance,data_videos/leg_raises/leg_raises_incorrect_010.mp4,0,59,2.0,60,30.0
+leg_raises_incorrect_011,leg_raises_src_035,leg raises,YouTube,incorrect,using_momentum,data_videos/leg_raises/leg_raises_incorrect_011.mp4,0,42,1.43,43,30.0
+leg_raises_incorrect_012,leg_raises_src_036,leg raises,YouTube,incorrect,partial_rom,data_videos/leg_raises/leg_raises_incorrect_012.mp4,0,59,2.0,60,30.0
+leg_raises_incorrect_013,leg_raises_src_038,leg raises,YouTube,incorrect,using_momentum,data_videos/leg_raises/leg_raises_incorrect_013.mp4,0,51,1.73,52,30.0
+leg_raises_incorrect_014,leg_raises_src_039,leg raises,YouTube,incorrect,using_momentum,data_videos/leg_raises/leg_raises_incorrect_014.mp4,0,78,2.63,79,30.0
+leg_raises_incorrect_015,leg_raises_src_040,leg raises,YouTube,incorrect,using_momentum,data_videos/leg_raises/leg_raises_incorrect_015.mp4,0,59,2.0,60,30.0
+leg_raises_incorrect_016,leg_raises_src_043,leg raises,YouTube,incorrect,using_momentum,data_videos/leg_raises/leg_raises_incorrect_016.mp4,0,48,1.63,49,30.0

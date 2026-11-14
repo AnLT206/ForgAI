@@ -1,0 +1,39 @@
+{
+  "sample_segment_id": "squat_correct_001",
+  "sample_frames": 57,
+  "threshold_ms_per_frame": 50.0,
+  "core_ai_single_fold": {
+    "n_runs": 100,
+    "mode": "Single-Fold (0)",
+    "exercise": "squat",
+    "num_frames_rep": 57,
+    "feature_extract_mean_ms": 3.618,
+    "model_inference_mean_ms": 79.352,
+    "rule_engine_mean_ms": 0.017,
+    "total_ai_mean_ms": 82.987,
+    "total_ai_p95_ms": 114.29,
+    "per_frame_ai_ms": 1.4559,
+    "core_ai_fps_equivalent": 686.9
+  },
+  "core_ai_five_fold_ensemble": {
+    "n_runs": 100,
+    "mode": "5-Fold Ensemble",
+    "exercise": "squat",
+    "num_frames_rep": 57,
+    "feature_extract_mean_ms": 4.243,
+    "model_inference_mean_ms": 435.319,
+    "rule_engine_mean_ms": 0.018,
+    "total_ai_mean_ms": 439.579,
+    "total_ai_p95_ms": 510.584,
+    "per_frame_ai_ms": 7.7119,
+    "core_ai_fps_equivalent": 129.7
+  },
+  "end_to_end_video_single_fold": {
+    "mediapipe_extract_ms": 2752.19,
+    "mediapipe_per_frame_ms": 48.28,
+    "total_ai_ms": 136.751,
+    "end_to_end_total_ms": 2888.94,
+    "end_to_end_per_frame_ms": 50.68,
+    "fps_equivalent": 19.7
+  }
+}

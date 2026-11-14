@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ForgAI Studio — Phân tích Kỹ thuật Tập Gym Bằng AI</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <div class="brand-logo" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6.5 6.5h11" />
+            <path d="M6.5 17.5h11" />
+            <path d="M4 9.5v5" />
+            <path d="M20 9.5v5" />
+            <path d="M2 11v2" />
+            <path d="M22 11v2" />
+            <path d="M12 6.5v11" />
+          </svg>
+        </div>
+        <div>
+          <h1 class="brand-title">ForgAI Studio</h1>
+          <p class="brand-sub">Phân tích Kỹ thuật Tập Gym 13 Khớp · Step 7 Web Dashboard</p>
+        </div>
+      </div>
+
+      <nav class="tab-nav" role="tablist" aria-label="Chức năng chính ForgAI Studio">
+        <button class="tab-btn active" role="tab" aria-selected="true" aria-controls="panel-upload" id="tab-upload" data-tab="upload">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+            <polyline points="17 8 12 3 7 8" />
+            <line x1="12" y1="3" x2="12" y2="15" />
+          </svg>
+          <span>Phân tích Video</span>
+        </button>
+
+        <button class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-webcam" id="tab-webcam" data-tab="webcam">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M23 7l-7 5 7 5V7z" />
+            <rect x="1" y="5" width="15" height="14" rx="2" ry="2" />
+          </svg>
+          <span>Camera Trực tiếp</span>
+        </button>
+
+        <button class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-dashboard" id="tab-dashboard" data-tab="dashboard">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="18" y1="20" x2="18" y2="10" />
+            <line x1="12" y1="20" x2="12" y2="4" />
+            <line x1="6" y1="20" x2="6" y2="14" />
+          </svg>
+          <span>Tổng quan Mô hình</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- TAB 1: PHÂN TÍCH VIDEO KÉO-THẢ -->
+    <section id="panel-upload" class="tab-panel active" role="tabpanel" aria-labelledby="tab-upload">
+      <div class="upload-setup-grid">
+        <div class="card">
+          <div class="card-header">
+            <h2>1. Chọn Video Cần Chấm Điểm</h2>
+            <span class="hint-pill">Hỗ trợ .mp4, .mov, .avi, .mkv (tối đa 250 MB)</span>
+          </div>
+
+          <div id="dropzone" class="dropzone" tabindex="0" role="button" aria-label="Kéo thả video hoặc bấm để chọn file từ máy tính">
+            <input type="file" id="video-input" accept=".mp4,.mov,.avi,.mkv,.webm,video/*" hidden />
+            <div id="dropzone-empty" class="dropzone-empty">
+              <div class="drop-icon" aria-hidden="true">
+                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242" />
+                  <path d="M12 12v9" />
+                  <path d="m16 16-4-4-4 4" />
+                </svg>
+              </div>
+              <p class="drop-title">Kéo thả video vào đây hoặc <span class="link-accent">chọn file trên máy</span></p>
+              <p class="drop-desc">Quay rõ toàn thân và khớp chính để MediaPipe bắt 13 khớp chính xác nhất</p>
+            </div>
+
+            <div id="dropzone-preview" class="dropzone-preview hidden">
+              <video id="local-preview-video" class="preview-player" controls muted playsinline></video>
+              <div id="preview-status" class="preview-status hidden" aria-live="polite"></div>
+              <div class="file-bar">
+                <div class="file-meta">
+                  <span id="file-name" class="file-name">video.mp4</span>
+                  <span id="file-size" class="file-size">0 MB</span>
+                </div>
+                <button type="button" id="btn-change-file" class="btn-secondary btn-sm">Đổi video khác</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h2>2. Cấu hình Bài tập & Chế độ AI</h2>
+            <span class="hint-pill">8 bài tập Nhóm A</span>
+          </div>
+
+          <div class="field-group">
+            <label class="field-label">Chọn bài tập đang thực hiện trong video</label>
+            <div id="exercise-grid" class="exercise-grid" role="radiogroup" aria-label="Chọn bài tập"></div>
+          </div>
+
+          <div class="field-group">
+            <label class="field-label">Loại video đầu vào</label>
+            <div class="segmented-control" role="radiogroup" aria-label="Chế độ phân tích video">
+              <button type="button" class="seg-btn active" data-mode="single_rep">
+                <strong>Video 1 Rep</strong>
+                <span>Chấm sâu 4 nhánh AI + Biểu đồ góc</span>
+              </button>
+              <button type="button" class="seg-btn" data-mode="multi_rep">
+                <strong>Video Nhiều Rep (Cả hiệp)</strong>
+                <span>Tự đếm &amp; chấm từng rep liên tiếp</span>
+              </button>
+            </div>
+          </div>
+
+          <label class="toggle-row" for="toggle-all-folds">
+            <div class="toggle-text">
+              <strong>Chế độ chấm kỹ hơn (Hội đồng 5 mô hình AI)</strong>
+              <span>Mặc định dùng 1 mô hình để phản hồi nhanh. Bật để tổng hợp ý kiến từ cả 5 mô hình đã huấn luyện (ổn định hơn, ~0.4 giây/rep).</span>
+            </div>
+            <input type="checkbox" id="toggle-all-folds" class="switch-input" />
+          </label>
+
+          <div id="upload-error" class="alert-banner alert-error hidden" role="alert"></div>
+
+          <button type="button" id="btn-analyze" class="btn-primary btn-analyze" disabled>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polygon points="5 3 19 12 5 21 5 3" />
+            </svg>
+            <span>Phân tích Kỹ thuật Ngay</span>
+          </button>
+
+          <div id="loading-box" class="loading-box hidden" aria-live="polite">
+            <div class="spinner" aria-hidden="true"></div>
+            <div>
+              <strong id="loading-title">Đang xử lý video bằng ForgAI...</strong>
+              <p id="loading-steps" class="loading-steps">Trích xuất MediaPipe Pose 13 khớp → Chấm điểm AI &amp; Luật cơ sinh học → Chuẩn hóa H.264</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- KẾT QUẢ PHÂN TÍCH VIDEO -->
+      <div id="result-section" class="result-section hidden">
+        <div class="result-grid">
+          <!-- Cột Trái: Video HUD + Biểu đồ -->
+          <div class="card">
+            <div class="card-header">
+              <h2>Video Kết quả (Khung xương 13 khớp &amp; HUD Tiếng Việt)</h2>
+              <a id="btn-download-video" href="#" download class="btn-secondary btn-sm">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                  <polyline points="7 10 12 15 17 10" />
+                  <line x1="12" y1="15" x2="12" y2="3" />
+                </svg>
+                <span>Tải video HUD (.mp4)</span>
+              </a>
+            </div>
+
+            <div class="video-stage">
+              <video id="result-video" class="result-player" controls autoplay loop playsinline></video>
+            </div>
+
+            <div id="single-curve-card" class="curve-card hidden">
+              <div class="curve-header">
+                <strong id="curve-title">Biểu đồ Quỹ đạo Khớp Chủ đạo</strong>
+                <span id="curve-stats" class="curve-stats"></span>
+              </div>
+              <div id="curve-svg-wrap" class="curve-svg-wrap"></div>
+            </div>
+          </div>
+
+          <!-- Cột Phải: Kết quả AI + Giải thích -->
+          <div id="result-details-col" class="result-details-col"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 2: CAMERA TRỰC TIẾP 30 FPS -->
+    <section id="panel-webcam" class="tab-panel" role="tabpanel" aria-labelledby="tab-webcam" hidden>
+      <div class="webcam-grid">
+        <div class="card">
+          <div class="card-header">
+            <h2>Luồng Camera Trực Tiếp (Realtime 30 FPS)</h2>
+            <div class="webcam-header-actions">
+              <span id="webcam-badge" class="status-pill status-idle">Chưa bắt đầu</span>
+              <button type="button" id="btn-wc-fullscreen" class="btn-secondary btn-sm" title="Mở rộng Camera toàn màn hình (Phím F)">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="15 3 21 3 21 9" />
+                  <polyline points="9 21 3 21 3 15" />
+                  <line x1="21" y1="3" x2="14" y2="10" />
+                  <line x1="3" y1="21" x2="10" y2="14" />
+                </svg>
+                <span>Toàn màn hình (F)</span>
+              </button>
+            </div>
+          </div>
+
+          <div id="webcam-stage" class="webcam-stage">
+            <img id="webcam-stream-img" class="webcam-stream hidden" alt="Luồng video phân tích Realtime ForgAI" />
+            <div id="webcam-placeholder" class="webcam-placeholder">
+              <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M23 7l-7 5 7 5V7z" />
+                <rect x="1" y="5" width="15" height="14" rx="2" ry="2" />
+              </svg>
+              <p><strong>Bước 1:</strong> Chọn bài tập &rarr; <strong>Bước 2:</strong> Chọn số Rep mục tiêu &rarr; <strong>Bước 3:</strong> Bấm <strong>Xác nhận cấu hình</strong> rồi nhấn <strong>Bắt đầu Camera</strong>.</p>
+            </div>
+
+            <div id="wc-stage-banner" class="wc-stage-banner hidden" role="status" aria-live="polite"></div>
+
+            <button type="button" id="btn-wc-stage-fs" class="btn-stage-fs" title="Toàn màn hình (F)" aria-label="Bật hoặc tắt chế độ Camera toàn màn hình">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="15 3 21 3 21 9" />
+                <polyline points="9 21 3 21 3 15" />
+                <line x1="21" y1="3" x2="14" y2="10" />
+                <line x1="3" y1="21" x2="10" y2="14" />
+              </svg>
+            </button>
+
+            <div id="wc-fs-overlay" class="wc-fs-overlay" aria-live="polite">
+              <div class="wc-fs-topbar">
+                <div class="wc-fs-metrics">
+                  <span id="wc-fs-exercise" class="fs-chip fs-chip-ex">Squat</span>
+                  <span id="wc-fs-state" class="fs-chip">CHƯA CHẠY</span>
+                  <span id="wc-fs-reps" class="fs-chip fs-chip-rep num-tabular">0 / 10 rep</span>
+                  <span id="wc-fs-fps" class="fs-chip num-tabular">0 FPS · 960px</span>
+                </div>
+                <div class="wc-fs-actions">
+                  <button type="button" id="btn-fs-mirror" class="btn-secondary btn-sm active-outline">Lật gương: Bật</button>
+                  <button type="button" id="btn-fs-reset" class="btn-secondary btn-sm" disabled>Reset Rep</button>
+                  <button type="button" id="btn-fs-toggle" class="btn-primary btn-sm" disabled>Bắt đầu Camera</button>
+                  <button type="button" id="btn-fs-exit" class="btn-secondary btn-sm">Thu nhỏ (Esc)</button>
+                </div>
+              </div>
+              <div class="wc-fs-bottom">
+                <div class="progress-track wc-fs-progress">
+                  <div id="wc-fs-progress-bar" class="progress-fill" style="width:0%"></div>
+                </div>
+                <div id="wc-fs-summary" class="alert-banner alert-success wc-fs-summary hidden" role="status"></div>
+                <div id="wc-fs-last-result" class="wc-fs-last-result">
+                  Đang chờ hoàn thành rep đầu tiên...
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="wc-summary-banner" class="alert-banner alert-success hidden" role="status"></div>
+
+          <div class="webcam-telemetry">
+            <div class="tele-item">
+              <span>Trạng thái chu kỳ</span>
+              <strong id="wc-state">CHƯA CHẠY</strong>
+            </div>
+            <div class="tele-item">
+              <span>Tiến độ Rep</span>
+              <div class="progress-track"><div id="wc-progress-bar" class="progress-fill" style="width:0%"></div></div>
+            </div>
+            <div class="tele-item">
+              <span>Hoàn thành / Mục tiêu</span>
+              <strong id="wc-rep-count" class="num-tabular">0 / 10 rep</strong>
+            </div>
+            <div class="tele-item">
+              <span>Tốc độ xử lý</span>
+              <strong id="wc-fps" class="num-tabular">0 FPS · 0 ms</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h2>Thiết lập &amp; Xác nhận Hiệp tập</h2>
+            <span id="wc-confirm-badge" class="status-pill status-pending">Chưa xác nhận</span>
+          </div>
+
+          <div id="wc-setup-fields">
+            <div class="field-group">
+              <label class="field-label">1. Chọn bài tập thực hiện</label>
+              <div id="wc-exercise-grid" class="exercise-grid compact" role="radiogroup" aria-label="Chọn bài tập cho Camera"></div>
+            </div>
+
+            <div class="field-group">
+              <label class="field-label" for="wc-target-reps-input">2. Chọn số Rep mục tiêu trong hiệp</label>
+              <div id="wc-rep-presets" class="rep-preset-row" role="radiogroup" aria-label="Chọn nhanh số rep mục tiêu">
+                <button type="button" class="rep-chip" data-reps="0">Tự do</button>
+                <button type="button" class="rep-chip" data-reps="5">5 rep</button>
+                <button type="button" class="rep-chip" data-reps="8">8 rep</button>
+                <button type="button" class="rep-chip active" data-reps="10">10 rep</button>
+                <button type="button" class="rep-chip" data-reps="12">12 rep</button>
+                <button type="button" class="rep-chip" data-reps="15">15 rep</button>
+              </div>
+              <div class="rep-custom-row">
+                <label for="wc-target-reps-input">Hoặc nhập số rep (1–50, 0 = Tự do):</label>
+                <input type="number" id="wc-target-reps-input" class="select-input rep-num-input" min="0" max="50" value="10" />
+              </div>
+            </div>
+
+            <div class="field-group wc-device-row">
+              <div>
+                <label class="field-label" for="wc-camera-index">Thiết bị Camera</label>
+                <select id="wc-camera-index" class="select-input">
+                  <option value="0">Camera #0 (Webcam mặc định)</option>
+                  <option value="1">Camera #1 (Camera rời / phụ)</option>
+                </select>
+              </div>
+              <div style="display:flex;align-items:flex-end;">
+                <button type="button" id="btn-wc-mirror" class="btn-secondary active-outline" style="width:100%;">Lật gương: Bật</button>
+              </div>
+            </div>
+
+            <label class="toggle-row" for="wc-toggle-all-folds">
+              <div class="toggle-text">
+                <strong>Chấm kỹ bằng Hội đồng 5 mô hình AI</strong>
+                <span>Mặc định 1 mô hình để giữ 30 FPS mượt. Bật để tổng hợp cả 5 mô hình (~0.4 giây trễ cuối mỗi rep).</span>
+              </div>
+              <input type="checkbox" id="wc-toggle-all-folds" class="switch-input" />
+            </label>
+          </div>
+
+          <div id="wc-confirm-box" class="wc-confirm-box">
+            <div class="wc-confirm-meta">
+              <strong>3. Xác nhận trước khi bắt đầu</strong>
+              <span id="wc-confirm-summary">Squat (Gánh đùi / Ngồi xổm) · Mục tiêu: 10 rep · 1 mô hình nhanh</span>
+            </div>
+            <div class="webcam-actions" style="margin-bottom:0;margin-top:10px;">
+              <button type="button" id="btn-wc-confirm" class="btn-secondary">Xác nhận cấu hình</button>
+              <button type="button" id="btn-wc-toggle" class="btn-primary" disabled>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10" />
+                  <polygon points="10 8 16 12 10 16 10 8" />
+                </svg>
+                <span>Bắt đầu Camera</span>
+              </button>
+              <button type="button" id="btn-wc-reset" class="btn-secondary" disabled>Reset Rep</button>
+            </div>
+          </div>
+
+          <div id="wc-error" class="alert-banner alert-error hidden" role="alert"></div>
+
+          <div class="field-group" style="margin-top:14px;">
+            <label class="field-label">Kết quả Rep vừa hoàn thành</label>
+            <div id="wc-last-result" class="wc-last-card empty-muted">
+              Chưa có rep nào được chấm trong phiên hiện tại.
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label class="field-label">Lịch sử Rep phiên này</label>
+            <div id="wc-history" class="wc-history-list"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 3: TỔNG QUAN MÔ HÌNH & ĐỘ TRỄ -->
+    <section id="panel-dashboard" class="tab-panel" role="tabpanel" aria-labelledby="tab-dashboard" hidden>
+      <div id="dash-error" class="alert-banner alert-error hidden" role="alert">
+        <span id="dash-error-text"></span>
+        <button type="button" id="btn-dash-retry" class="btn-secondary btn-sm" style="margin-left:10px;">Thử tải lại</button>
+      </div>
+
+      <div id="dash-kpis" class="kpi-row"></div>
+
+      <div class="dash-tables-grid">
+        <div class="card">
+          <div class="card-header">
+            <h2>So sánh Hiệu năng 5-Fold Cross-Validation (Bước 6.2 E.3-LowRisk)</h2>
+            <span class="hint-pill">0% Data Leakage</span>
+          </div>
+          <div class="table-wrap">
+            <table id="tbl-models" class="data-table"></table>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h2>Kiểm chuẩn Độ trễ Suy luận CPU (Ngưỡng &lt; 50 ms/frame)</h2>
+            <span class="hint-pill status-pass">Đạt chuẩn Realtime</span>
+          </div>
+          <div class="table-wrap">
+            <table id="tbl-benchmark" class="data-table"></table>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h2>Hiệu năng Chi tiết trên Từng Bài tập (8 Bài Nhóm A — Out-of-Fold)</h2>
+        </div>
+        <div class="table-wrap">
+          <table id="tbl-exercises" class="data-table"></table>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h2>Thư viện Biểu đồ Báo cáo (300 DPI — Bấm vào ảnh để phóng to)</h2>
+        </div>
+        <div id="figures-gallery" class="figures-gallery"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Lightbox Modal phóng to biểu đồ -->
+  <div id="lightbox-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="lightbox-title">
+    <div class="modal-backdrop"></div>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 id="lightbox-title">Biểu đồ</h3>
+        <button type="button" id="btn-close-modal" class="icon-btn" aria-label="Đóng cửa sổ xem ảnh">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="18" y1="6" x2="6" y2="18" />
+            <line x1="6" y1="6" x2="18" y2="18" />
+          </svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <img id="lightbox-img" src="" alt="" />
+      </div>
+    </div>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+# Python & IDE
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+env/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Antigravity / Agent internal configs
+.agents/
+
+# Heavy raw & segmented video datasets (exceed GitHub 100MB/repo limits)
+data_videos/
+data_supplementary/
+*.mp4
+*.mov
+*.avi
+*.mkv
+
+# Temporary outputs & generated demos
+outputs/demo/
+outputs/web_sessions/
+*.tmp
+*.log
+*.part
+*.ytdl
