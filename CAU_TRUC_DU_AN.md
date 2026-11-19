@@ -21,9 +21,9 @@ D:\datasets-gym\FORGAI\
 │   └── pose_landmarker_full.task # Trọng số MediaPipe Pose lưu cục bộ
 │
 ├── 📁 metadata/                  # [CHỈ LƯU 1 FILE CHUẨN DUY NHẤT]
-│   └── task2_assessment.csv      # Danh bạ 521 mẫu (8 bài tập) đã chuẩn hóa tên & đường dẫn nội bộ
+│   └── task2_assessment.csv      # Danh bạ 561 mẫu (8 bài tập) đã chuẩn hóa tên & đường dẫn nội bộ
 │
-├── 📁 data_videos/               # [KHO VIDEO 1-REP ĐỘC LẬP] 521 video chuẩn hóa theo từng bài tập
+├── 📁 data_videos/               # [KHO VIDEO 1-REP ĐỘC LẬP] 561 video chuẩn hóa theo từng bài tập
 │   ├── chest_fly_machine/        # chest_fly_machine_correct_001.mp4 ...
 │   ├── hip_thrust/               # hip_thrust_correct_001.mp4 ...
 │   ├── leg_extension/            # leg_extension_correct_001.mp4 ...
@@ -37,7 +37,7 @@ D:\datasets-gym\FORGAI\
 │   └── _cache/                   # Kho video gốc YouTube dự phòng (giữ lại để re-cut khi cần)
 │
 ├── 📁 data_processed/            # [DỮ LIỆU ĐÃ TRÍCH XUẤT] Lưu file khung xương .npy siêu nhẹ
-│   └── pose/                     # 521 file khung xương (squat_correct_001.npy ...)
+│   └── pose/                     # 561 file khung xương (squat_correct_001.npy ...)
 │
 ├── 📁 tools/                     # [BỘ CÔNG CỤ CLI & HỖ TRỢ]
 │   ├── download_tool.py          # Công cụ tải & cắt rep YouTube tự động (yt-dlp + ffmpeg, gắn YT_<id>)
@@ -79,10 +79,10 @@ D:\datasets-gym\FORGAI\
 | Thư mục | Vai trò | Vì sao bắt buộc phải có? |
 | :--- | :--- | :--- |
 | **`configs/`** | Cấu hình & Model Pose | Quản lý tập trung toàn bộ tham số 8 bài tập, seed, chia tập và chứa file `pose_landmarker_full.task` nội bộ. |
-| **`metadata/`** | **1 file danh bạ chuẩn duy nhất** | Chỉ lưu duy nhất `task2_assessment.csv` (521 mẫu của 8 bài tập, tên chuẩn hóa dễ hiểu, không lưu cột split tĩnh). |
-| **`data_videos/`** | Kho Video 1-rep độc lập | Chứa toàn bộ 521 video đã cắt chuẩn 1 rep (`data_videos/<bài_tập>/<bài_tập>_<correct/incorrect>_<001>.mp4`), giúp dự án độc lập 100% (`603.63 MB`). |
+| **`metadata/`** | **1 file danh bạ chuẩn duy nhất** | Chỉ lưu duy nhất `task2_assessment.csv` (561 mẫu của 8 bài tập, tên chuẩn hóa dễ hiểu, không lưu cột split tĩnh). |
+| **`data_videos/`** | Kho Video 1-rep độc lập | Chứa toàn bộ 561 video đã cắt chuẩn 1 rep (`data_videos/<bài_tập>/<bài_tập>_<correct/incorrect>_<001>.mp4`), giúp dự án độc lập 100% (`611.21 MB`). |
 | **`data_supplementary/_cache/`** | Kho video gốc dự phòng | Giữ nguyên các video gốc YouTube tải về để có thể re-cut lại bất cứ lúc nào nếu cần. |
-| **`data_processed/pose/`** | Kho lưu khung xương | Chứa 521 file `.npy` tọa độ 13 khớp. Nhẹ tênh (`12.61 MB`), giúp train nhanh gấp 100 lần. |
+| **`data_processed/pose/`** | Kho lưu khung xương | Chứa 561 file `.npy` tọa độ 13 khớp. Nhẹ tênh (`13.29 MB`), giúp train nhanh gấp 100 lần. |
 | **`tools/`** | Công cụ CLI tải, xem, vẽ & demo | Chứa `download_tool.py` (tải & cắt rep YouTube), `replay_rep.py` (xem lại rep), `visualize_task2.py` (biểu đồ), `demo_inference.py` (CLI Bước 7 + showcase + benchmark) và `realtime_demo.py` (demo Realtime Webcam/Video 30 FPS). |
 | **`web/`** | Giao diện Web Studio | Gói web độc lập chứa `app.py` (FastAPI backend, H.264, MJPEG webcam) và `static/` (`index.html`, `styles.css`, `app.js`), khởi chạy qua `run_web.bat`. |
 | **`src/`** | Bộ máy xử lý cốt lõi | Chứa toàn bộ logic trích xuất, tiền xử lý `117-d`, mô hình AI (`100-d/103-d Pure-AI`), bộ luật cơ sinh học giải thích lỗi và engine Suy luận/Realtime (`inference.py`, `realtime.py`). |
@@ -93,13 +93,13 @@ D:\datasets-gym\FORGAI\
 
 ## 📊 PHẦN 3: GIẢI THÍCH CHI TIẾT FILE METADATA CHUẨN DUY NHẤT (`metadata/task2_assessment.csv`)
 
-Thư mục `metadata/` chỉ lưu **1 file chuẩn duy nhất** với **521 dòng** (8 bài tập Nhóm A), định danh theo chuẩn quốc tế:
+Thư mục `metadata/` chỉ lưu **1 file chuẩn duy nhất** với **561 dòng** (8 bài tập Nhóm A), định danh theo chuẩn quốc tế:
 
 * **`segment_id`**: Mã định danh chuẩn duy nhất của từng rep (`<exercise>_<correct|incorrect>_<NNN>`, ví dụ: `squat_correct_001`, `squat_incorrect_005`).
-* **`video_id`**: Mã video nguồn gốc / người tập (`<exercise>_src_<NNN>`, ví dụ: `squat_src_001`). Các đoạn rep cắt từ cùng 1 video gốc hoặc cùng 1 người tập (kể cả khi xuất hiện chéo giữa GYMED / EFA / YouTube) mang chung 1 mã `src` để gom nhóm chống rò rỉ dữ liệu 100% (tổng cộng 371 nhóm độc lập).
+* **`video_id`**: Mã video nguồn gốc / người tập (`<exercise>_src_<NNN>`, ví dụ: `squat_src_001`). Các đoạn rep cắt từ cùng 1 video gốc hoặc cùng 1 người tập (kể cả khi xuất hiện chéo giữa GYMED / EFA / YouTube) mang chung 1 mã `src` để gom nhóm chống rò rỉ dữ liệu 100% (tổng cộng 405 nhóm độc lập).
 * **`exercise`**: Tên bài tập trong 8 bài Nhóm A (`pull up`, `push-up`, `leg extension`, `squat`, `chest fly machine`, `hip thrust`, `t bar row`, `leg raises`).
 * **`source`**: Nguồn gốc video được chuẩn hóa gọn về 3 giá trị (`EFA`, `GYMED`, `YouTube`) phục vụ đối chiếu Trước & Sau bổ sung dữ liệu.
-* **`form_label`**: Nhãn kỹ thuật: **`correct`** (Đúng — 330 mẫu) hoặc **`incorrect`** (Sai — 191 mẫu).
+* **`form_label`**: Nhãn kỹ thuật: **`correct`** (Đúng — 330 mẫu) hoặc **`incorrect`** (Sai — 231 mẫu).
 * **`error_reason`**: Mã lỗi chi tiết chuẩn hóa cho mẫu Sai (`partial_rom`, `knee_valgus`, `waist_sagging`...), hoặc `none` cho mẫu Đúng.
 * **`video_path`**: Đường dẫn tương đối bên trong dự án (`data_videos/<exercise>/<segment_id>.mp4`), giúp dự án chạy độc lập trên mọi máy.
 * **`start_frame`**, **`end_frame`**: Vì video trong `data_videos/` đã được cắt chuẩn đúng 1 rep duy nhất, mọi mẫu đều bắt đầu tại `0` và kết thúc tại `num_frames - 1`.

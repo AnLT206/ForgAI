@@ -70,6 +70,16 @@ pull_up_incorrect_027,pull_up_src_060,pull up,YouTube,incorrect,partial_rom,data
 pull_up_incorrect_028,pull_up_src_059,pull up,YouTube,incorrect,using_momentum,data_videos/pull_up/pull_up_incorrect_028.mp4,0,56,1.9,57,30.0
 pull_up_incorrect_029,pull_up_src_060,pull up,YouTube,incorrect,using_momentum,data_videos/pull_up/pull_up_incorrect_029.mp4,0,68,2.3,69,30.0
 pull_up_incorrect_030,pull_up_src_060,pull up,YouTube,incorrect,unequal_pull,data_videos/pull_up/pull_up_incorrect_030.mp4,0,68,2.3,69,30.0
+pull_up_incorrect_031,pull_up_src_061,pull up,YouTube,incorrect,using_momentum,data_videos/pull_up/pull_up_incorrect_031.mp4,0,44,1.5,45,30.0
+pull_up_incorrect_032,pull_up_src_062,pull up,YouTube,incorrect,using_momentum,data_videos/pull_up/pull_up_incorrect_032.mp4,0,53,1.8,54,30.0
+pull_up_incorrect_033,pull_up_src_063,pull up,YouTube,incorrect,using_momentum,data_videos/pull_up/pull_up_incorrect_033.mp4,0,38,1.3,39,30.0
+pull_up_incorrect_034,pull_up_src_064,pull up,YouTube,incorrect,partial_rom,data_videos/pull_up/pull_up_incorrect_034.mp4,0,86,2.9,87,30.0
+pull_up_incorrect_035,pull_up_src_065,pull up,YouTube,incorrect,partial_rom,data_videos/pull_up/pull_up_incorrect_035.mp4,0,48,1.63,49,30.0
+pull_up_incorrect_036,pull_up_src_066,pull up,YouTube,incorrect,neck_extension,data_videos/pull_up/pull_up_incorrect_036.mp4,0,78,2.63,79,30.0
+pull_up_incorrect_037,pull_up_src_067,pull up,YouTube,incorrect,neck_extension,data_videos/pull_up/pull_up_incorrect_037.mp4,0,48,1.63,49,30.0
+pull_up_incorrect_038,pull_up_src_068,pull up,YouTube,incorrect,unequal_pull,data_videos/pull_up/pull_up_incorrect_038.mp4,0,71,2.4,72,30.0
+pull_up_incorrect_039,pull_up_src_069,pull up,YouTube,incorrect,unequal_pull,data_videos/pull_up/pull_up_incorrect_039.mp4,0,83,2.8,84,30.0
+pull_up_incorrect_040,pull_up_src_052,pull up,YouTube,incorrect,partial_rom,data_videos/pull_up/pull_up_incorrect_040.mp4,0,49,1.67,50,30.0
 push_up_correct_001,push_up_src_001,push-up,EFA,correct,none,data_videos/push_up/push_up_correct_001.mp4,0,60,2.54,61,23.98
 push_up_correct_002,push_up_src_002,push-up,EFA,correct,none,data_videos/push_up/push_up_correct_002.mp4,0,101,3.4,102,29.97
 push_up_correct_003,push_up_src_002,push-up,EFA,correct,none,data_videos/push_up/push_up_correct_003.mp4,0,104,3.5,105,29.97
@@ -215,6 +225,10 @@ leg_extension_incorrect_022,leg_extension_src_056,leg extension,YouTube,incorrec
 leg_extension_incorrect_023,leg_extension_src_057,leg extension,YouTube,incorrect,butt_lifting,data_videos/leg_extension/leg_extension_incorrect_023.mp4,0,59,2.0,60,30.0
 leg_extension_incorrect_024,leg_extension_src_058,leg extension,YouTube,incorrect,partial_rom,data_videos/leg_extension/leg_extension_incorrect_024.mp4,0,41,1.4,42,30.0
 leg_extension_incorrect_025,leg_extension_src_059,leg extension,YouTube,incorrect,butt_lifting,data_videos/leg_extension/leg_extension_incorrect_025.mp4,0,53,1.8,54,30.0
+leg_extension_incorrect_026,leg_extension_src_060,leg extension,YouTube,incorrect,partial_rom,data_videos/leg_extension/leg_extension_incorrect_026.mp4,0,51,1.73,52,30.0
+leg_extension_incorrect_027,leg_extension_src_061,leg extension,YouTube,incorrect,partial_rom,data_videos/leg_extension/leg_extension_incorrect_027.mp4,0,32,1.1,33,30.0
+leg_extension_incorrect_028,leg_extension_src_062,leg extension,YouTube,incorrect,using_momentum,data_videos/leg_extension/leg_extension_incorrect_028.mp4,0,29,1.0,30,30.0
+leg_extension_incorrect_029,leg_extension_src_063,leg extension,YouTube,incorrect,leaning_forward,data_videos/leg_extension/leg_extension_incorrect_029.mp4,0,47,1.6,48,30.0
 squat_correct_001,squat_src_001,squat,EFA,correct,none,data_videos/squat/squat_correct_001.mp4,0,56,2.38,57,24.0
 squat_correct_002,squat_src_002,squat,EFA,correct,none,data_videos/squat/squat_correct_002.mp4,0,92,3.1,93,29.97
 squat_correct_003,squat_src_003,squat,EFA,correct,none,data_videos/squat/squat_correct_003.mp4,0,82,3.32,83,25.0
@@ -283,6 +297,14 @@ squat_incorrect_022,squat_src_058,squat,YouTube,incorrect,knee_valgus,data_video
 squat_incorrect_023,squat_src_066,squat,YouTube,incorrect,leaning_forward,data_videos/squat/squat_incorrect_023.mp4,0,92,3.1,93,30.0
 squat_incorrect_024,squat_src_067,squat,YouTube,incorrect,knee_valgus,data_videos/squat/squat_incorrect_024.mp4,0,74,2.5,75,30.0
 squat_incorrect_025,squat_src_068,squat,YouTube,incorrect,hips_rising_first,data_videos/squat/squat_incorrect_025.mp4,0,137,4.6,138,30.0
+squat_incorrect_026,squat_src_069,squat,YouTube,incorrect,heels_lifting,data_videos/squat/squat_incorrect_026.mp4,0,62,2.1,63,30.0
+squat_incorrect_027,squat_src_069,squat,YouTube,incorrect,knee_valgus,data_videos/squat/squat_incorrect_027.mp4,0,71,2.4,72,30.0
+squat_incorrect_028,squat_src_069,squat,YouTube,incorrect,arching_lower_back,data_videos/squat/squat_incorrect_028.mp4,0,53,1.8,54,30.0
+squat_incorrect_029,squat_src_069,squat,YouTube,incorrect,butt_wink,data_videos/squat/squat_incorrect_029.mp4,0,99,3.33,100,30.0
+squat_incorrect_030,squat_src_069,squat,YouTube,incorrect,hips_rising_first,data_videos/squat/squat_incorrect_030.mp4,0,71,2.4,72,30.0
+squat_incorrect_031,squat_src_070,squat,YouTube,incorrect,leaning_forward,data_videos/squat/squat_incorrect_031.mp4,0,56,1.9,57,30.0
+squat_incorrect_032,squat_src_071,squat,YouTube,incorrect,uncontrolled_eccentric,data_videos/squat/squat_incorrect_032.mp4,0,72,2.43,73,30.0
+squat_incorrect_033,squat_src_072,squat,YouTube,incorrect,improper_foot_placement,data_videos/squat/squat_incorrect_033.mp4,0,63,2.13,64,30.0
 chest_fly_machine_correct_001,chest_fly_machine_src_001,chest fly machine,GYMED,correct,none,data_videos/chest_fly_machine/chest_fly_machine_correct_001.mp4,0,146,4.9,147,30.0
 chest_fly_machine_correct_002,chest_fly_machine_src_002,chest fly machine,GYMED,correct,none,data_videos/chest_fly_machine/chest_fly_machine_correct_002.mp4,0,217,9.09,218,23.98
 chest_fly_machine_correct_003,chest_fly_machine_src_003,chest fly machine,GYMED,correct,none,data_videos/chest_fly_machine/chest_fly_machine_correct_003.mp4,0,63,2.13,64,30.0
@@ -344,6 +366,8 @@ chest_fly_machine_incorrect_017,chest_fly_machine_src_049,chest fly machine,YouT
 chest_fly_machine_incorrect_018,chest_fly_machine_src_050,chest fly machine,YouTube,incorrect,shoulder_protraction,data_videos/chest_fly_machine/chest_fly_machine_incorrect_018.mp4,0,89,3.0,90,30.0
 chest_fly_machine_incorrect_019,chest_fly_machine_src_050,chest fly machine,YouTube,incorrect,excessive_elbow_bend,data_videos/chest_fly_machine/chest_fly_machine_incorrect_019.mp4,0,65,2.2,66,30.0
 chest_fly_machine_incorrect_020,chest_fly_machine_src_050,chest fly machine,YouTube,incorrect,shoulders_shrugging,data_videos/chest_fly_machine/chest_fly_machine_incorrect_020.mp4,0,85,2.87,86,30.0
+chest_fly_machine_incorrect_021,chest_fly_machine_src_054,chest fly machine,YouTube,incorrect,shoulder_protraction,data_videos/chest_fly_machine/chest_fly_machine_incorrect_021.mp4,0,53,1.8,54,30.0
+chest_fly_machine_incorrect_022,chest_fly_machine_src_055,chest fly machine,YouTube,incorrect,shoulder_protraction,data_videos/chest_fly_machine/chest_fly_machine_incorrect_022.mp4,0,56,1.9,57,30.0
 hip_thrust_correct_001,hip_thrust_src_001,hip thrust,GYMED,correct,none,data_videos/hip_thrust/hip_thrust_correct_001.mp4,0,51,1.74,52,29.97
 hip_thrust_correct_002,hip_thrust_src_001,hip thrust,GYMED,correct,none,data_videos/hip_thrust/hip_thrust_correct_002.mp4,0,51,1.74,52,29.97
 hip_thrust_correct_003,hip_thrust_src_002,hip thrust,GYMED,correct,none,data_videos/hip_thrust/hip_thrust_correct_003.mp4,0,112,3.77,113,30.0
@@ -404,6 +428,11 @@ hip_thrust_incorrect_016,hip_thrust_src_044,hip thrust,YouTube,incorrect,head_lo
 hip_thrust_incorrect_017,hip_thrust_src_046,hip thrust,YouTube,incorrect,hyperextended_back,data_videos/hip_thrust/hip_thrust_incorrect_017.mp4,0,119,4.0,120,30.0
 hip_thrust_incorrect_018,hip_thrust_src_048,hip thrust,YouTube,incorrect,head_looking_up,data_videos/hip_thrust/hip_thrust_incorrect_018.mp4,0,89,3.0,90,30.0
 hip_thrust_incorrect_019,hip_thrust_src_050,hip thrust,YouTube,incorrect,hyperextended_back,data_videos/hip_thrust/hip_thrust_incorrect_019.mp4,0,55,1.87,56,30.0
+hip_thrust_incorrect_020,hip_thrust_src_051,hip thrust,YouTube,incorrect,hyperextended_back,data_videos/hip_thrust/hip_thrust_incorrect_020.mp4,0,128,4.3,129,30.0
+hip_thrust_incorrect_021,hip_thrust_src_052,hip thrust,YouTube,incorrect,improper_foot_placement,data_videos/hip_thrust/hip_thrust_incorrect_021.mp4,0,119,4.0,120,30.0
+hip_thrust_incorrect_022,hip_thrust_src_053,hip thrust,YouTube,incorrect,head_looking_up,data_videos/hip_thrust/hip_thrust_incorrect_022.mp4,0,83,2.8,84,30.0
+hip_thrust_incorrect_023,hip_thrust_src_054,hip thrust,YouTube,incorrect,using_momentum,data_videos/hip_thrust/hip_thrust_incorrect_023.mp4,0,73,2.47,74,30.0
+hip_thrust_incorrect_024,hip_thrust_src_029,hip thrust,YouTube,incorrect,partial_rom,data_videos/hip_thrust/hip_thrust_incorrect_024.mp4,0,50,1.7,51,30.0
 t_bar_row_correct_001,t_bar_row_src_001,t bar row,GYMED,correct,none,data_videos/t_bar_row/t_bar_row_correct_001.mp4,0,66,2.24,67,29.97
 t_bar_row_correct_002,t_bar_row_src_002,t bar row,GYMED,correct,none,data_videos/t_bar_row/t_bar_row_correct_002.mp4,0,33,1.42,34,23.98
 t_bar_row_correct_003,t_bar_row_src_001,t bar row,GYMED,correct,none,data_videos/t_bar_row/t_bar_row_correct_003.mp4,0,56,1.9,57,29.97
@@ -463,6 +492,11 @@ t_bar_row_incorrect_014,t_bar_row_src_045,t bar row,YouTube,incorrect,uncontroll
 t_bar_row_incorrect_015,t_bar_row_src_046,t bar row,YouTube,incorrect,uncontrolled_eccentric,data_videos/t_bar_row/t_bar_row_incorrect_015.mp4,0,41,1.4,42,30.0
 t_bar_row_incorrect_016,t_bar_row_src_048,t bar row,YouTube,incorrect,improper_foot_placement,data_videos/t_bar_row/t_bar_row_incorrect_016.mp4,0,35,1.2,36,30.0
 t_bar_row_incorrect_017,t_bar_row_src_049,t bar row,YouTube,incorrect,round_back,data_videos/t_bar_row/t_bar_row_incorrect_017.mp4,0,29,1.0,30,30.0
+t_bar_row_incorrect_018,t_bar_row_src_051,t bar row,YouTube,incorrect,using_momentum,data_videos/t_bar_row/t_bar_row_incorrect_018.mp4,0,31,1.07,32,30.0
+t_bar_row_incorrect_019,t_bar_row_src_052,t bar row,YouTube,incorrect,partial_rom,data_videos/t_bar_row/t_bar_row_incorrect_019.mp4,0,25,0.87,26,30.0
+t_bar_row_incorrect_020,t_bar_row_src_053,t bar row,YouTube,incorrect,standing_too_upright,data_videos/t_bar_row/t_bar_row_incorrect_020.mp4,0,38,1.3,39,30.0
+t_bar_row_incorrect_021,t_bar_row_src_054,t bar row,YouTube,incorrect,partial_rom,data_videos/t_bar_row/t_bar_row_incorrect_021.mp4,0,33,1.13,34,30.0
+t_bar_row_incorrect_022,t_bar_row_src_055,t bar row,YouTube,incorrect,standing_too_upright,data_videos/t_bar_row/t_bar_row_incorrect_022.mp4,0,35,1.2,36,30.0
 leg_raises_correct_001,leg_raises_src_001,leg raises,GYMED,correct,none,data_videos/leg_raises/leg_raises_correct_001.mp4,0,89,3.0,90,29.97
 leg_raises_correct_002,leg_raises_src_002,leg raises,GYMED,correct,none,data_videos/leg_raises/leg_raises_correct_002.mp4,0,46,1.57,47,29.97
 leg_raises_correct_003,leg_raises_src_003,leg raises,GYMED,correct,none,data_videos/leg_raises/leg_raises_correct_003.mp4,0,148,4.97,149,29.97
@@ -520,3 +554,9 @@ leg_raises_incorrect_013,leg_raises_src_038,leg raises,YouTube,incorrect,using_m
 leg_raises_incorrect_014,leg_raises_src_039,leg raises,YouTube,incorrect,using_momentum,data_videos/leg_raises/leg_raises_incorrect_014.mp4,0,78,2.63,79,30.0
 leg_raises_incorrect_015,leg_raises_src_040,leg raises,YouTube,incorrect,using_momentum,data_videos/leg_raises/leg_raises_incorrect_015.mp4,0,59,2.0,60,30.0
 leg_raises_incorrect_016,leg_raises_src_043,leg raises,YouTube,incorrect,using_momentum,data_videos/leg_raises/leg_raises_incorrect_016.mp4,0,48,1.63,49,30.0
+leg_raises_incorrect_017,leg_raises_src_044,leg raises,YouTube,incorrect,using_momentum,data_videos/leg_raises/leg_raises_incorrect_017.mp4,0,31,1.07,32,30.0
+leg_raises_incorrect_018,leg_raises_src_045,leg raises,YouTube,incorrect,using_momentum,data_videos/leg_raises/leg_raises_incorrect_018.mp4,0,35,1.2,36,30.0
+leg_raises_incorrect_019,leg_raises_src_046,leg raises,YouTube,incorrect,using_momentum,data_videos/leg_raises/leg_raises_incorrect_019.mp4,0,41,1.4,42,30.0
+leg_raises_incorrect_020,leg_raises_src_047,leg raises,YouTube,incorrect,uncontrolled_eccentric,data_videos/leg_raises/leg_raises_incorrect_020.mp4,0,32,1.1,33,30.0
+leg_raises_incorrect_021,leg_raises_src_048,leg raises,YouTube,incorrect,uncontrolled_eccentric,data_videos/leg_raises/leg_raises_incorrect_021.mp4,0,32,1.1,33,30.0
+leg_raises_incorrect_022,leg_raises_src_049,leg raises,YouTube,incorrect,partial_rom,data_videos/leg_raises/leg_raises_incorrect_022.mp4,0,35,1.2,36,30.0

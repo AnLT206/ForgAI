@@ -75,7 +75,7 @@ def _infer_unit(feat_name: str) -> str:
 
 
 # ==============================================================================
-# 1. BẢNG LUẬT CƠ SINH HỌC TƯỜNG MINH CHO 8 BÀI TẬP (45 CẶP BÀI-LỖI / 32 MÃ LỖI)
+# 1. BẢNG LUẬT CƠ SINH HỌC TƯỜNG MINH CHO 8 BÀI TẬP (50 CẶP BÀI-LỖI / 32 MÃ LỖI)
 # Cấu trúc: (tên_đặc_trưng, hướng ['gt'|'lt'|'dev'], trọng_số, mô_tả_tiếng_Việt)
 # ==============================================================================
 EXERCISE_ERROR_RULES: dict[str, dict[str, list[tuple[str, str, float, str]]]] = {
@@ -210,6 +210,20 @@ EXERCISE_ERROR_RULES: dict[str, dict[str, list[tuple[str, str, float, str]]]] = 
             ("knee_valgus_ratio_at_inflection", "lt", 1.4, "Độ chụm gối tại đáy"),
             ("knee_asym_max", "gt", 0.8, "Độ lệch hai đầu gối"),
         ],
+        "arching_lower_back": [
+            ("spine_compression_at_inflection", "gt", 1.5, "Độ ưỡn căng cột sống thắt lưng"),
+            ("neck_angle_min", "lt", 1.2, "Độ ngửa cổ / ép bả vai quá mức"),
+            ("torso_tilt_min", "lt", 1.0, "Góc ưỡn thẳng lưng trên"),
+        ],
+        "uncontrolled_eccentric": [
+            ("driver_phase1_speed", "gt", 1.7, "Vận tốc thả rơi người pha hạ Squat"),
+            ("driver_speed_bouncing", "gt", 1.4, "Gia tốc nảy bật tại đáy Squat"),
+            ("driver_dimless_jerk", "gt", 0.85, "Độ giật thiếu kiểm soát trong chu kỳ"),
+        ],
+        "improper_foot_placement": [
+            ("knee_valgus_ratio_at_inflection", "dev", 1.6, "Tỷ lệ độ rộng thế đứng chân / gối"),
+            ("shin_tilt_at_inflection", "dev", 1.3, "Độ nghiêng cẳng chân lệch chuẩn"),
+        ],
     },
     "chest fly machine": {
         "shoulder_protraction": [
@@ -292,6 +306,10 @@ EXERCISE_ERROR_RULES: dict[str, dict[str, list[tuple[str, str, float, str]]]] = 
             ("shin_tilt_at_inflection", "dev", 1.5, "Độ nghiêng chân trụ lệch chuẩn"),
             ("knee_valgus_ratio_min", "dev", 1.3, "Tỷ lệ độ rộng thế đứng"),
         ],
+        "partial_rom": [
+            ("elbow_angle_min", "gt", 1.6, "Góc gập khuỷu tay tối thiểu (chưa kéo sát thân)"),
+            ("elbow_angle_rom", "lt", 1.3, "Biên độ gập duỗi khuỷu tay"),
+        ],
     },
     "leg raises": {
         "using_momentum": [
@@ -315,6 +333,11 @@ EXERCISE_ERROR_RULES: dict[str, dict[str, list[tuple[str, str, float, str]]]] = 
             ("hip_angle_min", "gt", 1.5, "Chân nâng chưa đủ cao"),
             ("hip_angle_rom", "lt", 1.4, "Biên độ nâng chân"),
             ("driver_peak_speed", "lt", 0.8, "Tốc độ nâng chân ngắn"),
+        ],
+        "uncontrolled_eccentric": [
+            ("ecc_conc_speed_ratio", "gt", 1.7, "Tỷ lệ tốc độ thả rơi chân / nâng chân"),
+            ("driver_phase2_speed", "gt", 1.3, "Vận tốc thả rơi hai chân pha hạ"),
+            ("driver_dimless_jerk", "gt", 0.85, "Độ giật thiếu kiểm soát trong chu kỳ"),
         ],
     },
 }

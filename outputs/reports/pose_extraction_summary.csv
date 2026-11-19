@@ -60,6 +60,8 @@ chest_fly_machine_incorrect_017,chest fly machine,incorrect,85,85,83,0.9765,0.91
 chest_fly_machine_incorrect_018,chest fly machine,incorrect,90,90,90,1.0,0.9373,27.55,cached
 chest_fly_machine_incorrect_019,chest fly machine,incorrect,66,66,66,1.0,0.9264,20.23,cached
 chest_fly_machine_incorrect_020,chest fly machine,incorrect,86,86,86,1.0,0.9432,26.33,cached
+chest_fly_machine_incorrect_021,chest fly machine,incorrect,54,54,54,1.0,0.9851,16.58,extracted
+chest_fly_machine_incorrect_022,chest fly machine,incorrect,57,57,57,1.0,0.9804,17.49,extracted
 hip_thrust_correct_001,hip thrust,correct,52,52,26,0.5,0.7128,15.97,cached
 hip_thrust_correct_002,hip thrust,correct,52,52,49,0.9423,0.7273,15.97,cached
 hip_thrust_correct_003,hip thrust,correct,113,113,112,0.9912,0.8479,34.55,cached
@@ -120,6 +122,11 @@ hip_thrust_incorrect_016,hip thrust,incorrect,83,83,83,1.0,0.7645,25.41,cached
 hip_thrust_incorrect_017,hip thrust,incorrect,120,120,119,0.9917,0.762,36.69,cached
 hip_thrust_incorrect_018,hip thrust,incorrect,90,90,90,1.0,0.6289,27.55,cached
 hip_thrust_incorrect_019,hip thrust,incorrect,56,56,56,1.0,0.728,17.19,cached
+hip_thrust_incorrect_020,hip thrust,incorrect,129,129,129,1.0,0.8484,39.43,extracted
+hip_thrust_incorrect_021,hip thrust,incorrect,120,120,120,1.0,0.848,36.69,extracted
+hip_thrust_incorrect_022,hip thrust,incorrect,84,84,84,1.0,0.8253,25.72,extracted
+hip_thrust_incorrect_023,hip thrust,incorrect,74,74,74,1.0,0.7761,22.67,extracted
+hip_thrust_incorrect_024,hip thrust,incorrect,51,51,51,1.0,0.7564,15.66,extracted
 leg_extension_correct_001,leg extension,correct,69,69,69,1.0,0.7346,21.15,cached
 leg_extension_correct_002,leg extension,correct,76,76,76,1.0,0.9205,23.28,cached
 leg_extension_correct_003,leg extension,correct,71,71,71,1.0,0.9068,21.76,cached
@@ -183,8 +190,12 @@ leg_extension_incorrect_020,leg extension,incorrect,39,39,39,1.0,0.9722,12.01,ca
 leg_extension_incorrect_021,leg extension,incorrect,38,38,38,1.0,0.6979,11.7,cached
 leg_extension_incorrect_022,leg extension,incorrect,31,31,31,1.0,0.8402,9.57,cached
 leg_extension_incorrect_023,leg extension,incorrect,60,60,60,1.0,0.7315,18.41,cached
-leg_extension_incorrect_024,leg extension,incorrect,42,42,42,1.0,0.8198,12.92,extracted
-leg_extension_incorrect_025,leg extension,incorrect,54,54,54,1.0,0.7421,16.58,extracted
+leg_extension_incorrect_024,leg extension,incorrect,42,42,42,1.0,0.8198,12.92,cached
+leg_extension_incorrect_025,leg extension,incorrect,54,54,54,1.0,0.7421,16.58,cached
+leg_extension_incorrect_026,leg extension,incorrect,52,52,52,1.0,0.8716,15.97,extracted
+leg_extension_incorrect_027,leg extension,incorrect,33,33,33,1.0,0.8002,10.18,extracted
+leg_extension_incorrect_028,leg extension,incorrect,30,30,30,1.0,0.773,9.27,extracted
+leg_extension_incorrect_029,leg extension,incorrect,48,48,48,1.0,0.7491,14.75,extracted
 leg_raises_correct_001,leg raises,correct,90,90,90,1.0,0.9432,27.55,cached
 leg_raises_correct_002,leg raises,correct,47,47,47,1.0,0.9043,14.45,cached
 leg_raises_correct_003,leg raises,correct,149,149,149,1.0,0.6232,45.52,cached
@@ -242,6 +253,12 @@ leg_raises_incorrect_013,leg raises,incorrect,52,52,52,1.0,0.8443,15.97,cached
 leg_raises_incorrect_014,leg raises,incorrect,79,79,79,1.0,0.7316,24.2,cached
 leg_raises_incorrect_015,leg raises,incorrect,60,60,60,1.0,0.826,18.41,cached
 leg_raises_incorrect_016,leg raises,incorrect,49,49,49,1.0,0.7591,15.05,cached
+leg_raises_incorrect_017,leg raises,incorrect,32,32,32,1.0,0.7734,9.88,extracted
+leg_raises_incorrect_018,leg raises,incorrect,36,36,36,1.0,0.8446,11.09,extracted
+leg_raises_incorrect_019,leg raises,incorrect,42,42,42,1.0,0.9268,12.92,extracted
+leg_raises_incorrect_020,leg raises,incorrect,33,33,33,1.0,0.8652,10.18,extracted
+leg_raises_incorrect_021,leg raises,incorrect,33,33,33,1.0,0.776,10.18,extracted
+leg_raises_incorrect_022,leg raises,incorrect,36,36,36,1.0,0.8843,11.09,extracted
 pull_up_correct_001,pull up,correct,39,39,38,0.9744,0.8578,12.01,cached
 pull_up_correct_002,pull up,correct,60,60,60,1.0,0.9587,18.41,cached
 pull_up_correct_003,pull up,correct,84,84,84,1.0,0.667,25.72,cached
@@ -308,11 +325,21 @@ pull_up_incorrect_022,pull up,incorrect,60,60,60,1.0,0.8049,18.41,cached
 pull_up_incorrect_023,pull up,incorrect,60,60,60,1.0,0.883,18.41,cached
 pull_up_incorrect_024,pull up,incorrect,61,61,61,1.0,0.8576,18.71,cached
 pull_up_incorrect_025,pull up,incorrect,54,54,54,1.0,0.9599,16.58,cached
-pull_up_incorrect_026,pull up,incorrect,42,42,42,1.0,0.7383,12.92,extracted
-pull_up_incorrect_027,pull up,incorrect,48,48,48,1.0,0.7111,14.75,extracted
-pull_up_incorrect_028,pull up,incorrect,57,57,56,0.9825,0.7228,17.49,extracted
-pull_up_incorrect_029,pull up,incorrect,69,69,68,0.9855,0.8409,21.15,extracted
-pull_up_incorrect_030,pull up,incorrect,69,69,69,1.0,0.7207,21.15,extracted
+pull_up_incorrect_026,pull up,incorrect,42,42,42,1.0,0.7383,12.92,cached
+pull_up_incorrect_027,pull up,incorrect,48,48,48,1.0,0.7111,14.75,cached
+pull_up_incorrect_028,pull up,incorrect,57,57,56,0.9825,0.7228,17.49,cached
+pull_up_incorrect_029,pull up,incorrect,69,69,68,0.9855,0.8409,21.15,cached
+pull_up_incorrect_030,pull up,incorrect,69,69,69,1.0,0.7207,21.15,cached
+pull_up_incorrect_031,pull up,incorrect,45,45,45,1.0,0.7533,13.84,extracted
+pull_up_incorrect_032,pull up,incorrect,54,54,54,1.0,0.9447,16.58,extracted
+pull_up_incorrect_033,pull up,incorrect,39,39,39,1.0,0.7387,12.01,extracted
+pull_up_incorrect_034,pull up,incorrect,87,87,85,0.977,0.6638,26.63,extracted
+pull_up_incorrect_035,pull up,incorrect,49,49,49,1.0,0.9494,15.05,extracted
+pull_up_incorrect_036,pull up,incorrect,79,79,79,1.0,0.7865,24.2,extracted
+pull_up_incorrect_037,pull up,incorrect,49,49,49,1.0,0.9666,15.05,extracted
+pull_up_incorrect_038,pull up,incorrect,72,72,72,1.0,0.8725,22.06,extracted
+pull_up_incorrect_039,pull up,incorrect,84,84,84,1.0,0.6923,25.72,extracted
+pull_up_incorrect_040,pull up,incorrect,50,50,50,1.0,0.9443,15.36,extracted
 push_up_correct_001,push-up,correct,61,61,61,1.0,0.8009,18.71,cached
 push_up_correct_002,push-up,correct,102,102,102,1.0,0.7574,31.2,cached
 push_up_correct_003,push-up,correct,105,105,105,1.0,0.7893,32.12,cached
@@ -458,9 +485,17 @@ squat_incorrect_019,squat,incorrect,66,66,66,1.0,0.9627,20.23,cached
 squat_incorrect_020,squat,incorrect,53,53,53,1.0,0.9957,16.27,cached
 squat_incorrect_021,squat,incorrect,112,112,112,1.0,0.7132,34.25,cached
 squat_incorrect_022,squat,incorrect,139,139,139,1.0,0.9957,42.48,cached
-squat_incorrect_023,squat,incorrect,93,93,93,1.0,0.7565,28.46,extracted
-squat_incorrect_024,squat,incorrect,75,75,75,1.0,0.9913,22.98,extracted
-squat_incorrect_025,squat,incorrect,138,138,138,1.0,0.7348,42.17,extracted
+squat_incorrect_023,squat,incorrect,93,93,93,1.0,0.7565,28.46,cached
+squat_incorrect_024,squat,incorrect,75,75,75,1.0,0.9913,22.98,cached
+squat_incorrect_025,squat,incorrect,138,138,138,1.0,0.7348,42.17,cached
+squat_incorrect_026,squat,incorrect,63,63,63,1.0,0.7468,19.32,extracted
+squat_incorrect_027,squat,incorrect,72,72,72,1.0,0.9892,22.06,extracted
+squat_incorrect_028,squat,incorrect,54,54,54,1.0,0.7456,16.58,extracted
+squat_incorrect_029,squat,incorrect,100,100,100,1.0,0.7274,30.59,extracted
+squat_incorrect_030,squat,incorrect,72,72,72,1.0,0.7552,22.06,extracted
+squat_incorrect_031,squat,incorrect,57,57,57,1.0,0.7253,17.49,extracted
+squat_incorrect_032,squat,incorrect,73,73,73,1.0,0.7816,22.37,extracted
+squat_incorrect_033,squat,incorrect,64,64,64,1.0,0.9963,19.62,extracted
 t_bar_row_correct_001,t bar row,correct,67,67,67,1.0,0.7965,20.54,cached
 t_bar_row_correct_002,t bar row,correct,34,34,34,1.0,0.9009,10.48,cached
 t_bar_row_correct_003,t bar row,correct,57,57,57,1.0,0.8244,17.49,cached
@@ -520,3 +555,8 @@ t_bar_row_incorrect_014,t bar row,incorrect,34,34,34,1.0,0.714,10.48,cached
 t_bar_row_incorrect_015,t bar row,incorrect,42,42,41,0.9762,0.7793,12.92,cached
 t_bar_row_incorrect_016,t bar row,incorrect,36,36,36,1.0,0.7536,11.09,cached
 t_bar_row_incorrect_017,t bar row,incorrect,30,30,30,1.0,0.8118,9.27,cached
+t_bar_row_incorrect_018,t bar row,incorrect,32,32,32,1.0,0.8013,9.88,extracted
+t_bar_row_incorrect_019,t bar row,incorrect,26,26,26,1.0,0.7162,8.05,extracted
+t_bar_row_incorrect_020,t bar row,incorrect,39,39,39,1.0,0.6852,12.01,extracted
+t_bar_row_incorrect_021,t bar row,incorrect,34,34,34,1.0,0.8178,10.48,extracted
+t_bar_row_incorrect_022,t bar row,incorrect,36,36,36,1.0,0.8139,11.09,extracted

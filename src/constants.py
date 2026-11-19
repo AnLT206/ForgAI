@@ -116,5 +116,5 @@ ERROR_REASON_VN_DICT = {
     "straight_legs": "Khóa thẳng đơ hai đầu gối thay vì giữ độ chùng gối nhẹ để bảo vệ lưng dưới",
     # 8. Leg raises
     "hip_flexor_dominance": "Chỉ gập khớp hông nhấc chân thấp mà không cuộn xương chậu (Không vào cơ bụng dưới)",
-    "arching_lower_back": "Võng thắt lưng rời khỏi mặt phẳng tựa khi hạ hai chân xuống",
+    "arching_lower_back": "Võng ưỡn thắt lưng quá mức hoặc rời khỏi mặt phẳng tựa",
 }
