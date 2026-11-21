@@ -57,6 +57,7 @@ from configs.config import (
 from src.dataset import (
     ForgAITask2Dataset,
     build_stratified_group_folds,
+    load_pose_2d_cache,
     load_pose_cache,
     load_task2_metadata,
     prepare_fold_data,
@@ -342,6 +343,7 @@ def run_single_fold(
     seed: int,
     device: torch.device,
     reuse_dl: bool = False,
+    pose_2d_cache: dict[str, np.ndarray | None] | None = None,
 ) -> dict:
     """Thực thi quy trình huấn luyện E.3-LowRisk, giải thích lỗi và lưu checkpoint cho 1 Fold."""
     fold_idx = int(fold_spec["fold"])
@@ -365,6 +367,7 @@ def run_single_fold(
         pose_cache=pose_cache,
         apply_train_aug=True,
         include_golden_channels=True,
+        pose_2d_cache=pose_2d_cache,
     )
     tr, va, te = fold_data["train"], fold_data["val"], fold_data["test"]
     seq_dim = fold_data["seq_dim"]
@@ -739,8 +742,9 @@ def main() -> None:
     df = load_task2_metadata()
     df_lookup = df.set_index("segment_id")
     pose_cache = load_pose_cache(df)
+    pose_2d_cache = load_pose_2d_cache(df)
     folds = build_stratified_group_folds(df)
-    print(f"[Init] Đã nạp {len(df)} mẫu ({df['video_id'].nunique()} nhóm video_id) & cache khung xương.")
+    print(f"[Init] Đã nạp {len(df)} mẫu ({df['video_id'].nunique()} nhóm video_id) & cache khung xương 3D+2D.")
 
     t_all0 = time.perf_counter()
     for fold_idx in selected_folds:
@@ -764,6 +768,7 @@ def main() -> None:
             seed=args.seed,
             device=device,
             reuse_dl=args.reuse_dl,
+            pose_2d_cache=pose_2d_cache,
         )
 
     merged_all = aggregate_and_save_global_reports(expected_total_clips=len(df))

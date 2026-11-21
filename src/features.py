@@ -97,6 +97,8 @@ _ASYM_NAMES = (
 
 _DYNAMIC_NAMES = (
     "inflection_time_frac",
+    "rep_duration_sec",
+    "ecc_duration_sec",
     "driver_phase1_speed",
     "driver_phase2_speed",
     "ecc_conc_speed_ratio",
@@ -109,6 +111,12 @@ _DYNAMIC_NAMES = (
     "driver_peak_to_mean_speed",
     "driver_dimless_jerk",
     "torso_driver_corr",
+    "hip_vs_wrist_2d_x_rom",
+    "hip_vs_wrist_2d_x_std",
+    "hip_vs_wrist_2d_x_speed",
+    "ank_vs_wrist_2d_x_rom",
+    "ank_vs_wrist_2d_y_rom",
+    "torso_2d_len_ratio_rom",
 )
 
 _GOLDEN_STAT_NAMES = (
@@ -166,6 +174,67 @@ TABULAR_FEATURE_DIM = len(TABULAR_FEATURE_NAMES)
 # ==============================================================================
 # 1. NỘI SUY KHUNG HÌNH KHUẤT & LÀM MƯỢT CHỐNG RUNG (CẢI TIẾN VISIBILITY-GATED)
 # ==============================================================================
+def _extract_vis_and_det_mask(arr: np.ndarray) -> tuple[np.ndarray, np.ndarray]:
+    """Tách mảng visibility [L, 13] và mặt nạ frame phát hiện được người tập từ (L, 13, C)."""
+    vis = arr[:, :, 5].copy() if arr.shape[2] >= 6 else np.ones(arr.shape[:2], dtype=np.float64)
+    vis = np.clip(vis, 0.0, 1.0)
+    det_mask = np.abs(arr[:, :, :3]).sum(axis=(1, 2)) > 1e-6
+    return vis, det_mask
+
+
+def _interpolate_and_smooth_coords(
+    coords: np.ndarray,
+    vis: np.ndarray,
+    det_mask: np.ndarray,
+    min_vis: float,
+    smooth_window: int,
+) -> tuple[np.ndarray, np.ndarray]:
+    """Nội suy tuyến tính theo thời gian trên các khớp che khuất và làm mượt chống rung."""
+    num_frames = coords.shape[0]
+    n_axes = coords.shape[2]
+    vis_out = vis.copy()
+    coords_out = coords.copy()
+    if num_frames == 0:
+        return coords_out.astype(np.float32), vis_out.astype(np.float32)
+
+    if not np.any(det_mask):
+        return np.zeros_like(coords_out, dtype=np.float32), np.zeros_like(vis_out, dtype=np.float32)
+
+    t_all = np.arange(num_frames, dtype=np.float64)
+    det_count = int(det_mask.sum())
+    min_valid_joint_frames = min(5, max(2, det_count // 4))
+
+    for j in range(NUM_JOINTS):
+        if det_count < num_frames:
+            vis_out[:, j] = np.clip(np.interp(t_all, t_all[det_mask], vis_out[det_mask, j]), 0.0, 1.0)
+
+        joint_valid = det_mask & (vis_out[:, j] >= min_vis)
+        use_mask = joint_valid if int(joint_valid.sum()) >= min_valid_joint_frames else det_mask
+
+        if int(use_mask.sum()) == 1:
+            coords_out[:, j, :] = coords_out[use_mask, j, :][0]
+        else:
+            t_src = t_all[use_mask]
+            for axis in range(n_axes):
+                coords_out[:, j, axis] = np.interp(t_all, t_src, coords_out[use_mask, j, axis])
+
+    # Làm mượt nhẹ khử rung MediaPipe (tuyệt đối giữ nguyên đầu-cuối nhờ edge padding)
+    if smooth_window == 3 and num_frames >= 3:
+        padded = np.pad(coords_out, ((1, 1), (0, 0), (0, 0)), mode="edge")
+        coords_out = 0.25 * padded[:-2] + 0.50 * padded[1:-1] + 0.25 * padded[2:]
+    elif smooth_window > 3 and num_frames >= smooth_window:
+        pad = smooth_window // 2
+        kernel = np.ones(smooth_window, dtype=np.float64) / float(smooth_window)
+        padded = np.pad(coords_out, ((pad, pad), (0, 0), (0, 0)), mode="edge")
+        coords_out = np.tensordot(
+            np.lib.stride_tricks.sliding_window_view(padded, smooth_window, axis=0),
+            kernel,
+            axes=([-1], [0]),
+        )
+
+    return coords_out.astype(np.float32), vis_out.astype(np.float32)
+
+
 def handle_zero_frames(
     pose_seq: np.ndarray,
     min_vis: float = MIN_VISIBILITY_THRESHOLD,
@@ -189,52 +258,32 @@ def handle_zero_frames(
         raise ValueError(f"Expected pose_seq shape (L, {NUM_JOINTS}, C), got {arr.shape}")
 
     arr = np.nan_to_num(arr, nan=0.0, posinf=0.0, neginf=0.0)
-    coords = arr[:, :, :3].copy()
-    vis = arr[:, :, 5].copy() if arr.shape[2] >= 6 else np.ones(arr.shape[:2], dtype=np.float64)
-    vis = np.clip(vis, 0.0, 1.0)
+    vis, det_mask = _extract_vis_and_det_mask(arr)
+    return _interpolate_and_smooth_coords(arr[:, :, :3], vis, det_mask, min_vis, smooth_window)
 
-    num_frames = coords.shape[0]
-    if num_frames == 0:
-        return coords.astype(np.float32), vis.astype(np.float32)
 
-    det_mask = np.abs(coords).sum(axis=(1, 2)) > 1e-6
-    if not np.any(det_mask):
-        return np.zeros_like(coords, dtype=np.float32), np.zeros_like(vis, dtype=np.float32)
+def handle_zero_frames_2d(
+    pose_seq: np.ndarray,
+    min_vis: float = MIN_VISIBILITY_THRESHOLD,
+    smooth_window: int = 3,
+) -> np.ndarray | None:
+    """
+    Trích xuất và nội suy làm mượt chuỗi tọa độ khung hình 2D [ix, iy] shape (L, 13, 2)
+    từ pose_seq (L, 13, 6) để đo chuyển động con lắc/vung thân so với điểm tựa (thanh xà).
+    Trả về None nếu đầu vào không chứa kênh 2D.
+    """
+    arr = np.asarray(pose_seq, dtype=np.float64)
+    if arr.ndim != 3 or arr.shape[1] != NUM_JOINTS or arr.shape[2] < 5:
+        return None
 
-    t_all = np.arange(num_frames, dtype=np.float64)
-    det_count = int(det_mask.sum())
-    min_valid_joint_frames = min(5, max(2, det_count // 4))
+    arr = np.nan_to_num(arr, nan=0.0, posinf=0.0, neginf=0.0)
+    coords_2d = arr[:, :, 3:5]
+    if not np.any(np.abs(coords_2d).sum(axis=(1, 2)) > 1e-6):
+        return None
 
-    for j in range(NUM_JOINTS):
-        if det_count < num_frames:
-            vis[:, j] = np.clip(np.interp(t_all, t_all[det_mask], vis[det_mask, j]), 0.0, 1.0)
-
-        joint_valid = det_mask & (vis[:, j] >= min_vis)
-        use_mask = joint_valid if int(joint_valid.sum()) >= min_valid_joint_frames else det_mask
-
-        # Nếu chỉ có đúng 1 frame hợp lệ toàn clip thì gán đều giá trị đó
-        if int(use_mask.sum()) == 1:
-            coords[:, j, :] = coords[use_mask, j, :][0]
-        else:
-            t_src = t_all[use_mask]
-            for axis in range(3):
-                coords[:, j, axis] = np.interp(t_all, t_src, coords[use_mask, j, axis])
-
-    # Làm mượt nhẹ khử rung MediaPipe (tuyệt đối giữ nguyên đầu-cuối nhờ edge padding)
-    if smooth_window == 3 and num_frames >= 3:
-        padded = np.pad(coords, ((1, 1), (0, 0), (0, 0)), mode="edge")
-        coords = 0.25 * padded[:-2] + 0.50 * padded[1:-1] + 0.25 * padded[2:]
-    elif smooth_window > 3 and num_frames >= smooth_window:
-        pad = smooth_window // 2
-        kernel = np.ones(smooth_window, dtype=np.float64) / float(smooth_window)
-        padded = np.pad(coords, ((pad, pad), (0, 0), (0, 0)), mode="edge")
-        coords = np.tensordot(
-            np.lib.stride_tricks.sliding_window_view(padded, smooth_window, axis=0),
-            kernel,
-            axes=([-1], [0]),
-        )
-
-    return coords.astype(np.float32), vis.astype(np.float32)
+    vis, det_mask = _extract_vis_and_det_mask(arr)
+    coords_2d_clean, _ = _interpolate_and_smooth_coords(coords_2d, vis, det_mask, min_vis, smooth_window)
+    return coords_2d_clean
 
 
 # ==============================================================================
@@ -281,6 +330,13 @@ def horizontal_flip_skeleton(
         flipped_vis = np.array(vis, dtype=np.float32, copy=True)[:, SWAP_MAP_13]
         return flipped, flipped_vis
     return flipped
+
+
+def horizontal_flip_2d(coords_2d: np.ndarray) -> np.ndarray:
+    """Lật gương ngang tọa độ khung hình 2D [ix, iy] (1.0 - ix) đồng bộ SWAP_MAP_13."""
+    flipped = np.array(coords_2d, dtype=np.float32, copy=True)
+    flipped[:, :, 0] = 1.0 - flipped[:, :, 0]
+    return flipped[:, SWAP_MAP_13, :]
 
 
 # ==============================================================================
@@ -562,13 +618,14 @@ def compute_biomechanical_tabular_features(
     golden_mean_anat: np.ndarray | None = None,
     golden_std_anat: np.ndarray | None = None,
     duration_sec: float | None = None,
+    coords2d_seq: np.ndarray | None = None,
 ) -> np.ndarray:
     """
-    Trích xuất vector đặc trưng bảng cơ sinh học 103 chiều (dùng cho Random Forest & Hybrid Ensemble):
+    Trích xuất vector đặc trưng bảng cơ sinh học (TABULAR_FEATURE_DIM = 111 chiều):
       - Nhóm A (48): 8 chuỗi góc chính x 6 thống kê (gồm ảnh chụp tại đáy t*).
       - Nhóm B (29): 10 chỉ số chuyên biệt cho 32 mã lỗi + 4 chỉ số bất đối xứng Trái-Phải.
-      - Nhóm C (13): Vận tốc góc, tỷ lệ pha Âm/Dương, gia tốc giật đáy, độ trễ Hông/Vai,
-                     độ mượt vô thứ nguyên (LDLJ), Peak-to-Mean Speed & tương quan thân-khớp.
+      - Nhóm C (21): Thời lượng thực (rep, eccentric), vận tốc/gia tốc theo thời gian thực (°/s, °/s²),
+                     tỷ lệ pha Âm/Dương, độ trễ Hông/Vai, LDLJ, tương quan thân-khớp & 6 chỉ số lắc 2D.
       - Nhóm D (5): Độ lệch so với Khuôn Mẫu Chuẩn (Phase-Aligned Golden-Rep Prototype).
       - Nhóm E (8): Vector One-Hot bài tập để Random Forest phân tách ngưỡng từng bài.
     """
@@ -599,12 +656,23 @@ def compute_biomechanical_tabular_features(
     vals.append(float(np.max(series["shoulder_y_asym"])))
     vals.append(float(np.max(series["knee_asym"])))
 
-    # Nhóm C: Động học vận tốc, gia tốc giật đáy & độ mượt vô thứ nguyên (Balasubramanian et al., 2015)
+    # Nhóm C: Động học thời gian thực (°/s, °/s²), độ mượt LDLJ & dao động vung thân 2D
+    safe_dur = (
+        float(duration_sec)
+        if (duration_sec is not None and np.isfinite(duration_sec) and float(duration_sec) > 0.0)
+        else float(max(1, t_len - 1)) / 30.0
+    )
+    safe_dur = max(0.25, safe_dur)
+    dt = safe_dur / float(max(1, t_len - 1))
+
     driver = series[spec["driver"]]
-    vel = np.diff(driver) if t_len > 1 else np.zeros(1, dtype=np.float32)
+    vel_step = np.diff(driver) if t_len > 1 else np.zeros(1, dtype=np.float32)
+    acc_step = np.diff(vel_step) if len(vel_step) > 1 else np.zeros(1, dtype=np.float32)
+    jerk_step = np.diff(acc_step) if len(acc_step) > 1 else np.zeros(1, dtype=np.float32)
+
+    vel = vel_step / dt
     abs_vel = np.abs(vel)
-    acc = np.diff(vel) if len(vel) > 1 else np.zeros(1, dtype=np.float32)
-    jerk = np.diff(acc) if len(acc) > 1 else np.zeros(1, dtype=np.float32)
+    acc = np.diff(vel) / dt if len(vel) > 1 else np.zeros(1, dtype=np.float32)
 
     p1_vel = float(np.mean(abs_vel[: max(1, t_star)]))
     p2_vel = float(np.mean(abs_vel[min(len(abs_vel) - 1, t_star) :]))
@@ -613,13 +681,19 @@ def compute_biomechanical_tabular_features(
     else:
         conc_speed, ecc_speed = p1_vel, p2_vel
 
-    ecc_conc_ratio = float(np.clip(ecc_speed / (conc_speed + 0.25), 0.0, 10.0))
+    t_frac = float(t_star / max(1, t_len - 1))
+    p1_dur = safe_dur * t_frac
+    p2_dur = safe_dur * (1.0 - t_frac)
+    ecc_duration_sec = p1_dur if spec["phase1_is_eccentric"] else p2_dur
+
+    conc_pad = 0.25 if spec["driver"] == "wrist_squeeze_dist" else 5.0
+    ecc_conc_ratio = float(np.clip(ecc_speed / (conc_speed + conc_pad), 0.0, 10.0))
     driver_peak_speed = float(np.max(abs_vel))
-    min_mean_vel = 0.02 if spec["driver"] == "wrist_squeeze_dist" else 0.20
+    min_mean_vel = 0.30 if spec["driver"] == "wrist_squeeze_dist" else 4.0
     driver_peak_to_mean_speed = float(np.clip(driver_peak_speed / max(float(np.mean(abs_vel)), min_mean_vel), 0.0, 20.0))
     rom_min = 0.15 if spec["driver"] == "wrist_squeeze_dist" else 5.0
     rom_safe = max(float(np.max(driver) - np.min(driver)), rom_min)
-    driver_dimless_jerk = float(np.log1p(float(np.mean(jerk ** 2)) * (float(max(1, t_len)) ** 5) / (rom_safe ** 2)))
+    driver_dimless_jerk = float(np.log1p(float(np.mean(jerk_step ** 2)) * (float(max(1, t_len)) ** 5) / (rom_safe ** 2)))
 
     if np.std(driver) > 1e-4 and np.std(series["torso_tilt"]) > 1e-4:
         corr_val = float(np.corrcoef(driver, series["torso_tilt"])[0, 1])
@@ -627,13 +701,13 @@ def compute_biomechanical_tabular_features(
     else:
         torso_driver_corr = 0.0
 
-    # Gia tốc đổi chiều quanh vùng chuyển pha [t* - 3, t* + 3]
+    # Gia tốc đổi chiều quanh vùng chuyển pha [t* - 3, t* + 3] (°/s²)
     lo_a = max(0, t_star - 3)
     hi_a = min(len(acc), t_star + 3)
     driver_bounce = float(np.max(np.abs(acc[lo_a:hi_a]))) if hi_a > lo_a else 0.0
 
-    torso_vel = np.diff(series["torso_tilt"]) if t_len > 1 else np.zeros(1, dtype=np.float32)
-    torso_acc = np.diff(torso_vel) if len(torso_vel) > 1 else np.zeros(1, dtype=np.float32)
+    torso_vel = (np.diff(series["torso_tilt"]) / dt) if t_len > 1 else np.zeros(1, dtype=np.float32)
+    torso_acc = (np.diff(torso_vel) / dt) if len(torso_vel) > 1 else np.zeros(1, dtype=np.float32)
     torso_peak_speed = float(np.max(np.abs(torso_vel)))
     torso_bounce = float(np.max(np.abs(torso_acc))) if len(torso_acc) > 0 else 0.0
 
@@ -642,8 +716,44 @@ def compute_biomechanical_tabular_features(
     hips_rising_first_lag = float(series["torso_tilt"][t_post] - series["torso_tilt"][t_star])
     snaking_lag = float(series["waist_sag_signed"][t_post] - series["waist_sag_signed"][t_star])
 
+    # Chuyển động vung 2D tương đối trên khung hình (bất biến với phép lật gương Trái-Phải & khoảng cách camera)
+    if (
+        coords2d_seq is not None
+        and np.asarray(coords2d_seq).shape[:2] == (t_len, NUM_JOINTS)
+        and np.asarray(coords2d_seq).shape[2] >= 2
+        and float(np.abs(coords2d_seq).sum()) > 1e-6
+    ):
+        c2 = np.asarray(coords2d_seq, dtype=np.float32)[:, :, :2]
+        sh2 = 0.5 * (c2[:, _L_SH, :] + c2[:, _R_SH, :])
+        hp2 = 0.5 * (c2[:, _L_HP, :] + c2[:, _R_HP, :])
+        wr2 = 0.5 * (c2[:, _L_WR, :] + c2[:, _R_WR, :])
+        an2 = 0.5 * (c2[:, _L_AN, :] + c2[:, _R_AN, :])
+        torso_2d_lens = np.linalg.norm(sh2 - hp2, axis=-1)
+        t2_scale = max(float(np.median(torso_2d_lens)), 0.05)
+
+        hip_wr_x = (hp2[:, 0] - wr2[:, 0]) / t2_scale
+        ank_wr_x = (an2[:, 0] - wr2[:, 0]) / t2_scale
+        ank_wr_y = (an2[:, 1] - wr2[:, 1]) / t2_scale
+        torso_2d_ratio = torso_2d_lens / t2_scale
+
+        hip_vs_wrist_2d_x_rom = float(np.ptp(hip_wr_x))
+        hip_vs_wrist_2d_x_std = float(np.std(hip_wr_x))
+        hip_vs_wrist_2d_x_speed = float(np.max(np.abs(np.diff(hip_wr_x) / dt))) if t_len > 1 else 0.0
+        ank_vs_wrist_2d_x_rom = float(np.ptp(ank_wr_x))
+        ank_vs_wrist_2d_y_rom = float(np.ptp(ank_wr_y))
+        torso_2d_len_ratio_rom = float(np.ptp(torso_2d_ratio))
+    else:
+        hip_vs_wrist_2d_x_rom = 0.0
+        hip_vs_wrist_2d_x_std = 0.0
+        hip_vs_wrist_2d_x_speed = 0.0
+        ank_vs_wrist_2d_x_rom = 0.0
+        ank_vs_wrist_2d_y_rom = 0.0
+        torso_2d_len_ratio_rom = 0.0
+
     vals.extend([
-        float(t_star / max(1, t_len - 1)),
+        t_frac,
+        safe_dur,
+        ecc_duration_sec,
         p1_vel,
         p2_vel,
         ecc_conc_ratio,
@@ -656,6 +766,12 @@ def compute_biomechanical_tabular_features(
         driver_peak_to_mean_speed,
         driver_dimless_jerk,
         torso_driver_corr,
+        hip_vs_wrist_2d_x_rom,
+        hip_vs_wrist_2d_x_std,
+        hip_vs_wrist_2d_x_speed,
+        ank_vs_wrist_2d_x_rom,
+        ank_vs_wrist_2d_y_rom,
+        torso_2d_len_ratio_rom,
     ])
 
     # Nhóm D: Độ lệch so với Khuôn Mẫu Chuẩn Căn Chỉnh Pha (KIMORE / Liao et al., 2020)

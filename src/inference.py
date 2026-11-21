@@ -41,6 +41,7 @@ from src.features import (
     compute_biomechanical_tabular_features,
     extract_anatomical_golden_matrix,
     handle_zero_frames,
+    handle_zero_frames_2d,
     normalize_skeleton_geometry,
 )
 from src.models import build_model
@@ -231,6 +232,7 @@ class ForgAITask2Predictor:
         a10: np.ndarray,
         exercise_name: str,
         duration_sec: float,
+        c2d32: np.ndarray | None = None,
     ) -> dict[str, Any]:
         ex_id = int(EXERCISE_TO_ID[exercise_name])
         ex_arr = np.asarray([ex_id], dtype=np.int64)
@@ -250,6 +252,7 @@ class ForgAITask2Predictor:
             golden_mean_anat=manat,
             golden_std_anat=sanat,
             duration_sec=float(duration_sec),
+            coords2d_seq=c2d32,
         )
         x_tab_sc = rt.tab_scaler.transform(x_tab_raw[None])
 
@@ -307,6 +310,7 @@ class ForgAITask2Predictor:
         # Giai đoạn 1: Tiền xử lý hình học & 117-d Biomechanical Mix
         t_feat0 = time.perf_counter()
         coords_clean, vis_clean = handle_zero_frames(arr, min_vis=MIN_VISIBILITY_THRESHOLD, smooth_window=3)
+        coords2d_clean = handle_zero_frames_2d(arr, min_vis=MIN_VISIBILITY_THRESHOLD, smooth_window=3)
         coords_norm = normalize_skeleton_geometry(coords_clean)
         full_series = compute_anatomical_angle_series(coords_norm, vis_clean)
         driver_key = EXERCISE_BIOMECH_SPEC[ex]["driver"]
@@ -314,6 +318,11 @@ class ForgAITask2Predictor:
 
         c32 = dynamic_strided_sampling(coords_norm, target_len=NUM_FRAMES, is_train=False)
         v32 = dynamic_strided_sampling(vis_clean, target_len=NUM_FRAMES, is_train=False)
+        c2d32 = (
+            dynamic_strided_sampling(coords2d_clean, target_len=NUM_FRAMES, is_train=False)
+            if coords2d_clean is not None
+            else None
+        )
         s117 = compute_117d_biomechanical_mix(c32)
         a10 = extract_anatomical_golden_matrix(c32, v32)
         feat_ms = (time.perf_counter() - t_feat0) * 1000.0
@@ -332,7 +341,7 @@ class ForgAITask2Predictor:
         t_mod0 = time.perf_counter()
 
         per_fold_out = [
-            self._score_on_runtime(rt, c32, v32, s117, a10, ex, dur) for rt in active_runtimes
+            self._score_on_runtime(rt, c32, v32, s117, a10, ex, dur, c2d32=c2d32) for rt in active_runtimes
         ]
         model_ms = (time.perf_counter() - t_mod0) * 1000.0
 

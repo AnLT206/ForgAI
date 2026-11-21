@@ -57,6 +57,8 @@ from src.features import (
     compute_biomechanical_tabular_features,
     extract_anatomical_golden_matrix,
     handle_zero_frames,
+    handle_zero_frames_2d,
+    horizontal_flip_2d,
     horizontal_flip_skeleton,
     normalize_skeleton_geometry,
     unwarp_sequence_from_inflection,
@@ -381,6 +383,19 @@ def load_pose_cache(
     return cache
 
 
+def load_pose_2d_cache(
+    df: pd.DataFrame,
+    min_vis: float = MIN_VISIBILITY_THRESHOLD,
+) -> dict[str, np.ndarray | None]:
+    """Nạp chuỗi tọa độ màn hình 2D [ix, iy] đã nội suy & làm mượt (L, 13, 2) cho toàn bộ dataset."""
+    cache_2d: dict[str, np.ndarray | None] = {}
+    for _, row in df.iterrows():
+        sid = row["segment_id"]
+        raw = np.load(row["npy_path"])
+        cache_2d[sid] = handle_zero_frames_2d(raw, min_vis=min_vis, smooth_window=3)
+    return cache_2d
+
+
 def build_stratified_group_folds(
     df: pd.DataFrame,
     n_splits: int = N_SPLITS,
@@ -443,17 +458,19 @@ def _materialize_split_tensors(
     apply_aug: bool,
     num_offsets: int = TRAIN_STRIDE_OFFSETS,
     enable_flip: bool = ENABLE_HORIZONTAL_FLIP,
+    pose_2d_cache: dict[str, np.ndarray | None] | None = None,
 ) -> dict:
     """Sinh các chuỗi T=32 frames (có nhân bản x6 nếu là Train và apply_aug=True)."""
     offsets = list(range(num_offsets)) if (is_train and apply_aug) else [0]
     flips = [False, True] if (is_train and apply_aug and enable_flip) else [False]
 
-    coords_list, vis_list, seq117_list, anat10_list = [], [], [], []
+    coords_list, coords2d_list, vis_list, seq117_list, anat10_list = [], [], [], [], []
     ex_ids, y_list, ex_names, seg_ids, vid_ids, durations = [], [], [], [], [], []
 
     for _, row in df_split.iterrows():
         sid = row["segment_id"]
         coords_norm, vis_clean = pose_cache[sid]
+        coords_2d = pose_2d_cache.get(sid) if pose_2d_cache is not None else None
         ex_name = row["exercise"]
         ex_id = int(row["exercise_id"])
         label_id = int(row["label_id"])
@@ -466,6 +483,11 @@ def _materialize_split_tensors(
                 if flip_flag
                 else (coords_norm, vis_clean)
             )
+            c2d_use = (
+                (horizontal_flip_2d(coords_2d) if flip_flag else coords_2d)
+                if coords_2d is not None
+                else None
+            )
             for off in offsets:
                 c_32 = dynamic_strided_sampling(
                     c_use, target_len=NUM_FRAMES, is_train=(is_train and apply_aug), offset_idx=off, num_offsets=num_offsets
@@ -473,10 +495,22 @@ def _materialize_split_tensors(
                 v_32 = dynamic_strided_sampling(
                     v_use, target_len=NUM_FRAMES, is_train=(is_train and apply_aug), offset_idx=off, num_offsets=num_offsets
                 )
+                c2d_32 = (
+                    dynamic_strided_sampling(
+                        c2d_use,
+                        target_len=NUM_FRAMES,
+                        is_train=(is_train and apply_aug),
+                        offset_idx=off,
+                        num_offsets=num_offsets,
+                    )
+                    if c2d_use is not None
+                    else np.zeros((NUM_FRAMES, NUM_JOINTS, 2), dtype=np.float32)
+                )
                 s_117 = compute_117d_biomechanical_mix(c_32)
                 a_10 = extract_anatomical_golden_matrix(c_32, v_32)
 
                 coords_list.append(c_32)
+                coords2d_list.append(c2d_32)
                 vis_list.append(v_32)
                 seq117_list.append(s_117)
                 anat10_list.append(a_10)
@@ -489,6 +523,7 @@ def _materialize_split_tensors(
 
     return {
         "coords_32": np.stack(coords_list, axis=0).astype(np.float32),
+        "coords2d_32": np.stack(coords2d_list, axis=0).astype(np.float32),
         "vis_32": np.stack(vis_list, axis=0).astype(np.float32),
         "seq_117": np.stack(seq117_list, axis=0).astype(np.float32),
         "anat_10": np.stack(anat10_list, axis=0).astype(np.float32),
@@ -502,8 +537,9 @@ def _materialize_split_tensors(
 
 
 def _build_tabular_matrix(split_data: dict, golden_bank: GoldenRepPrototypeBank) -> np.ndarray:
-    """Tính ma trận đặc trưng bảng 101 chiều kèm độ lệch Golden-Rep từ tập Train."""
+    """Tính ma trận đặc trưng bảng cơ sinh học kèm độ lệch Golden-Rep từ tập Train."""
     n = len(split_data["y"])
+    has_2d = "coords2d_32" in split_data
     rows = []
     for i in range(n):
         ex_id = int(split_data["ex_id"][i])
@@ -519,6 +555,7 @@ def _build_tabular_matrix(split_data: dict, golden_bank: GoldenRepPrototypeBank)
             golden_mean_anat=manat,
             golden_std_anat=sanat,
             duration_sec=float(split_data["duration_sec"][i]),
+            coords2d_seq=split_data["coords2d_32"][i] if has_2d else None,
         )
         rows.append(feats)
     return np.stack(rows, axis=0).astype(np.float32)
@@ -530,6 +567,7 @@ def prepare_fold_data(
     pose_cache: dict[str, tuple[np.ndarray, np.ndarray]] | None = None,
     apply_train_aug: bool = True,
     include_golden_channels: bool = True,
+    pose_2d_cache: dict[str, np.ndarray | None] | None = None,
 ) -> dict:
     """
     Chuẩn bị đầy đủ dữ liệu Train / Val / Test cho 1 Fold cụ thể:
@@ -538,14 +576,22 @@ def prepare_fold_data(
     """
     if pose_cache is None:
         pose_cache = load_pose_cache(df)
+    if pose_2d_cache is None:
+        pose_2d_cache = load_pose_2d_cache(df)
 
     df_train = df.iloc[fold_spec["train_idx"]].reset_index(drop=True)
     df_val = df.iloc[fold_spec["val_idx"]].reset_index(drop=True)
     df_test = df.iloc[fold_spec["test_idx"]].reset_index(drop=True)
 
-    raw_train = _materialize_split_tensors(df_train, pose_cache, is_train=True, apply_aug=apply_train_aug)
-    raw_val = _materialize_split_tensors(df_val, pose_cache, is_train=False, apply_aug=False)
-    raw_test = _materialize_split_tensors(df_test, pose_cache, is_train=False, apply_aug=False)
+    raw_train = _materialize_split_tensors(
+        df_train, pose_cache, is_train=True, apply_aug=apply_train_aug, pose_2d_cache=pose_2d_cache
+    )
+    raw_val = _materialize_split_tensors(
+        df_val, pose_cache, is_train=False, apply_aug=False, pose_2d_cache=pose_2d_cache
+    )
+    raw_test = _materialize_split_tensors(
+        df_test, pose_cache, is_train=False, apply_aug=False, pose_2d_cache=pose_2d_cache
+    )
 
     # 1. Fit Khuôn Mẫu Chuẩn CHỈ trên Train
     golden_bank = GoldenRepPrototypeBank(num_exercises=NUM_EXERCISES).fit(
@@ -633,7 +679,8 @@ def verify_step_c() -> dict:
 
     df = load_task2_metadata(TASK2_CSV_PATH)
     pose_cache = load_pose_cache(df)
-    print(f"[1/6] Đã nạp & làm sạch {len(pose_cache)}/{len(df)} chuỗi khung xương vào RAM.")
+    pose_2d_cache = load_pose_2d_cache(df)
+    print(f"[1/6] Đã nạp & làm sạch {len(pose_cache)}/{len(df)} chuỗi khung xương 3D+2D vào RAM.")
 
     # Test 1: Kiểm tra tính chất hình học (Hip-center, Torso scale=1.0, bất biến lật gương)
     max_hip_err = 0.0
@@ -654,27 +701,48 @@ def verify_step_c() -> dict:
         if torso_med > 0.15:
             max_scale_err = max(max_scale_err, abs(torso_med - 1.0))
 
-        # Kiểm tra lật gương trên 50 clip đại diện (khớp cả góc giải phẫu lẫn 101 đặc trưng bảng)
+        # Kiểm tra lật gương trên 50 clip đại diện (khớp cả góc giải phẫu lẫn đặc trưng bảng gồm cả 2D)
         if idx % 10 == 0:
             c_flip, v_flip = horizontal_flip_skeleton(c_norm, v_clean)
+            c2d = pose_2d_cache.get(sid)
+            c2d_flip = horizontal_flip_2d(c2d) if c2d is not None else None
             s_orig = compute_anatomical_angle_series(c_norm, v_clean)
             s_flip = compute_anatomical_angle_series(c_flip, v_flip)
             for k in ("knee_angle", "hip_angle", "elbow_angle", "torso_tilt", "waist_sag_signed"):
                 max_angle_flip_err = max(max_angle_flip_err, float(np.max(np.abs(s_orig[k] - s_flip[k]))))
 
+            c32_o = dynamic_strided_sampling(c_norm, is_train=False)
+            v32_o = dynamic_strided_sampling(v_clean, is_train=False)
+            c2d32_o = dynamic_strided_sampling(c2d, is_train=False) if c2d is not None else None
+            c2d32_f = dynamic_strided_sampling(c2d_flip, is_train=False) if c2d_flip is not None else None
+
             t_orig = compute_biomechanical_tabular_features(
-                dynamic_strided_sampling(c_norm, is_train=False),
-                dynamic_strided_sampling(v_clean, is_train=False),
+                c32_o,
+                v32_o,
                 row["exercise"],
                 duration_sec=float(row["duration_sec"]),
+                coords2d_seq=c2d32_o,
             )
             t_flip = compute_biomechanical_tabular_features(
                 dynamic_strided_sampling(c_flip, is_train=False),
                 dynamic_strided_sampling(v_flip, is_train=False),
                 row["exercise"],
                 duration_sec=float(row["duration_sec"]),
+                coords2d_seq=c2d32_f,
             )
             max_tab_flip_err = max(max_tab_flip_err, float(np.max(np.abs(t_orig - t_flip))))
+            if idx == 0:
+                t_fast = compute_biomechanical_tabular_features(
+                    c32_o, v32_o, row["exercise"], duration_sec=0.8, coords2d_seq=c2d32_o
+                )
+                t_slow = compute_biomechanical_tabular_features(
+                    c32_o, v32_o, row["exercise"], duration_sec=3.0, coords2d_seq=c2d32_o
+                )
+                idx_dur = TABULAR_FEATURE_NAMES.index("rep_duration_sec")
+                idx_spd = TABULAR_FEATURE_NAMES.index("driver_peak_speed")
+                assert t_fast[idx_dur] < t_slow[idx_dur] and t_fast[idx_spd] > t_slow[idx_spd] * 2.0, (
+                    "Tốc độ thực (°/giây) chưa phân tách theo duration_sec!"
+                )
 
     assert max_hip_err < 1e-5, f"Hip centering lệch: {max_hip_err}"
     assert max_angle_flip_err < 1e-3, f"Góc bị biến đổi sau lật gương: {max_angle_flip_err}"
@@ -688,7 +756,14 @@ def verify_step_c() -> dict:
     folds = build_stratified_group_folds(df)
     fold_summaries = []
     for f_spec in folds:
-        bundle = prepare_fold_data(df, f_spec, pose_cache=pose_cache, apply_train_aug=True, include_golden_channels=True)
+        bundle = prepare_fold_data(
+            df,
+            f_spec,
+            pose_cache=pose_cache,
+            apply_train_aug=True,
+            include_golden_channels=True,
+            pose_2d_cache=pose_2d_cache,
+        )
         tr, va, te = bundle["train"], bundle["val"], bundle["test"]
 
         # Kiểm tra kích thước & NaN/Inf

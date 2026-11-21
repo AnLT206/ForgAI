@@ -215,10 +215,10 @@ class BiomechanicalRandomForest:
     """
     Nhánh mô hình Tabular cải tiến (Bước 6.2 / E.3-LowRisk) dựa trên các công trình:
       - Liao et al. (IEEE TNSRE 2020) & Yu et al. (ICCV 2021): Chuẩn hóa tại chỗ
-        92 đặc trưng liên tục theo phân phối mẫu ĐÚNG (y == 0) của riêng từng bài tập
+        các đặc trưng liên tục (RF_CONT_DIM) theo phân phối mẫu ĐÚNG (y == 0) của riêng từng bài tập
         (Per-Exercise Correct-Reference Z-Score), tránh lẫn thang đo giữa 8 bài.
       - Capecci et al. (KIMORE, IEEE TNSRE 2019): Ghép thêm 3 chỉ số tổng hợp từ
-        BiomechanicalRuleEngine + 8 One-Hot bài tập -> đúng 103 chiều (không phình chiều).
+        BiomechanicalRuleEngine + 8 One-Hot bài tập -> RF_TABULAR_FEATURE_NAMES (114 chiều).
       - Chống overfit Augmentation x6: RandomForest & ExtraTrees học trên toàn bộ Train;
         HistGradientBoostingClassifier (cây nông depth=4, L2=3.0) CHỈ học trên mẫu gốc
         không nhân bản (_f0_o0).

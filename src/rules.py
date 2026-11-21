@@ -42,14 +42,18 @@ def _infer_min_std(feat_name: str) -> float:
     """Ngưỡng độ phân tán tối thiểu theo đơn vị vật lý để tránh khuếch đại nhiễu nhỏ."""
     if any(k in feat_name for k in ("peak_to_mean", "jerk", "corr")):
         return 0.25
+    if "2d_" in feat_name:
+        return 1.0 if "speed" in feat_name else 0.08
     if any(k in feat_name for k in ("angle", "tilt", "asym", "lag")):
         if "shoulder_y_asym" in feat_name:
             return 0.04
         return 6.0
-    if any(k in feat_name for k in ("speed", "bouncing")):
-        return 2.0
+    if "bouncing" in feat_name:
+        return 40.0
+    if "speed" in feat_name:
+        return 15.0
     if any(k in feat_name for k in ("ratio", "duration", "frac")):
-        return 0.20
+        return 0.25 if "duration" in feat_name else 0.20
     if any(k in feat_name for k in ("sag", "bridge", "drop", "chin", "dist", "compression")):
         return 0.06
     return 0.25
@@ -57,6 +61,8 @@ def _infer_min_std(feat_name: str) -> float:
 
 def _infer_unit(feat_name: str) -> str:
     """Đơn vị đo thân thiện dùng khi hiển thị bằng chứng số đo cho người dùng."""
+    if "2d_" in feat_name:
+        return " lần thân/s" if "speed" in feat_name else " lần thân"
     if "peak_to_mean" in feat_name or "ratio" in feat_name:
         return " lần"
     if "jerk" in feat_name or "corr" in feat_name:
@@ -69,8 +75,10 @@ def _infer_unit(feat_name: str) -> str:
         return "°"
     if "duration" in feat_name:
         return "s"
-    if "speed" in feat_name or "bouncing" in feat_name:
-        return "°/step"
+    if "bouncing" in feat_name:
+        return "°/s²"
+    if "speed" in feat_name:
+        return "°/s"
     return " đơn vị thân"
 
 
@@ -86,9 +94,14 @@ EXERCISE_ERROR_RULES: dict[str, dict[str, list[tuple[str, str, float, str]]]] = 
             ("torso_tilt_rom", "lt", 0.5, "Biên độ kéo thân lên"),
         ],
         "using_momentum": [
-            ("hip_angle_rom", "gt", 1.5, "Biên độ vung khớp hông"),
+            ("hip_vs_wrist_2d_x_rom", "gt", 1.5, "Biên độ vung ngang hông dưới xà 2D"),
+            ("hip_vs_wrist_2d_x_speed", "gt", 1.1, "Tốc độ vung ngang hông 2D"),
+            ("ank_vs_wrist_2d_x_rom", "gt", 1.2, "Biên độ vung ngang cổ chân 2D"),
+            ("torso_2d_len_ratio_rom", "gt", 0.9, "Biên độ đánh võng thân trước-sau 2D"),
+            ("hip_angle_rom", "gt", 1.3, "Biên độ vung khớp hông"),
             ("torso_tilt_rom", "gt", 1.1, "Biên độ đung đưa thân người"),
-            ("driver_peak_speed", "gt", 1.0, "Tốc độ giật kéo cực đại"),
+            ("driver_peak_speed", "gt", 1.1, "Tốc độ giật kéo cực đại"),
+            ("rep_duration_sec", "lt", 1.0, "Thời lượng rep giật kéo quá ngắn"),
             ("driver_peak_to_mean_speed", "gt", 0.90, "Tỷ lệ giật tốc độ cực đại so với trung bình"),
             ("torso_driver_corr", "gt", 0.85, "Độ lắc thân người ăn gian theo nhịp chuyển động"),
         ],
@@ -103,14 +116,19 @@ EXERCISE_ERROR_RULES: dict[str, dict[str, list[tuple[str, str, float, str]]]] = 
             ("elbow_asym_max", "gt", 1.1, "Chênh lệch góc tay cực đại"),
         ],
         "uncontrolled_eccentric": [
-            ("ecc_conc_speed_ratio", "gt", 1.9, "Tỷ lệ tốc độ thả rơi / kéo lên"),
-            ("driver_phase2_speed", "gt", 1.0, "Vận tốc pha hạ người"),
+            ("ecc_duration_sec", "lt", 1.4, "Thời gian pha hạ người quá nhanh"),
+            ("ecc_conc_speed_ratio", "gt", 1.7, "Tỷ lệ tốc độ thả rơi / kéo lên"),
+            ("driver_phase2_speed", "gt", 1.2, "Vận tốc pha hạ người"),
             ("driver_dimless_jerk", "gt", 0.85, "Độ giật thiếu kiểm soát trong chu kỳ"),
         ],
         "kipping": [
-            ("driver_speed_bouncing", "gt", 1.6, "Gia tốc đánh hông đổi chiều"),
+            ("hip_vs_wrist_2d_x_rom", "gt", 1.4, "Biên độ vung hông đánh đà 2D"),
+            ("ank_vs_wrist_2d_y_rom", "gt", 1.2, "Biên độ co đá chân lấy đà 2D"),
+            ("torso_2d_len_ratio_rom", "gt", 1.0, "Biên độ đánh võng thân 2D"),
+            ("driver_speed_bouncing", "gt", 1.4, "Gia tốc đánh hông đổi chiều"),
             ("hip_angle_rom", "gt", 1.2, "Biên độ vung hông lấy đà"),
             ("torso_tilt_rom", "gt", 1.2, "Biên độ lắc thân"),
+            ("rep_duration_sec", "lt", 0.9, "Thời lượng rep đánh đà quá nhanh"),
         ],
         "neck_extension": [
             ("neck_angle_min", "lt", 1.6, "Góc ngửa cổ rướn cằm"),
@@ -159,7 +177,8 @@ EXERCISE_ERROR_RULES: dict[str, dict[str, list[tuple[str, str, float, str]]]] = 
         ],
         "using_momentum": [
             ("driver_speed_bouncing", "gt", 1.4, "Gia tốc giật đá tạ"),
-            ("driver_peak_speed", "gt", 1.3, "Vận tốc đá cực đại"),
+            ("driver_peak_speed", "gt", 1.4, "Vận tốc đá cực đại"),
+            ("rep_duration_sec", "lt", 1.1, "Thời lượng rep đá tạ quá nhanh"),
             ("ecc_conc_speed_ratio", "gt", 1.0, "Tỷ lệ pha hạ / đá"),
             ("driver_peak_to_mean_speed", "gt", 0.90, "Tỷ lệ giật tốc độ cực đại so với trung bình"),
             ("torso_driver_corr", "gt", 0.85, "Độ lắc thân người ăn gian theo nhịp chuyển động"),
@@ -216,7 +235,8 @@ EXERCISE_ERROR_RULES: dict[str, dict[str, list[tuple[str, str, float, str]]]] = 
             ("torso_tilt_min", "lt", 1.0, "Góc ưỡn thẳng lưng trên"),
         ],
         "uncontrolled_eccentric": [
-            ("driver_phase1_speed", "gt", 1.7, "Vận tốc thả rơi người pha hạ Squat"),
+            ("ecc_duration_sec", "lt", 1.4, "Thời gian hạ Squat quá nhanh"),
+            ("driver_phase1_speed", "gt", 1.6, "Vận tốc thả rơi người pha hạ Squat"),
             ("driver_speed_bouncing", "gt", 1.4, "Gia tốc nảy bật tại đáy Squat"),
             ("driver_dimless_jerk", "gt", 0.85, "Độ giật thiếu kiểm soát trong chu kỳ"),
         ],
@@ -271,6 +291,7 @@ EXERCISE_ERROR_RULES: dict[str, dict[str, list[tuple[str, str, float, str]]]] = 
         "using_momentum": [
             ("driver_speed_bouncing", "gt", 1.5, "Gia tốc giật nảy hông"),
             ("driver_peak_speed", "gt", 1.3, "Tốc độ quăng hông cực đại"),
+            ("rep_duration_sec", "lt", 1.1, "Thời lượng rep đẩy hông quá nhanh"),
             ("driver_peak_to_mean_speed", "gt", 0.90, "Tỷ lệ giật tốc độ cực đại so với trung bình"),
             ("torso_driver_corr", "gt", 0.85, "Độ lắc thân người ăn gian theo nhịp chuyển động"),
         ],
@@ -282,14 +303,17 @@ EXERCISE_ERROR_RULES: dict[str, dict[str, list[tuple[str, str, float, str]]]] = 
             ("torso_tilt_rom", "lt", 1.0, "Biên độ giữ ổn định thân"),
         ],
         "uncontrolled_eccentric": [
+            ("ecc_duration_sec", "lt", 1.4, "Thời gian pha hạ tạ quá nhanh"),
             ("ecc_conc_speed_ratio", "gt", 1.6, "Tỷ lệ tốc độ thả tạ / kéo tạ"),
-            ("driver_phase2_speed", "gt", 1.0, "Vận tốc pha hạ tạ"),
+            ("driver_phase2_speed", "gt", 1.2, "Vận tốc pha hạ tạ"),
             ("torso_tilt_min", "lt", 0.7, "Độ bật thân pha hạ"),
             ("driver_dimless_jerk", "gt", 0.85, "Độ giật thiếu kiểm soát trong chu kỳ"),
         ],
         "using_momentum": [
-            ("torso_tilt_rom", "gt", 1.7, "Biên độ giật ngửa thân trên"),
+            ("torso_tilt_rom", "gt", 1.6, "Biên độ giật ngửa thân trên"),
             ("torso_tilt_peak_speed", "gt", 1.4, "Tốc độ giật lưng lấy đà"),
+            ("torso_2d_len_ratio_rom", "gt", 0.9, "Độ nhấp nhô thân trước-sau 2D"),
+            ("rep_duration_sec", "lt", 1.0, "Thời lượng rep kéo giật quá nhanh"),
             ("driver_peak_to_mean_speed", "gt", 0.90, "Tỷ lệ giật tốc độ cực đại so với trung bình"),
             ("torso_driver_corr", "gt", 0.85, "Độ lắc thân người ăn gian theo nhịp chuyển động"),
         ],
@@ -315,6 +339,8 @@ EXERCISE_ERROR_RULES: dict[str, dict[str, list[tuple[str, str, float, str]]]] = 
         "using_momentum": [
             ("driver_peak_speed", "gt", 1.5, "Tốc độ quăng chân cực đại"),
             ("driver_speed_bouncing", "gt", 1.4, "Gia tốc giật nảy khớp hông"),
+            ("rep_duration_sec", "lt", 1.1, "Thời lượng rep quăng chân quá nhanh"),
+            ("ank_vs_wrist_2d_y_rom", "gt", 1.0, "Biên độ quăng cổ chân 2D"),
             ("torso_tilt_rom", "gt", 1.1, "Biên độ đung đưa thân người"),
             ("torso_tilt_peak_speed", "gt", 1.0, "Tốc độ vung đà thân"),
             ("driver_peak_to_mean_speed", "gt", 0.90, "Tỷ lệ giật tốc độ cực đại so với trung bình"),
@@ -335,7 +361,8 @@ EXERCISE_ERROR_RULES: dict[str, dict[str, list[tuple[str, str, float, str]]]] = 
             ("driver_peak_speed", "lt", 0.8, "Tốc độ nâng chân ngắn"),
         ],
         "uncontrolled_eccentric": [
-            ("ecc_conc_speed_ratio", "gt", 1.7, "Tỷ lệ tốc độ thả rơi chân / nâng chân"),
+            ("ecc_duration_sec", "lt", 1.4, "Thời gian hạ chân quá nhanh"),
+            ("ecc_conc_speed_ratio", "gt", 1.6, "Tỷ lệ tốc độ thả rơi chân / nâng chân"),
             ("driver_phase2_speed", "gt", 1.3, "Vận tốc thả rơi hai chân pha hạ"),
             ("driver_dimless_jerk", "gt", 0.85, "Độ giật thiếu kiểm soát trong chu kỳ"),
         ],

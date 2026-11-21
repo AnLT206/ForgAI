@@ -85,7 +85,7 @@ EXERCISE_UI_META: dict[str, dict[str, str]] = {
 
 FIGURE_CAPTIONS: dict[str, str] = {
     "eval_fig1_training_curves.png": "Đánh giá 1: Đường cong huấn luyện & Composite Score trên Validation (5-Fold CV)",
-    "eval_fig2_model_comparison_cv.png": "Đánh giá 2: So sánh hiệu năng 5-Fold CV (BiomechanicalRF 106-d E.3+, DL & Hybrid)",
+    "eval_fig2_model_comparison_cv.png": "Đánh giá 2: So sánh hiệu năng 5-Fold CV (BiomechanicalRF 114-d E.3+, DL & Hybrid)",
     "eval_fig3_confusion_and_per_exercise.png": "Đánh giá 3: Ma trận nhầm lẫn Pooled & Macro-F1 theo 8 bài tập Nhóm A",
     "eval_fig4_attention_vs_biomechanics.png": "Đánh giá 4: Đối chiếu Temporal Attention với đường cong góc khớp cơ sinh học",
     "eval_fig5_explainability_and_features.png": "Đánh giá 5: Top-15 đặc trưng quan trọng & độ phủ chẩn đoán Rule Engine",
@@ -1013,7 +1013,7 @@ async def analyze_upload(
     prepared_job_id: str | None = Form(None),
     exercise: str = Form(...),
     analysis_mode: str = Form("single_rep"),
-    use_all_folds: bool = Form(False),
+    use_all_folds: bool = Form(True),
 ) -> JSONResponse:
     ex = exercise.strip().lower()
     if ex not in GROUP_A_EXERCISES:

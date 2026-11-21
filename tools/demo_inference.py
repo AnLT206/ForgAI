@@ -128,10 +128,10 @@ def _render_rich_result(console: Console, res: dict[str, Any], meta_info: dict[s
 
     tm = res["timings_ms"]
     rows_b = [
-        ("BiomechanicalRF (103-d E.3 + Prior Shift)", res["p_rf"], f"Đặc trưng: {tm['feature_extract_ms']:.2f} ms"),
-        ("CNN-BiLSTM + FiLM (166K params)", res["p_cnn_bilstm"], f"Forward AI: {tm['model_inference_ms']:.2f} ms"),
-        ("Transformer + FiLM (96K params)", res["p_transformer"], f"Rule Engine: {tm['rule_engine_ms']:.2f} ms"),
-        ("Hybrid Ensemble (0.60 / 0.25 / 0.15)", res["p_hybrid"], f"Tổng AI lõi: {tm['total_ai_ms']:.2f} ms/rep"),
+        ("BiomechanicalRF (114-d E.3+ + Prior Shift)", res["p_rf"], f"Đặc trưng: {tm['feature_extract_ms']:.2f} ms"),
+        ("CNN-BiLSTM + FiLM", res["p_cnn_bilstm"], f"Forward AI: {tm['model_inference_ms']:.2f} ms"),
+        ("Transformer + FiLM", res["p_transformer"], f"Rule Engine: {tm['rule_engine_ms']:.2f} ms"),
+        ("Hybrid Ensemble (0.50 / 0.25 / 0.25)", res["p_hybrid"], f"Tổng AI lõi: {tm['total_ai_ms']:.2f} ms/rep"),
     ]
     for name, p_val, lat_txt in rows_b:
         tag = "[red]INCORRECT[/red]" if p_val >= res["threshold"] else "[green]CORRECT[/green]"

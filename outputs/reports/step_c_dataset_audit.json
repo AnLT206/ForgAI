@@ -3,7 +3,7 @@
   "unique_video_id_groups": 405,
   "sequence_dim_117": 117,
   "sequence_dim_with_golden": 120,
-  "tabular_feature_dim": 103,
+  "tabular_feature_dim": 111,
   "tabular_feature_names": [
     "knee_angle_min",
     "knee_angle_max",
@@ -83,6 +83,8 @@
     "shoulder_y_asym_max",
     "knee_asym_max",
     "inflection_time_frac",
+    "rep_duration_sec",
+    "ecc_duration_sec",
     "driver_phase1_speed",
     "driver_phase2_speed",
     "ecc_conc_speed_ratio",
@@ -95,6 +97,12 @@
     "driver_peak_to_mean_speed",
     "driver_dimless_jerk",
     "torso_driver_corr",
+    "hip_vs_wrist_2d_x_rom",
+    "hip_vs_wrist_2d_x_std",
+    "hip_vs_wrist_2d_x_speed",
+    "ank_vs_wrist_2d_x_rom",
+    "ank_vs_wrist_2d_y_rom",
+    "torso_2d_len_ratio_rom",
     "golden_coord_dev_mean",
     "golden_angle_dev_mean",
     "golden_dev_at_inflection",
@@ -114,7 +122,7 @@
     "max_hip_centering_error": 9.313225746154785e-10,
     "max_torso_scale_deviation": 2.384185791015625e-07,
     "max_flip_angle_diff_deg": 0.0,
-    "max_flip_tabular_diff": 0.0
+    "max_flip_tabular_diff": 1.3113021850585938e-05
   },
   "biomech_sanity_fold0": {
     "squat_knee_correct_deg": 67.4,

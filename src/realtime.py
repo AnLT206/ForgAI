@@ -44,6 +44,7 @@ from src.features import (
     compute_torso_scale,
     extract_anatomical_golden_matrix,
     handle_zero_frames,
+    handle_zero_frames_2d,
     normalize_skeleton_geometry,
 )
 from src.models import build_model
@@ -246,11 +247,11 @@ class CycleRepCounter:
         self,
         exercise: str,
         ema_alpha: float = 0.35,
-        pre_roll_frames: int = 8,
-        min_rep_frames: int = 10,
-        min_rep_sec: float = 0.55,
-        min_active_sec: float = 0.35,
-        min_active_frames: int = 5,
+        pre_roll_frames: int = 12,
+        min_rep_frames: int = 8,
+        min_rep_sec: float = 0.40,
+        min_active_sec: float = 0.25,
+        min_active_frames: int = 4,
         max_rep_sec: float = 12.0,
         max_lost_frames: int = 18,
         reacquire_warmup_frames: int = 8,
@@ -665,10 +666,16 @@ class ForgAIRealtimeScorer:
 
         t0 = time.perf_counter()
         coords_clean, vis_clean = handle_zero_frames(pose_seq, min_vis=MIN_VISIBILITY_THRESHOLD, smooth_window=3)
+        coords2d_clean = handle_zero_frames_2d(pose_seq, min_vis=MIN_VISIBILITY_THRESHOLD, smooth_window=3)
         coords_norm = normalize_skeleton_geometry(coords_clean)
 
         c32 = dynamic_strided_sampling(coords_norm, target_len=NUM_FRAMES, is_train=False)
         v32 = dynamic_strided_sampling(vis_clean, target_len=NUM_FRAMES, is_train=False)
+        c2d32 = (
+            dynamic_strided_sampling(coords2d_clean, target_len=NUM_FRAMES, is_train=False)
+            if coords2d_clean is not None
+            else None
+        )
         s117 = compute_117d_biomechanical_mix(c32)
         a10 = extract_anatomical_golden_matrix(c32, v32)
 
@@ -691,6 +698,7 @@ class ForgAIRealtimeScorer:
             golden_mean_anat=manat,
             golden_std_anat=sanat,
             duration_sec=float(duration_sec),
+            coords2d_seq=c2d32,
         )
         x_tab_sc = self.tab_scaler.transform(x_tab_raw[None])
 
@@ -698,10 +706,9 @@ class ForgAIRealtimeScorer:
             p_rf_for_hybrid = self.rf_model.predict_unshifted_proba(
                 x_tab_sc, tab_raw=x_tab_raw[None], exercises=[exercise]
             )
-            p_rf = self.rf_model.apply_prior_shift(p_rf_for_hybrid)
+            p_rf = self.rf_model.apply_prior_shift(p_rf_for_hybrid, exercises=[exercise])
         else:
             p_rf = self.rf_model.predict_proba(x_tab_sc, tab_raw=x_tab_raw[None], exercises=[exercise])
-            p_rf_for_hybrid = p_rf
 
         with torch.inference_mode():
             xs_t = torch.from_numpy(x_seq_sc).to(self.device)
@@ -711,7 +718,7 @@ class ForgAIRealtimeScorer:
             p_t = float(torch.sigmoid(self.trans_model(xs_t, ex_t, xt_t)).item())
 
         probs_dict = {
-            "rf": p_rf_for_hybrid,
+            "rf": p_rf,
             "cnn_bilstm": np.asarray([[1.0 - p_c, p_c]], dtype=np.float32),
             "transformer": np.asarray([[1.0 - p_t, p_t]], dtype=np.float32),
         }

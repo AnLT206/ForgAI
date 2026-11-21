@@ -57,7 +57,7 @@ plt.rcParams["font.family"] = ["Segoe UI", "Arial", "DejaVu Sans"]
 plt.rcParams["axes.unicode_minus"] = False
 
 MODEL_SPECS = [
-    ("rf", "BiomechanicalRF (106-d E.3+)", "prob_rf", "pred_rf", "#3B528B"),
+    ("rf", "BiomechanicalRF (114-d E.3+)", "prob_rf", "pred_rf", "#3B528B"),
     ("cnn_bilstm", "CNN-BiLSTM + FiLM", "prob_cnn_bilstm", "pred_cnn_bilstm", "#21918C"),
     ("transformer", "Transformer + FiLM", "prob_transformer", "pred_transformer", "#5EC962"),
     ("hybrid", "Hybrid Ensemble (0.50/0.25/0.25)", "prob_hybrid", "pred_hybrid", "#D95F02"),
