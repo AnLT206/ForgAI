@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 src/dataset.py
-Quản lý toàn bộ pipeline dữ liệu cho ForgAI Task 2 (Nhóm A - 8 bài tập, 493 mẫu):
+Quản lý toàn bộ pipeline dữ liệu cho ForgAI Task 2 (Nhóm A - 8 bài tập, 561 mẫu):
   1. dynamic_strided_sampling(): Lấy mẫu nhảy cóc cách đều T=32 frames trên toàn bộ rep (kể cả L < 32).
   2. GoldenRepPrototypeBank: Xây dựng Khuôn Mẫu Chuẩn (chỉ fit trên tập Train) để tính độ lệch.
   3. ZScoreScaler: Chuẩn hóa Z-Score (chỉ fit trên tập Train - Zero Data Leakage).
@@ -275,7 +275,7 @@ class GoldenRepPrototypeBank:
 class ZScoreScaler:
     """
     Bộ chuẩn hóa Z-Score (mu, sigma) chỉ học từ Train để áp dụng sang Val/Test.
-    Với ma trận đặc trưng bảng 2D (103-d), kết hợp Z-Score toàn cục (35%) với
+    Với ma trận đặc trưng bảng 2D (111-d), kết hợp Z-Score toàn cục (35%) với
     Per-Exercise Correct-Reference Z-Score (65%) tính trên các mẫu Đúng của riêng
     từng bài tập trong tập Train, giúp nhánh DL phân biệt chính xác ngưỡng từng bài.
     """
@@ -369,7 +369,7 @@ def load_pose_cache(
     min_vis: float = MIN_VISIBILITY_THRESHOLD,
 ) -> dict[str, tuple[np.ndarray, np.ndarray]]:
     """
-    Nạp và làm sạch toàn bộ 493 chuỗi khung xương một lần vào RAM (~10 MB):
+    Nạp và làm sạch toàn bộ 561 chuỗi khung xương một lần vào RAM (~10 MB):
       - handle_zero_frames() (nội suy + làm mượt 3-frame)
       - normalize_skeleton_geometry() (Hip-Centering + Torso-Length Normalization)
     """
@@ -697,7 +697,7 @@ def verify_step_c() -> dict:
         sh_mid = 0.5 * (c_norm[:, l_sh, :] + c_norm[:, r_sh, :])
         max_hip_err = max(max_hip_err, float(np.abs(hip_mid).max()))
         torso_med = float(np.median(np.linalg.norm(sh_mid - hip_mid, axis=-1)))
-        # Clip cực dị có thể chạm ngưỡng chặn dưới min_torso_len=0.15 nhưng với 493 clip thực tế kỳ vọng ~1.0
+        # Clip cực dị có thể chạm ngưỡng chặn dưới min_torso_len=0.15 nhưng với 561 clip thực tế kỳ vọng ~1.0
         if torso_med > 0.15:
             max_scale_err = max(max_scale_err, abs(torso_med - 1.0))
 

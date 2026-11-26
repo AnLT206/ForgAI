@@ -4,11 +4,11 @@ src/models.py
 Định nghĩa toàn bộ 4 mô hình phân loại kỹ thuật Đúng / Sai (Task 2) và hàm mất mát chống lệch lớp:
   1. FiLMLayer & SpatialDropout1d: Các khối điều biến theo bài tập & chống học vẹt chuỗi khung xương.
   2. FocalBCEWithLogitsLoss: Hàm loss nhị phân cân bằng lớp + Focal + Label Smoothing (0.03).
-  3. BiomechanicalRandomForest (Model 1 - Baseline): Tổ hợp RandomForest + ExtraTrees trên 100 đặc trưng bảng.
+  3. BiomechanicalRandomForest (Model 1 - Baseline): Tổ hợp RandomForest + ExtraTrees trên 111 đặc trưng bảng (+ 3 điểm Luật = 114-d).
   4. ExerciseConditionedCNNBiLSTM (Model 2 - Deep Learning 1): Multi-Scale 1D-CNN + FiLM + Bi-LSTM 2 tầng
-     + Temporal Attention + nhánh Gated Tabular (166,780 tham số).
+     + Temporal Attention + nhánh Gated Tabular (167,120 tham số).
   5. ExerciseConditionedTransformer (Model 3 - Deep Learning 2): Pre-LN Transformer + FiLM + [TAB] Token
-     (95,938 tham số).
+     (96,578 tham số).
   6. HybridFormEnsemble (Model 4): Tổ hợp xác suất 3 mô hình & dò ngưỡng tối ưu Macro-F1 CHỈ trên Validation.
 """
 
@@ -518,7 +518,7 @@ class ExerciseConditionedCNNBiLSTM(nn.Module):
       - Tầng 1 (FiLM): Khuếch đại/triệt tiêu 120 kênh chuỗi theo mã bài tập ex_id.
       - Tầng 2 (Multi-Scale 1D-CNN): Hai nhánh Conv1d song song (kernel 3 & 5) + SpatialDropout1d(0.30).
       - Tầng 3 (Bi-LSTM 2 tầng): hidden_size=48 mỗi chiều (96-d) đọc trọn vẹn chu kỳ xuôi/ngược.
-      - Tầng 4 (Attention + MaxPool + Gated Tabular): Hội tụ tại frame quyết định kết hợp bảng 100-d.
+      - Tầng 4 (Attention + MaxPool + Gated Tabular): Hội tụ tại frame quyết định kết hợp bảng 111-d.
     """
 
     def __init__(
@@ -632,7 +632,7 @@ class ExerciseConditionedTransformer(nn.Module):
     """
     Kế thừa SkelGym Temporal Transformer + Cải tiến [TAB] Summary Token & FiLM:
       - Chiếu chuỗi (B, 32, 120) -> d_model=64 + Positional Encoding + FiLM điều biến theo bài tập.
-      - Chiếu vector bảng 100-d thành 1 Token tổng hợp ([TAB] Token) ghép vào đầu chuỗi -> (B, 33, 64),
+      - Chiếu vector bảng 111-d thành 1 Token tổng hợp ([TAB] Token) ghép vào đầu chuỗi -> (B, 33, 64),
         cho phép Self-Attention đối chiếu trực tiếp từng frame với các chỉ số đáy & thời lượng rep.
       - Pre-LN TransformerEncoder 2 tầng (norm_first=True) hội tụ ổn định, không cần warmup phức tạp.
     """
@@ -755,7 +755,7 @@ DEFAULT_HYBRID_WEIGHTS: dict[str, float] = {
 
 class HybridFormEnsemble:
     """
-    Kết hợp xác suất dự đoán từ 3 họ mô hình độc lập (Tabular 106-d, CNN-BiLSTM, Transformer).
+    Kết hợp xác suất dự đoán từ 3 họ mô hình độc lập (Tabular 114-d, CNN-BiLSTM, Transformer).
     Hỗ trợ hai chế độ:
       - Prior-Anchored Fixed Simplex (`fit_fixed_simplex`, mặc định Bước E.3+):
         Dùng trọng số tiên nghiệm cân bằng (0.50 / 0.25 / 0.25, ngưỡng 0.50), triệt tiêu
@@ -934,7 +934,7 @@ def verify_models() -> None:
     tr, va, te = b0["train"], b0["val"], b0["test"]
     print(f"[1/4] Nạp Fold {HOLDOUT_TEST_FOLD}: Train(x6)={len(tr['y'])}, Val(x1)={len(va['y'])}, Test(x1)={len(te['y'])}")
 
-    # 1. Kiểm định Model 1: BiomechanicalRandomForest (104-d E.3-LowRisk)
+    # 1. Kiểm định Model 1: BiomechanicalRandomForest (114-d E.3+)
     from src.rules import BiomechanicalRuleEngine
 
     df_lookup = df.set_index("segment_id")
@@ -966,7 +966,7 @@ def verify_models() -> None:
     rf_test_f1 = f1_score(te["y"], (rf_test_p[:, 1] >= 0.5).astype(int), average="macro")
     rf_test_acc = accuracy_score(te["y"], (rf_test_p[:, 1] >= 0.5).astype(int))
     print(
-        f"[2/4] Model 1 BiomechanicalRandomForest (104-d): Fit={rf_fit_sec:.2f}s | "
+        f"[2/4] Model 1 BiomechanicalRandomForest (114-d): Fit={rf_fit_sec:.2f}s | "
         f"Val Macro-F1={rf_val_f1:.3f} | Test Acc={rf_test_acc:.3f}, Macro-F1={rf_test_f1:.3f}"
     )
     top_feats = rf_model.get_top_features(top_k=5)
@@ -1016,7 +1016,7 @@ def verify_models() -> None:
             f"1-Epoch CPU={ep_sec:.3f}s | Loss={np.mean(ep_losses):.4f} -> PASS"
         )
 
-    # 3. Kiểm định HybridFormEnsemble (Prior-Anchored Fixed Simplex 0.60 / 0.25 / 0.15)
+    # 3. Kiểm định HybridFormEnsemble (Prior-Anchored Fixed Simplex 0.50 / 0.25 / 0.25)
     ens = HybridFormEnsemble()
     ens.fit_fixed_simplex(val_probs, va["y"])
     te_pred = ens.predict(test_probs)

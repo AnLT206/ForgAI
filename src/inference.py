@@ -6,7 +6,7 @@ Engine suy luận đóng gói cho Bước 7 (Deployment - ForgAI Task 2):
   - Hỗ trợ 2 nguồn đầu vào chính thức:
       1. Chuỗi khung xương .npy có sẵn (predict_from_npy).
       2. File video .mp4 bất kỳ (predict_from_video, tái sử dụng src/extractor.py).
-  - Trả về đầy đủ xác suất 4 nhánh (BiomechanicalRF 103-d, CNN-BiLSTM, Transformer, Hybrid),
+  - Trả về đầy đủ xác suất 4 nhánh (BiomechanicalRF 114-d, CNN-BiLSTM, Transformer, Hybrid),
     Form Score (0..100%), chẩn đoán mã lỗi BiomechanicalRuleEngine, danh sách khớp tô đỏ trên
     video HUD, chuỗi góc khớp chủ đạo theo từng frame và số đo độ trễ từng công đoạn (ms).
 """

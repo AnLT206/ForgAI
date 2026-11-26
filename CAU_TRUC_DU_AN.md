@@ -56,7 +56,7 @@ D:\datasets-gym\FORGAI\
 │   ├── extractor.py              # Trích xuất MediaPipe Pose 13 khớp ra file .npy
 │   ├── features.py               # Hip-centering, Torso normalization, 117-d Mix, Điểm Đáy/Đỉnh, Golden-Rep
 │   ├── dataset.py                # Dynamic Strided Sampling (T=32), Augmentation x6, GroupSplit chống rò rỉ
-│   ├── models.py                 # BiomechanicalRF (103-d E.3 Pure-AI), 1D-CNN + Bi-LSTM, Transformer, Fixed-Simplex Ensemble
+│   ├── models.py                 # BiomechanicalRF (114-d E.3+ Pure-AI), 1D-CNN + Bi-LSTM, Transformer, Fixed-Simplex Ensemble
 │   ├── rules.py                  # Bộ luật cơ sinh học giải thích mã lỗi tiếng Việt
 │   ├── inference.py              # ForgAITask2Predictor đóng gói suy luận 1-Fold / 5-Fold & tô khớp lỗi HUD
 │   └── realtime.py               # MediaPipeRealtimeTracker, CycleRepCounter, ForgAIRealtimeScorer
@@ -85,7 +85,7 @@ D:\datasets-gym\FORGAI\
 | **`data_processed/pose/`** | Kho lưu khung xương | Chứa 561 file `.npy` tọa độ 13 khớp. Nhẹ tênh (`13.29 MB`), giúp train nhanh gấp 100 lần. |
 | **`tools/`** | Công cụ CLI tải, xem, vẽ & demo | Chứa `download_tool.py` (tải & cắt rep YouTube), `replay_rep.py` (xem lại rep), `visualize_task2.py` (biểu đồ), `demo_inference.py` (CLI Bước 7 + showcase + benchmark) và `realtime_demo.py` (demo Realtime Webcam/Video 30 FPS). |
 | **`web/`** | Giao diện Web Studio | Gói web độc lập chứa `app.py` (FastAPI backend, H.264, MJPEG webcam) và `static/` (`index.html`, `styles.css`, `app.js`), khởi chạy qua `run_web.bat`. |
-| **`src/`** | Bộ máy xử lý cốt lõi | Chứa toàn bộ logic trích xuất, tiền xử lý `117-d`, mô hình AI (`100-d/103-d Pure-AI`), bộ luật cơ sinh học giải thích lỗi và engine Suy luận/Realtime (`inference.py`, `realtime.py`). |
+| **`src/`** | Bộ máy xử lý cốt lõi | Chứa toàn bộ logic trích xuất, tiền xử lý `117-d`, mô hình AI (`111-d/114-d Pure-AI`), bộ luật cơ sinh học giải thích lỗi và engine Suy luận/Realtime (`inference.py`, `realtime.py`). |
 | **`experiments/`** | Phòng điều khiển thực nghiệm | Chứa `train_task2.py` (`--reuse-dl`) và `evaluate.py` để huấn luyện 5-Fold CV và đối sánh các mô hình. |
 | **`outputs/`** | Thành quả nghiên cứu | Chứa file trọng số mô hình tốt nhất (`checkpoints/`), video HUD minh họa (`demo/`) và báo cáo + biểu đồ (`reports/`). |
 

@@ -368,10 +368,10 @@
       : `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>`;
 
     const branches = [
-      { name: "BiomechanicalRF (103-d E.3 + Prior Shift)", val: d.branches.rf },
-      { name: "CNN-BiLSTM + FiLM (166K params)", val: d.branches.cnn_bilstm },
-      { name: "Transformer + FiLM (96K params)", val: d.branches.transformer },
-      { name: "Hybrid Ensemble (0.60 / 0.25 / 0.15)", val: d.branches.hybrid },
+      { name: "BiomechanicalRF (114-d E.3+ + Prior Shift)", val: d.branches.rf },
+      { name: "CNN-BiLSTM + FiLM (167K params)", val: d.branches.cnn_bilstm },
+      { name: "Transformer + FiLM (97K params)", val: d.branches.transformer },
+      { name: "Hybrid Ensemble (0.50 / 0.25 / 0.25)", val: d.branches.hybrid },
     ];
     const branchHtml = branches
       .map((b) => {
@@ -1032,19 +1032,19 @@
 
       $("dash-kpis").innerHTML = `
       <div class="kpi-card">
-        <span>BiomechanicalRF (103-d E.3)</span>
+        <span>BiomechanicalRF (114-d E.3+)</span>
         <strong class="num-tabular">${(Number(rf.macro_f1_mean || 0) * 100).toFixed(2)}%</strong>
         <small>CV Macro-F1 · Acc ${(Number(rf.accuracy_mean || 0) * 100).toFixed(2)}%</small>
       </div>
       <div class="kpi-card">
-        <span>Hybrid Ensemble (0.60/0.25/0.15)</span>
+        <span>Hybrid Ensemble (0.50/0.25/0.25)</span>
         <strong class="num-tabular">${Number(hy.roc_auc_mean || 0).toFixed(3)} AUC</strong>
         <small>Acc ${(Number(hy.accuracy_mean || 0) * 100).toFixed(2)}% ± ${(Number(hy.accuracy_std || 0) * 100).toFixed(2)}%</small>
       </div>
       <div class="kpi-card">
         <span>Kiểm định Zero Data Leakage</span>
-        <strong class="num-tabular">${audit.total_oof_clips || 521} mẫu</strong>
-        <small>${audit.unique_video_id_groups || 371} nhóm video_id · ${audit.cross_fold_video_id_leaks ?? 0} rò rỉ</small>
+        <strong class="num-tabular">${audit.total_oof_clips || 561} mẫu</strong>
+        <small>${audit.unique_video_id_groups || 405} nhóm video_id · ${audit.cross_fold_video_id_leaks ?? 0} rò rỉ</small>
       </div>
       <div class="kpi-card">
         <span>Độ trễ Lõi AI (CPU 1-Fold)</span>

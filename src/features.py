@@ -62,7 +62,7 @@ EXERCISE_BIOMECH_SPEC = {
     "leg raises": {"driver": "hip_angle", "mode": "min", "phase1_is_eccentric": False},
 }
 
-# Khung định nghĩa cố định tên cột đặc trưng bảng (100 chiều) bảo đảm đồng nhất tuyệt đối
+# Khung định nghĩa cố định tên cột đặc trưng bảng (111 chiều) bảo đảm đồng nhất tuyệt đối
 _CORE_SERIES_NAMES = (
     "knee_angle",
     "hip_angle",
@@ -151,7 +151,7 @@ def extract_anatomical_golden_matrix(coords: np.ndarray, vis: np.ndarray | None 
 
 
 def get_tabular_feature_names() -> list[str]:
-    """Trả về danh sách tên 100 đặc trưng cơ sinh học theo đúng thứ tự cột."""
+    """Trả về danh sách tên 111 đặc trưng cơ sinh học theo đúng thứ tự cột."""
     names: list[str] = []
     for s_name in _CORE_SERIES_NAMES:
         for stat in _CORE_STATS:

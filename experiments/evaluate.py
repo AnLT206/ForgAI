@@ -10,8 +10,8 @@ experiments/evaluate.py
   - cv_rf_feature_importances.csv
 
 Chức năng chính:
-  1. Hậu kiểm Zero Data Leakage (493 clip, 356 nhóm video_id, 0 giao nhau giữa các Test Fold).
-  2. Tính bảng chỉ số 5-Fold (Mean ± Std) & Pooled OOF (N = 493) cho cả 4 mô hình.
+  1. Hậu kiểm Zero Data Leakage (561 clip, 405 nhóm video_id, 0 giao nhau giữa các Test Fold).
+  2. Tính bảng chỉ số 5-Fold (Mean ± Std) & Pooled OOF (N = 561) cho cả 4 mô hình.
   3. Phân rã hiệu năng theo 8 bài tập Nhóm A, theo 3 nguồn (EFA, GYMED, YouTube) và McNemar test.
   4. Đánh giá chẩn đoán 32 mã lỗi của BiomechanicalRuleEngine (Top-1 / Top-3 Error Recall).
   5. Xuất 5 biểu đồ báo cáo 300-DPI (eval_fig1*..eval_fig5*) + task2_eval_summary.json + task2_eval_report.md.
@@ -50,7 +50,7 @@ if str(PROJECT_ROOT) not in sys.path:
 
 from configs.config import FIGURES_DIR, GROUP_A_EXERCISES, N_SPLITS, REPORTS_DIR
 from src.constants import ERROR_REASON_VN_DICT
-from src.features import ANATOMICAL_GOLDEN_KEYS, EXERCISE_BIOMECH_SPEC
+from src.features import ANATOMICAL_GOLDEN_KEYS, EXERCISE_BIOMECH_SPEC, get_tabular_feature_names
 from src.rules import EXERCISE_ERROR_RULES
 
 plt.rcParams["font.family"] = ["Segoe UI", "Arial", "DejaVu Sans"]
@@ -98,7 +98,7 @@ def compute_binary_metrics(y_true: np.ndarray, p_pos: np.ndarray, y_pred: np.nda
 
 
 def audit_zero_leakage(oof_df: pd.DataFrame) -> dict:
-    """Xác minh toàn vẹn OOF N=493 không trùng segment_id và không rò rỉ video_id giữa các Test Fold."""
+    """Xác minh toàn vẹn OOF N=561 không trùng segment_id và không rò rỉ video_id giữa các Test Fold."""
     n_rows = int(len(oof_df))
     n_seg = int(oof_df["segment_id"].nunique())
     n_vid = int(oof_df["video_id"].nunique())
@@ -603,7 +603,8 @@ def plot_eval_fig5_explainability_and_features(
     ax1.set_yticks(y_pos)
     ax1.set_yticklabels(stats.index.tolist(), fontsize=9)
     ax1.set_xlabel("Mức độ quan trọng trung bình qua 5 Fold (RF + ExtraTrees)", fontsize=9.5, fontweight="bold")
-    ax1.set_title("Top-15 Đặc trưng Cơ sinh học Quyết định nhất (106-d E.3+)\n(Tím: Luật | Cam: Golden-Rep | Xanh lá: Nhịp | Xanh dương: Góc chuẩn bài)", fontsize=10.0, fontweight="bold")
+    rf_dim = len(get_tabular_feature_names()) + 3
+    ax1.set_title(f"Top-15 Đặc trưng Cơ sinh học Quyết định nhất ({rf_dim}-d E.3+)\n(Tím: Luật | Cam: Golden-Rep | Xanh lá: Nhịp | Xanh dương: Góc chuẩn bài)", fontsize=10.0, fontweight="bold")
     ax1.grid(axis="x", alpha=0.25)
 
     # Panel 2: Rule Engine Top-1 vs Top-3 Recall theo từng bài tập

@@ -2,7 +2,7 @@
 """
 src/extractor.py
 Trích xuất tọa độ khung xương 13 khớp cốt lõi (RAW_POINTS_13) bằng MediaPipe PoseLandmarker
-cho toàn bộ 493 video trong metadata/task2_assessment.csv.
+cho toàn bộ 561 video trong metadata/task2_assessment.csv.
 
 Mỗi file .npy lưu tại data_processed/pose/<segment_id>.npy có shape (L, 13, 6) kiểu float32:
   - Kênh 0, 1, 2 (wx, wy, wz): Tọa độ không gian 3D thực (mét) từ pose_world_landmarks,

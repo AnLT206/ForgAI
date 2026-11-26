@@ -377,14 +377,14 @@ def run_single_fold(
         f"Val={len(va['y'])} | Test={len(te['y'])} | seq_dim={seq_dim}, tab_dim={tab_dim}"
     )
 
-    # 1. BiomechanicalRuleEngine (fit STRICTLY trên Train gốc _f0_o0 trước khi fit RF 103-d)
+    # 1. BiomechanicalRuleEngine (fit STRICTLY trên Train gốc _f0_o0 trước khi fit RF 114-d)
     df_train_base, raw0_mask = _extract_raw_train_base(
         df_lookup, tr, expected_count=fold_data["raw_counts"]["train_clips"]
     )
     rule_engine = BiomechanicalRuleEngine(rule_weight=0.55, proto_weight=0.45)
     rule_engine.fit(df_train_base, tr["tab_raw"][raw0_mask])
 
-    # 2. BiomechanicalRandomForest E.3-LowRisk (Per-Exercise Correct-Ref 103-d + HGB trên _f0_o0 + Train Prior Shift)
+    # 2. BiomechanicalRandomForest E.3+ (Per-Exercise Correct-Ref 114-d + HGB trên _f0_o0 + Train Prior Shift)
     t_rf0 = time.perf_counter()
     rf_model = build_model("rf", random_state=seed + fold_idx)
     rf_model.fit(
@@ -406,7 +406,7 @@ def run_single_fold(
     rf_val_m = _compute_split_metrics(va["y"], rf_val_p[:, 1], threshold=0.5)
     rf_test_m = _compute_split_metrics(te["y"], rf_test_p[:, 1], threshold=0.5)
     print(
-        f"  [Model 1] BiomechanicalRF 103-d ({rf_sec:.2f}s) | "
+        f"  [Model 1] BiomechanicalRF 114-d ({rf_sec:.2f}s) | "
         f"Val MF1={rf_val_m['macro_f1']:.3f} | Test Acc={rf_test_m['acc']:.3f}, "
         f"MF1={rf_test_m['macro_f1']:.3f}, AUC={rf_test_m['roc_auc']:.3f}"
     )
@@ -500,7 +500,7 @@ def run_single_fold(
         test_attns[model_name] = t_attn
         dl_summaries[model_name] = summary
 
-    # 5. HybridFormEnsemble (Prior-Anchored Fixed Simplex 0.60 / 0.25 / 0.15, thr=0.50 -> 0 tham số dò trên Val)
+    # 5. HybridFormEnsemble (Prior-Anchored Fixed Simplex 0.50 / 0.25 / 0.25, thr=0.50 -> 0 tham số dò trên Val)
     hybrid = HybridFormEnsemble(model_names=("rf", "cnn_bilstm", "transformer"))
     hybrid.fit_fixed_simplex(val_probs, va["y"], fixed_weights=DEFAULT_HYBRID_WEIGHTS, threshold=0.50)
     hyb_test_p = hybrid.predict_proba(test_probs)
@@ -655,7 +655,7 @@ def aggregate_and_save_global_reports(expected_total_clips: int) -> bool:
     REPORTS_DIR.mkdir(parents=True, exist_ok=True)
     oof_df = pd.concat([r["oof_df"] for r in fold_results], ignore_index=True)
 
-    # Xác minh không rò rỉ dữ liệu & đủ toàn bộ 493 clip
+    # Xác minh không rò rỉ dữ liệu & đủ toàn bộ 561 clip
     assert len(oof_df) == expected_total_clips, f"OOF thiếu mẫu: {len(oof_df)} vs {expected_total_clips}"
     assert oof_df["segment_id"].nunique() == expected_total_clips, "Phát hiện trùng segment_id trong OOF!"
     assert (oof_df.groupby("video_id")["fold"].nunique() == 1).all(), "Rò rỉ video_id giữa các Test Fold!"

@@ -27,7 +27,7 @@ FIGURES_DIR = REPORTS_DIR / "figures"
 POSE_MODEL_PATH = PROJECT_ROOT / "configs" / "pose_landmarker_full.task"
 
 # ==============================================================================
-# 2. DANH SÁCH 8 BÀI TẬP NHÓM A (ĐÃ ĐỦ CHỈ TIÊU ĐÚNG & SAI - 493 VIDEO)
+# 2. DANH SÁCH 8 BÀI TẬP NHÓM A (ĐÃ ĐỦ CHỈ TIÊU ĐÚNG & SAI - 561 VIDEO)
 # ==============================================================================
 GROUP_A_EXERCISES = [
     "pull up",
@@ -68,7 +68,7 @@ N_SPLITS = 5                    # 5-Fold StratifiedGroupKFold (gom theo video_id
 HOLDOUT_TEST_FOLD = 0           # Fold 0 được cố định làm tập Holdout Test độc lập
 VAL_RATIO_WITHIN_TRAIN = 0.15   # Tách 15% từ phần Train làm tập Validation để chọn mô hình
 
-# Siêu tham số mô hình Deep Learning (Thiết kế gọn nhẹ chống Overfitting trên 493 mẫu)
+# Siêu tham số mô hình Deep Learning (Thiết kế gọn nhẹ chống Overfitting trên 561 mẫu)
 BATCH_SIZE = 32
 LEARNING_RATE = 4e-4
 WEIGHT_DECAY = 3e-2
